@@ -1,9 +1,15 @@
----
-typora-copy-images-to: img
-typora-root-url: ./
----
+# java学习
+[![NPM](https://img.shields.io/npm/v/docsify-themeable.svg?style=flat-square)](https://www.npmjs.com/package/docsify-themeable)
+[![Codacy grade](https://img.shields.io/codacy/grade/860d40719cbd4e0f91e145b87ec7c29a.svg?style=flat-square)](https://www.codacy.com/app/jhildenbiddle/docsify-themeable?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jhildenbiddle/docsify-themeable&amp;utm_campaign=Badge_Grade)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://github.com/jhildenbiddle/docsify-themeable/blob/master/LICENSE)
+[![jsDelivr](https://data.jsdelivr.com/v1/package/npm/docsify-themeable/badge)](https://www.jsdelivr.com/package/npm/docsify-themeable)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,docsify,developers,frontend)
+<a class="github-button" href="https://github.com/jhildenbiddle/docsify-themeable" data-icon="octicon-star" data-show-count="true" aria-label="Star jhildenbiddle/docsify-themeable on GitHub">Star</a>
+
+
 
 ## 1.SpringMVC概述
+
 
 ### 1.1 MVC架构
 
@@ -21,10 +27,10 @@ typora-root-url: ./
 三层架构的目的是解耦，mvc的目的是实现web层系统的职责划分。 
 
 MVC架构在三层架构中的位置图示：
-
-![1600508850298](/img/1600508850298.png)
-
-
+ <figure class="thumbnails">
+    <img src="picture/Springmvc/1600508850298.png" alt="Screenshot of coverpage" title="Cover page">
+    
+</figure>
 
 ### 1.2 SpringMVC
 
@@ -59,8 +65,6 @@ SpringMVC 中有以下核心组件，如下：
     
 </figure>
 
-
-![Springmvc](/Springmvc/1600526335897.png)
 
 
 
@@ -262,8 +266,10 @@ public class HelloController {
 
 流程图如下：
 
-![1600595708760](/img/1600595708760.png)
-
+ <figure class="thumbnails">
+    <img src="picture/Springmvc/1600595708760.png" alt="Screenshot of coverpage" title="Cover page">
+    
+</figure>
 ```markdown
 # SpringMVC加载流程: 服务器启动时
 1. 服务器启动时,只会加载web.xml文件
@@ -298,15 +304,19 @@ public class HelloController {
 
 路径请求执行：
 
-![1600572893227](/img/1600572893227.png)
 
 
+ <figure class="thumbnails">
+    <img src="picture/Springmvc/1600572893227.png" alt="Screenshot of coverpage" title="Cover page">
+    
+</figure>
+
+ <figure class="thumbnails">
+    <img src="picture/Springmvc/157853207433.png" alt="Screenshot of coverpage" title="Cover page">
+    
+</figure>
 
 
-
-
-
-![1600526335897](/img/157853207433.png)
 
 DispatchServlet执行流程：
 
@@ -1432,11 +1442,13 @@ public class HeaderCookieController {
 
 JSR 269 之前我们也有注解这样的神器，可是我们比如想要做什么必须使用反射，反射的方法局限性较大。**首先，它必须定义@Retention为RetentionPolicy.RUNTIME，只能在运行时通过反射来获取注解值，使得运行时代码效率降低**。其次，如果想在编译阶段利用注解来进行一些检查，对用户的某些不合理代码给出错误报告，反射的使用方法就无能为力了。**而 JSR 269 之后我们可以在 Javac的编译期利用注解做这些事情**。所以我们发现**核心的区分是在 运行期 还是 编译期**。
 
- ![1600592476240](/img/1600592476240.png)
 
  
 
- 
+  <figure class="thumbnails">
+    <img src="picture/Springmvc/1600592476240.png" alt="Screenshot of coverpage" title="Cover page">
+    
+</figure>
 
  
 
