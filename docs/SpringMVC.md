@@ -54,8 +54,13 @@ MVC架构在三层架构中的位置图示：
 
 
 SpringMVC 中有以下核心组件，如下：
+ <figure class="thumbnails">
+    <img src="picture/Springmvc/1600526335897.png" alt="Screenshot of coverpage" title="Cover page">
+    
+</figure>
 
-![Springmvc](/img/1600526335897.png)
+
+![Springmvc](/Springmvc/1600526335897.png)
 
 
 
