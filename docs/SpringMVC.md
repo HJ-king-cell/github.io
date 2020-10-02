@@ -29,7 +29,6 @@
 MVC架构在三层架构中的位置图示：
  <figure class="thumbnails">
     <img src="picture/Springmvc/1600508850298.png" alt="Screenshot of coverpage" title="Cover page">
-    
 </figure>
 
 ### 1.2 SpringMVC
