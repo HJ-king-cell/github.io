@@ -1,9 +1,3 @@
----
-typora-copy-images-to: img
-typora-root-url: ./
----
-
-
 
 # 开源框架介绍
 
@@ -108,7 +102,11 @@ Spring 官网：<https://spring.io/>
 
 Spring结构体系如下：
 
-![1600164978207](/img/1600164978207.png)
+
+ <figure class="thumbnails">
+    <img src="picture/Spring/1600164978207.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 整个结构分为五大块：
 
