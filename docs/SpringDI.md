@@ -1,7 +1,4 @@
----
-typora-copy-images-to: img
-typora-root-url: ./
----
+
 
 ## 1.DI注解配置
 
