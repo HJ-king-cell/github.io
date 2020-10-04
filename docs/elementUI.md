@@ -28,13 +28,13 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/我是按钮.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/我是按钮.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 - Element 提供的按钮
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/element提供的按钮.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/element提供的按钮.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 1.2、Element快速入门
@@ -140,7 +140,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/基础布局.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/基础布局.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 - **代码实现**
@@ -235,7 +235,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/容器布局.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/容器布局.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -556,7 +556,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/顶部导航栏.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/顶部导航栏.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 - **代码实现**
@@ -625,7 +625,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/侧边导航栏.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/侧边导航栏.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 - **代码实现**
@@ -728,7 +728,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/综合案例-效果图.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/综合案例-效果图.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 2.2、头部区域的分析
@@ -910,13 +910,13 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E7%99%BB%E5%BD%95.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E7%99%BB%E5%BD%95.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E9%A6%96%E9%A1%B5.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B-%E9%A6%96%E9%A1%B5.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 操作流程：
@@ -1134,7 +1134,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/picture/web/element/1599809916441.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/element/1599809916441.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 - **代码实现**
