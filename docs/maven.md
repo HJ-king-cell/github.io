@@ -113,22 +113,22 @@ Apache Maven是一个软件项目管理和综合工具。基于项目对象模�
 
  第一步：新增环境变量：MAVEN_HOME
 
-![1536298522077](img/1536298522077.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536298522077.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 第二步：在path环境变量中添加：%MAVEN_HOME%\bin;
 
-![1536298737485](img/1536298737485.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536298737485.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 第三步：测试：在cmd控制台中输入命令： mvn -v ；如果出现以下maven的版本信息，则说明maven的安装与环境变量的配置均正确；
 
-![1536298840009](img/1536298840009.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536298840009.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -151,30 +151,27 @@ maven的仓库可以分为3种：
 | 中央仓库 | 是远程仓库，仓库中jar由专业团队（maven团队）统一维护。中央仓库的地址：<http://repo1.maven.org/maven2> |
 | 私服     | 是远程仓库, 一般是在公司内部架设一台私人服务器对外公开。开发中经常使用的国内私服：阿里云 http://maven.aliyun.com/nexus/content/groups/public |
 
-​			![1563618264884](img\1563618264884.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1563618264884.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ​	注: 由于中央仓库服务器在国外,网速比较慢,我们一般远程仓库使用私服. 
 
-![1536321846073](img/1536321846073.png)
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536321846073.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 #### 2.4.1 配置本地仓库
 
 ​	本地仓库的位置是通过maven的核心配置文件（settings.xml）来配置的。settings.xml文件位于maven安装目录：..\apache-maven-3.5.2\conf\settings.xml 。
-
-![1536320866111](img/1536320866111.png) 
+ 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536320866111.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ​	打开settings.xml文件：
 
-![1536321154337](img/1536321154337.png)
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536321154337.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 发现本地仓库默认的地址为当前用户的/.m2/repository目录。
 
@@ -184,21 +181,20 @@ maven的仓库可以分为3种：
 
 1. 第一步：在maven的安装目录下创建一个repository文件夹（一般习惯将仓库地址和maven安装目录放置在一起）。
 
-![1536321449669](img/1536321449669.png)
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536321449669.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 2. 第二步：在核心配置文件setting.xml中，将仓库存放的位置设置成：D:\software\maven\apache-maven-3.5.2\repository（以自己的安装路径为准）；
 
-![1536321587176](img/1536321587176.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536321587176.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 3. 第三步：为了减少包下载，将今天下发资料中的 repository 解压到 Maven 目录下的 repository 中。
 
-![1599228672010](img\1599228672010.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1599228672010.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -246,15 +242,13 @@ maven的仓库可以分为3种：
 
 1. 第一步：打开default settings(对以后的新建工程生效)：
 
-![1536322921891](img/1536322921891.png) 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536322921891.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 2. 第二步：配置maven_home和settings.xml的路径：
 
-![1536323155528](img/1536323155528.png)
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536323155528.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -262,9 +256,9 @@ maven的仓库可以分为3种：
 
 ​	使用idea创建maven项目后，默认会去网络中下载一些配置资源。需要设置参数archetypeCatalog。设置方法如下：将-DarchetypeCatalog=internal 设置到Maven--Runner--VM Options中。
 
-![1536323356026](img/1536323356026.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536323356026.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ~~~
 参数：-DarchetypeCatalog=internal
@@ -280,21 +274,20 @@ maven的仓库可以分为3种：
 
 1. 第一步：File--New--Project
 
-![1536323729345](img/1536323729345.png) 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536323729345.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 2. 第二步：选择maven然后下一步：
 
-![1536323794913](img/1536323794913.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536323794913.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 3. 第三步：填写项目的坐标信息：
 
-![1536324650210](img/1536324650210.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536324650210.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 附：
 
@@ -306,17 +299,17 @@ ArtifactID就是项目的唯一的标识符， 一般是 项目名-xxx   比如t
 
 4. 第四步：指定项目名称和路径：idea会把项目名中的`-` 去掉，我们给添加上即可。
 
-![1536324797585](img/1536324797585.png) 
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536324797585.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 2.2 java工程目录简介
 
-![1536325214803](img/1536325214803.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536325214803.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -336,15 +329,15 @@ public class MavenTest {
 
 运行程序：点击main方法左侧的绿色小三角，点击**图标1** 或者**图标2** 运行程序：
 
-![1536325547012](img/1536325547012.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536325547012.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 运行结果：如果控制台上能够正常打印如下信息，则说明工程创建没问题：
 
-![1536325628492](img/1536325628492.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536325628492.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -360,17 +353,17 @@ public class MavenTest {
 
 ​	web项目的打包方式为war，打开maven项目的pom文件。在项目的坐标信息下添加<packaging>标签，设置打包方式。
 
-![1536373704461](img/1536373704461.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536373704461.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 【import Changes】
 
-![1552707375575](img/1552707375575.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1552707375575.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -378,27 +371,27 @@ public class MavenTest {
 
 打开**Project Structure** 视图
 
-![1536373953501](img/1536373953501.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536373953501.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 **新增web.xml文件**：按照数字图标的顺序操作
 
-![1536373997409](img/1536373997409.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536373997409.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 **设置web.xml的路径** ：点击web.xml后会自动弹出一个窗口设置路径
 
-![1536374162723](img/1536374162723.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536374162723.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 点击Apply，OK即可：
 
-![1536374230001](img/1536374230001.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536374230001.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -406,9 +399,9 @@ public class MavenTest {
 
 ​	设置完成之后，main目录下会创建webapp-WEB-INF-web.xml。
 
-![1536374298208](img/1536374298208.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536374298208.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -416,27 +409,25 @@ public class MavenTest {
 
 ##### 第一步：Edit Configurations
 
-![1536374514414](img/1536374514414.png)
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536374514414.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ##### 第二步：添加local tomcat
 
 ​	按照下图数字图标顺序操作： ＋ --> Tomcat Server --> Local
 
-![1536374604706](img/1536374604706.png)
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536374604706.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 ##### 第三步：配置tomcat
 
-![1536374866740](img/1536374866740.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536374866740.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -458,10 +449,9 @@ public class MavenTest {
 ~~~
 
 ​	启动tomcat后，访问hello.html。如果能正确访问到hello.html。说明项目创建OK。
-
-![1536375126705](img/1536375126705.png) 
+ 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536375126705.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -535,10 +525,10 @@ mvn install ：发布项目到本地仓库 ；
 
 ​	clean命令的作用是清理项目编译或打包后生成的文件，具体对应maven项目中的target目录；
 
-![1536461829797](img/1536461829797.png) 
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536461829797.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -547,10 +537,10 @@ mvn install ：发布项目到本地仓库 ；
 
 ​	compile命令的作用是编译src/main/java中的java代码编译成可直接运行的class文件。编译完成后maven项目会自动创建一个target目录来存储这些文件。
 
-![1536462238225](img/1536462238225.png) 
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536462238225.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 2.3、mvn test
@@ -559,15 +549,15 @@ mvn install ：发布项目到本地仓库 ；
 
 编译后生成的文件：
 
-![1536462607624](img/1536462607624.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536462607624.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 运行日志：
 
-![1536462659065](img/1536462659065.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536462659065.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -575,25 +565,24 @@ mvn install ：发布项目到本地仓库 ；
 
 ​	package命令是将项目打包成可以发布的包。maven项目常见的打包方式有两种，maven的java project会打成jar包。maven的web project会打成war包。打包完成后将生成的文件存放在target目录中。
 
-![1536463083110](img/1536463083110.png) 
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536463083110.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 2.5、 mvn install
 
 ​	install命令是将当前的项目打包并发布到本地仓库中，供本地的其他maven项目使用。项目发布的路径：**本地仓库路径/groupId/artifactId/** 
 
-![1536463413099](img/1536463413099.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536463413099.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1536463635011](img/1536463635011.png) 
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536463635011.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -602,9 +591,9 @@ mvn install ：发布项目到本地仓库 ；
 
 ​	maven的核心分发包只有几兆大小，核心包中仅仅定义了抽象的生命周期。生命周期的各个阶段都是由插件完成的，它会在需要的时候下载并使用插件，例如我们在执行mvn compile命令时实际是在调用maven的compile插件来编译java源码：
 
-![1536460661151](img/1536460661151.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536460661151.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ​	我们使用IDEA创建maven项目后，就不需要再手动输入maven的命令来构建maven的生命周期了。IDEA给每个maven构建项目生命周期各个阶段都提供了图形化界面的操作方式。具体操作如下：
 
@@ -612,15 +601,14 @@ mvn install ：发布项目到本地仓库 ；
 
 ​	依次打开：View--》Tool Windows--》Maven Projects
 
-![1536461075676](img/1536461075676.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536461075676.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 打开IDEA编辑区右侧:Maven Projects会弹出如下窗口，打开窗口中的Lifecycle即可看到相关命令。
 
-![1536461166495](img/1536461166495.png) 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536461166495.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -686,9 +674,9 @@ pom.xml
 
 
 
-![1563638964921](img\1563638964921.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1563638964921.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 #### 2.2 依赖导入
 
@@ -698,21 +686,21 @@ pom.xml
 
 1. 第一步：鼠标光标移入到在pom.xml文件中，按Alt+Insert键。会弹出一个选择框：
 
-![1536472102384](img/1536472102384.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536472102384.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 2. 选择Dependency后会弹出一个搜索框：输入要添加的jar包的名字
 
-![1536472270456](img/1536472270456.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536472270456.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ​	选择需要的jar包后按回车键即可自动添加此依赖；
 
-![1536472334464](img/1536472334464.png) 
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536472334464.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -724,27 +712,26 @@ pom.xml
 
 1. 在中央仓库中查找：<http://mvnrepository.com/>
 
-![1536472944915](img/1536472944915.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536472944915.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1536473010206](img/1536473010206.png)
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536473010206.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ​	将以下坐标复制到pom文件中即可：
 
-![1536473048664](img/1536473048664.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536473048664.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ​	pom文件中引入依赖后，会去私服或者中央仓库中下载依赖：如果项目结构的External Librarites中出现刚引入的依赖，则说明依赖引入成功。
 
-![1536473173756](img/1536473173756.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536473173756.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 **私服**
@@ -930,14 +917,13 @@ maven的test指令运行测试代码存在中文乱码问题, 用这个插件可
 
 需要进行如下配置 : 重置配置一个tomcat
 
-![1563644550453](img\1563644550453.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1563644550453.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1563644677915](img\1563644677915.png)
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1563644677915.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 #### 4.4 插件完整配置
 
@@ -995,17 +981,17 @@ maven的test指令运行测试代码存在中文乱码问题, 用这个插件可
 
 * 第一步：创建maven的web项目，并配置webapp和web.xml;
 
-![1536501232886](img/1536501232886.png) 
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536501232886.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 * 第二步：修改pom文件中打包方式为war；
 
-![1536501327478](img/1536501327478.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536501327478.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -1013,9 +999,9 @@ maven的test指令运行测试代码存在中文乱码问题, 用这个插件可
 
 * 第一步：复制静态页面到webapp目录下：
 
-![1536501505609](img/1536501505609.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536501505609.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 * 第二步：复制java代码到src/main/java目录中：
 
@@ -1023,9 +1009,9 @@ maven的test指令运行测试代码存在中文乱码问题, 用这个插件可
 
   >注意,如果要在resources下创建目录 : com/itheima/dao(directory) 之类的, 千万别写 com.itheima.dao(package)
 
-![1536501750887](img/1536501750887.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536501750887.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 ### 3、对照原项目jar包导入依赖
 
@@ -1089,25 +1075,25 @@ maven的test指令运行测试代码存在中文乱码问题, 用这个插件可
 1. servlet： provided；
 2. mysql驱动：runtime；
 
-![1536503546046](img/1536503546046.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536503546046.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1536921400386](img/1536921400386.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536921400386.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ###
 
 ### 5、配置tomcat启动
 
-![1536504191050](img/1536504191050.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1536504191050.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 6、配置插件
@@ -1290,17 +1276,19 @@ maven的test指令运行测试代码存在中文乱码问题, 用这个插件可
 
 ​	初始情况下，我们的本地仓库是没有任何jar包的，此时会从私服去下载（如果没有配置，就直接从中央仓库去下载），可能由于网络的原因，jar包下载不完全，这些不完整的jar包都是以lastUpdated结尾。此时，maven不会再重新帮你下载，需要你删除这些以lastUpdated结尾的文件。如果本地仓库中有很多这样的以lastUpadted结尾的文件，可以执行如下脚本来删除：
 
-![lastUpdate](img/lastUpdated.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/lastUpdate.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
- 将今天下发资料中的内容复制到本地仓库的根目录中![1599274858340](img\1599274858340.png)
-
+ 将今天下发资料中的内容复制到本地仓库的根目录中!
+<figure class="thumbnails">
+    <img src="picture/maven/1599274858340.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 复制完毕后，双击运行即可删除maven仓库中的残留文件。
 
-![1599274973940](img\1599274973940.png)
+
  <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/maven/1599274973940.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>

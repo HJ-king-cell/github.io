@@ -31,8 +31,10 @@ maven的仓库可以分为3种：
 | 中央仓库 | 是远程仓库，仓库中jar由专业团队（maven团队）统一维护。中央仓库的地址：<https://repo1.maven.org/maven2> |
 | 私服     | 是远程仓库, 一般是在公司内部架设一台私人服务器对外公开。开发中经常使用的国内私服：阿里云 http://maven.aliyun.com/nexus/content/groups/public |
 
-![1536321846073](img/1536321846073.png)
 
+<figure class="thumbnails">
+    <img src="picture/maven/1536321846073.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ### 1.3 maven常用命令
@@ -62,8 +64,11 @@ maven的仓库可以分为3种：
 
 通过上面三个参数我们就能够确定一个唯一版本号的jar包。
 
-![1563638964921](img\1563638964921.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1563638964921.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ### 1.5 maven的依赖范围
@@ -78,8 +83,11 @@ maven的仓库可以分为3种：
 
 （3）是否参与打包（package指令范围内）
 
-![](img/50.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/50.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ##### 指定依赖范围的方法
@@ -133,8 +141,9 @@ maven的仓库可以分为3种：
 
 被依赖：spring-context
 
-![1600865224157](/img/1600865224157.png)
-
+<figure class="thumbnails">
+    <img src="picture/maven/1600865224157.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 **2.依赖传递包**
@@ -145,23 +154,34 @@ maven的仓库可以分为3种：
 
 被依赖：spring-aop 、spring-beans、spring-core、spring-expression
 
-![1600865401414](/img/1600865401414.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600865401414.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 **3.依赖传递**
 
 直接依赖包自身将需要的依赖包导入到项目中，我们称之为包的依赖传递。
 
-![1559549336921](.\img\图片3.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559549336921.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ​                         
 
 通过上面的图可以看到，我们的web项目直接依赖了spring-context，而spring-webcontextvc依赖了sping-aop、spring-beans等。最终的结果就是在我们的web项目中间接依赖了spring-aop、spring-beans等。
 
-![1600912765732](/img/1600912765732.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600912765732.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 2.2 什么是依赖冲突
 
@@ -173,7 +193,12 @@ maven的仓库可以分为3种：
 
 ​         这就造成了依赖冲突。
 
-![1600866673155](/img/1600866673155.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600866673155.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 maven工程中的两个直接依赖包中的依赖传递包，出现同种功能的并且包名一致，但是版本不一致，这种现象称之为依赖冲突。
 
@@ -216,7 +241,12 @@ Maven 的依赖调节原则常用的有有以下：
 
 在 pom 文件中定义依赖，以先声明的依赖为准。其实就是根据坐标导入的顺序来确定最终使用哪个传递过来的依赖。
 
-![1600866673155](/img/1600866673155.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600866673155.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 结论：通过上图可以看到，spring-context 和spring-webmvc 都传递过来了spring-beans，但是因为spring-context 在前面，所以最终使用的 spring-beans 是由spring-context 传递过来的，而spring-webmvc 传递过来的spring-beans则被忽略了。
 
@@ -246,15 +276,22 @@ Maven 的依赖调节原则常用的有有以下：
 
 项目打包后的效果
 
-![1600867938708](/img/1600867938708.png)
 
+<figure class="thumbnails">
+    <img src="picture/maven/1600867938708.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 #### 2.4.2 路径近者优先
 
 在 pom 文件中，spring-context 和 spring-webmvc 都将 spring-beans 作为依赖传递包，而项目中又将 spring-beans 作为直接依赖包导入到 pom 文件中，如下：
 
-![1600868203680](/img/1600868203680.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600868203680.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 结论：通过上图可以看到，spring-context 和spring-webmvc 都传递过来了spring-beans，但是因为项目将 spring-beans 作为直接依赖包导入，所以最终使用的 直接依赖包 spring -beans，其他的都会被忽略了。
 
@@ -289,15 +326,23 @@ Maven 的依赖调节原则常用的有有以下：
 
 打包的结果：
 
-![1600868508686](/img/1600868508686.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600868508686.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ### 2.5 排除依赖
 
 可以使用exclusions标签将传递过来的依赖排除出去。
 
-![1600868869595](/img/1600868869595.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600868869595.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 结论：通过上图可以看到，spring-context 已经将依赖传递spring-beans排除出去了，此时就会使用 spring-web 依赖传递包 spring-beans 。
 
@@ -326,8 +371,11 @@ Maven 的依赖调节原则常用的有有以下：
 
 打包的结果：
 
-![1600869045355](/img/1600869045355.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600869045355.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ### 2.6 版本锁定
@@ -342,8 +390,11 @@ Maven 的依赖调节原则常用的有有以下：
 
 **1.在dependencyManagement标签中锁定依赖的版本**
 
-![1600869883265](/img/1600869883265.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600869883265.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 PS：dependencyManager 标签中的内容，并不会导入jar包到项目中，它只负责对包版本进行锁定。
@@ -352,7 +403,12 @@ PS：dependencyManager 标签中的内容，并不会导入jar包到项目中，
 
 **2.在dependencies标签中声明需要导入的maven坐标**
 
-![1600915523227](/img/1600915523227.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600915523227.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 由于 dependencyManager  中已经对 spring-beans 进行了版本的锁定，所以直接依赖包 spring-webmvc 和 spring-context 会将 spring-beans 依赖版本提升为 5.0.6 版本。
 
@@ -388,8 +444,11 @@ PS：dependencyManager 标签中的内容，并不会导入jar包到项目中，
 
 打包效果：
 
-![1600870619145](/img/1600870619145.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600870619145.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1052,9 +1111,17 @@ public class AccountController {
 
 在现实生活中，汽车厂家进行汽车生产时，由于整个生产过程非常复杂和繁琐，工作量非常大，所以车场都会将整个汽车的部件分开生产，最终再将生产好的部件进行组装，形成一台完整的汽车。
 
-![1559550879535](.\img\图片12.png)
+<figure class="thumbnails">
+    <img src="picture/maven/1559550879535.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
-![1559550904100](.\img\图片13.png)
+
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559550904100.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```java
 开发模式:
@@ -1078,8 +1145,11 @@ public class AccountController {
 
 在Java语言中，类之间是可以继承的，通过继承，子类就可以引用父类中非private的属性和方法。同样，在maven工程之间也可以继承，子工程继承父工程后，就可以使用在父工程中引入的依赖。继承的目的是为了消除重复代码。
 
-![1600881898559](/img/1600881898559.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600881898559.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 通过上面的结构图可以看到：
@@ -1138,7 +1208,12 @@ public class AccountController {
 
 例如拆分后的maven工程有多个，如果要进行打包，就需要针对每个工程分别执行打包命令，操作起来非常繁琐。这时就可以使用<modules>标签将这些工程统一聚合到maven工程中，需要打包的时候，只需要在此工程中执行一次打包命令，其下被聚合的工程就都会被打包了。
 
-![1559551000245](.\img\图片15.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551000245.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1178,9 +1253,11 @@ public class AccountController {
 
 maven_parent进行打包，也会将其子项目一起打包。
 
-![1600931151164](/img/1600931151164.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/maven/1600931151164.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1384,7 +1461,12 @@ maven_parent进行打包，也会将其子项目一起打包。
 ```
 在pojo模块中创建对象
 
-![1600934231542](/img/1600934231542.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600934231542.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 Account实体
 
@@ -1457,7 +1539,11 @@ public class Account {
 
 创建DAO接口和Mapper映射文件
 
-![1600934268651](/img/1600934268651.png)
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600934268651.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```java
 package com.itheima.dao;
@@ -1629,8 +1715,11 @@ jdbc.password=root
 
 </project>
 ```
-![1600934452955](/img/1600934452955.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600934452955.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 创建Service接口和实现类
@@ -1838,8 +1927,11 @@ public class AccountServiceImpl implements IAccountService {
 ```
 
 
-![1600934556304](/img/1600934556304.png)   
 
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600934556304.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1982,7 +2074,12 @@ maven私服就是公司局域网内的maven远程仓库，每个员工的电脑�
 
 nexus 是一个maven仓库管理器（其实就是一个软件），nexus可以充当maven私服，同时nexus还提供强大的仓库管理、构件搜索等功能。
 
-![1600935645214](/img/1600935645214.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600935645214.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 5.2 搭建maven私服
 
@@ -1994,11 +2091,20 @@ https://help.sonatype.com/repomanager2/download/download-archives---repository-m
 
 将下载的压缩包进行解压，进入bin目录
 
-![1559551510928](.\img\图片17.png)
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551510928.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 打开cmd窗口并进入上面bin目录下，执行`nexus.bat install`命令安装服务（==注意需要以管理员身份运行cmd命令==）
 
-![1559551531544](.\img\图片18.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551531544.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ③启动nexus
 
@@ -2006,11 +2112,20 @@ https://help.sonatype.com/repomanager2/download/download-archives---repository-m
 
 方式一：在Windows系统服务中启动nexus
 
-![1559551564441](.\img\图片19.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551564441.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 方式二：在命令行执行`nexus.bat start`命令启动nexus
 
-![1559551591730](.\img\图片20.png)
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551591730.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ④访问nexus
 
@@ -2020,9 +2135,17 @@ https://help.sonatype.com/repomanager2/download/download-archives---repository-m
 
 登录成功后点击左侧菜单Repositories可以看到nexus内置的仓库列表（如下图）
 
-![1559551620133](.\img\图片.png)
 
-![image-20200609162746460](img/image-20200609162746460.png)
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551620133.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/image-20200609162746460.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 nexus仓库类型
 
@@ -2057,11 +2180,20 @@ Central: ★中央仓库下载的jar包
 
 ④virtual(虚拟)：兼容Maven1版本的jar或者插件
 
-![1559551723693](.\img\图片21.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551723693.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 nexus仓库类型与安装目录对应关系
 
-![1559551752012](.\img\图片22.png)
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559551752012.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 5.3 将项目发布到maven私服
 
@@ -2104,17 +2236,32 @@ maven私服是搭建在公司局域网内的maven仓库，公司内的所有开�
 
 3. 执行mvn deploy命令（第一次需要联网）
 
-![1600900695200](/img/1600900695200.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600900695200.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 运行后的结果：
 
 私服仓库
 
-![1600900750039](/img/1600900750039.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600900750039.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 所对应的本地文件
 
-![1600900817382](/img/1600900817382.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1600900817382.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 5.4 从私服下载jar到本地仓库
 
@@ -2245,7 +2392,12 @@ install:install-file     --固定写法
 
 ③查看本地maven仓库，确认安装是否成功
 
-![1559552325997](.\img\图片24.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/maven/1559552325997.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 6.2 将第三方jar安装到maven私服
 
