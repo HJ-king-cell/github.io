@@ -173,7 +173,11 @@ typora-root-url: ./
 
 - 常用指令
 
-  ![](.\img\常用指令-指令介绍.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/web/Vue/常用指令-指令介绍.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 2.2、文本插值
 
@@ -343,11 +347,11 @@ typora-root-url: ./
                       a. 遍历数组
   
                           names:["张三","李四","王五"]
-                      element : 每次遍历出来的元素
+                      Vue : 每次遍历出来的元素
                       names : 被遍历的数组
               -->
-              <li v-for="element in names">
-                  {{element}}
+              <li v-for="Vue in names">
+                  {{Vue}}
               </li>
               <!--
                     b. 遍历对象
@@ -356,19 +360,19 @@ typora-root-url: ./
                             age:23
                         }
                 -->
-              <li v-for="element in student">
-                {{element}}
+              <li v-for="Vue in student">
+                {{Vue}}
               </li>
               <!--
                   2. 类似于普通for循环
                       (元素,索引) in 被遍历的数组
               -->
-              <li v-for="(element,index) in names">
-                  元素:{{element}},索引:{{index}}
+              <li v-for="(Vue,index) in names">
+                  元素:{{Vue}},索引:{{index}}
               </li>
   
-              <li v-for="(element,index) in student">
-                  元素:{{element}},索引:{{index}}
+              <li v-for="(Vue,index) in student">
+                  元素:{{Vue}},索引:{{index}}
               </li>
           </ul>
       </div>
@@ -490,9 +494,11 @@ typora-root-url: ./
   将Model和View关联起来的就是ViewModel，它是桥梁。
   ViewModel负责把Model的数据同步到View显示出来，还负责把View修改的数据同步回Model。
 
-  ![](.\img\1539348598180.png)
 
-  
+
+   <figure class="thumbnails">
+    <img src="picture/web/Vue/1539348598180.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
   ```html
   <!DOCTYPE html>
@@ -593,15 +599,19 @@ typora-root-url: ./
 
 ## **3.1 生命周期**
 
-![](img/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png) 
 
 
+ <figure class="thumbnails">
+    <img src="picture/web/Vue/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## **3.2 生命周期的八个阶段**
 
-![](img/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E5%85%AB%E4%B8%AA%E9%98%B6%E6%AE%B5.png) 
 
 
+ <figure class="thumbnails">
+    <img src="picture/web/Vue/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E7%9A%84%E5%85%AB%E4%B8%AA%E9%98%B6%E6%AE%B5.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## **3.3 代码(了解)**
 
@@ -653,7 +663,7 @@ typora-root-url: ./
 				},
 				beforeUpdate: function() {
 					console.group('beforeUpdate 更新前状态===============》');
-					let dom = document.getElementById("app").innerHTML;
+					let dom = document.getVueById("app").innerHTML;
 					console.log(dom);
 					console.log("%c%s", "color:red", "el     : " + this.$el);
 					console.log(this.$el);
@@ -662,7 +672,7 @@ typora-root-url: ./
 				},
 				updated: function() {
 					console.group('updated 更新完成状态===============》');
-					let dom = document.getElementById("app").innerHTML;
+					let dom = document.getVueById("app").innerHTML;
 					console.log(dom);
 					console.log("%c%s", "color:red", "el     : " + this.$el);
 					console.log(this.$el);
@@ -812,7 +822,11 @@ typora-root-url: ./
 
 - **axios常用方法**
 
-  ![](img/axios常用方法.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/web/Vue/axios常用方法.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 - **代码实现**
 
@@ -957,8 +971,8 @@ typora-root-url: ./
 <div id="div">
     <div id="users">
         <ul>
-         <li v-for="element in users">
-            id:{{element.id}} --name:{{element.name}}--age:{{element.age}}
+         <li v-for="Vue in users">
+            id:{{Vue.id}} --name:{{Vue.name}}--age:{{Vue.age}}
          </li>
         </ul>
     </div>
@@ -1016,8 +1030,8 @@ typora-root-url: ./
 <div id="div">
     <div id="users">
         <ul>
-         <li v-for="element in users">
-            id:{{element.id}} --name:{{element.name}}--age:{{element.age}}
+         <li v-for="Vue in users">
+            id:{{Vue.id}} --name:{{Vue.name}}--age:{{Vue.age}}
          </li>
         </ul>
     </div>
@@ -1105,23 +1119,6 @@ typora-root-url: ./
 </script>
 </html>
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 ```java
@@ -1257,9 +1254,11 @@ public class User implements Serializable {
 
 **1.在项目Setting中找到对应的设置**
 
-![1599647271897](/img/1599647271897.png)
 
 
+ <figure class="thumbnails">
+    <img src="picture/web/Vue/1599647271897.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **2.将下面的命令填写到执行的位置**
 
@@ -1267,4 +1266,7 @@ public class User implements Serializable {
 @tap,@tap.stop,@tap.prevent,@tap.once,@click,@click.stop,@click.prevent,@click.once,@change,@change.lazy,@change.number,@change.trim,@on,@blur,@fous,@submit,scoped,v-model,v-model.number,v-model.trim,v-for,v-text,v-html,v-show,v-if,v-else-if,v-else,v-pre,v-bind,v-bind:class,v-bind:style,v-bind:id,v-bind:href,:class,:style,:id,:href
 ```
 
-![1599647212374](/img/1599647212374.png)
+
+ <figure class="thumbnails">
+    <img src="picture/web/Vue/1599647212374.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>

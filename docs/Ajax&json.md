@@ -4,7 +4,11 @@
 
 ### 1.1 什么是ajax
 
-![1553212487038](assets/1553212487038.png) 
+
+
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553212487038.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ​	**异步JavaScript和XML (Asynchronous Javascript And XML)**
 
@@ -48,13 +52,19 @@
 
 很大企业开发中，是同步和异步并存的方式。	
 
-![1553212724057](assets/1553212724057.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553212724057.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ​	AJAX使用异步的提交方式，浏览器与服务器可以并行操作，即浏览器后台发送数据给服务器。用户在前台还是可以继续工作。用户感觉不到浏览器已经将数据发送给了服务器，并且服务器也已经返回了数据。
 
-![1553212896200](assets/1553212896200.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553212896200.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 1.3 AJAX的应用场景
 
@@ -62,25 +72,37 @@
 
 ​	很多站点的注册页面都具备自动检测用户名是否存在的友好提示，该功能整体页面并没有刷新，但仍然可以异步与服务器端进行数据交换，查询用户的输入的用户名是否在数据库中已经存在。   
 
-![1553212896200](assets/1553212896200.png)                                                         
+                                                    
+
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553212896200.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ####  1.3.2 内容自动补全
 
 百度的搜索补全功能：
 
-![1553213438248](assets/1553213438248.png)     
+
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553213438248.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 京东的搜索补全功能：
 
-![1553213486539](assets/1553213486539.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553213486539.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 二. 原生ajax的访问流程[了解]
 
 ### 1.1 AJAX的执行流程
 
-![1553214240418](assets/1553214240418.png)
+
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553214240418.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 流程说明：
 
@@ -258,9 +280,11 @@ public class HelloServlet extends javax.servlet.http.HttpServlet {
 
 ​	jquery作为一个优秀的js框架, 自然也会对ajax的复杂的api进行封装:
 
-![1590596120929](assets/1590596120929.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1590596120929.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 3.3.1 get/post 函数
 
@@ -589,9 +613,11 @@ json可以取代XML笨重的数据结构，和xml相比：更小、更快，更�
 
 > json、xml作用：作为数据的载体，在网络中传输
 
-![1590628812135](assets/1590628812135.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1590628812135.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```HTML
 <!DOCTYPE html>
@@ -832,7 +858,10 @@ public class User {
 
 **常见的json转换工具**
 
-![1553220531567](assets/1553220531567.png)
+
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553220531567.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### **4.4.2 使用步骤**
 
@@ -1050,9 +1079,9 @@ public class JsonTest {
 
 
 
-![1592379230100](assets/1592379230100.png)  
-
-
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1592379230100.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```html
 <!DOCTYPE html>
@@ -1169,13 +1198,18 @@ public class AjaxServlet extends javax.servlet.http.HttpServlet {
 4. 否则要隐藏div。
 5. 给大div中的子div绑定鼠标点击事件，点击某个名字则将div的文本内容显示在文本框中，并隐藏div
 
-![1565427178364](assets/1565427178364.png)
+
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1565427178364.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **效果**
 
-![1553220989638](assets/1553220989638.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/web/Ajax&json/1553220989638.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
