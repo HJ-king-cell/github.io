@@ -546,11 +546,18 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 
 #### ① 当前web项目引入jar包
 
-![1587523977994](assets/1587523977994.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/web/jsp&mvc/1587523977994.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### ② 当前jsp页面tablib指令引入
 
-![1587524031438](assets/1587524031438.png) 
+
+ <figure class="thumbnails">
+    <img src="picture/web/jsp&mvc/1587524031438.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 2.2.2 常用标签
 
@@ -754,7 +761,7 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 
 ### 3.2.1 需求分析
 
-![1587536245514](assets/1587536245514.png) 
+
  <figure class="thumbnails">
     <img src="picture/web/jsp&mvc/1587536245514.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
