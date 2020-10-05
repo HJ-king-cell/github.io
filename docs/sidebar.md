@@ -1,5 +1,9 @@
 - **web**
 - []()
+- []()
+- []()
+- []()
+- [jQuery](jQuery)
 - [Ajax&json](Ajax&json)
 - [Vue](Vue)
 - [elementUI](elementUI)
