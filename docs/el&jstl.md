@@ -85,7 +85,7 @@ EL表达式主要简化从域对象（4个域）中获取数据
 ```
 示例代码：
 
-```jsp
+```web/jsp
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -163,7 +163,7 @@ EL表达式主要简化从域对象（4个域）中获取数据
 
 
 
-```jsp
+```web/jsp
 <%@ page import="com.itheima01.el.User" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Collections" %>
@@ -256,7 +256,7 @@ EL表达式主要简化从域对象（4个域）中获取数据
 
 
 
-```jsp
+```web/jsp
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -364,7 +364,7 @@ EL表达式主要简化从域对象（4个域）中获取数据
 			可以获取浏览器指定cookie名称的值
 ```
 
-```jsp
+```web/jsp
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -385,9 +385,9 @@ EL表达式主要简化从域对象（4个域）中获取数据
             %>
             ${pageContext.request.contextPath} <br>
 
-            <a href="http://localhost:8080/day08-el&jstl">index.jsp</a> <br>
-            <a href="http://localhost:8080${pageContext.request.contextPath}">index.jsp</a>
-            <a href="index.jsp">index.jsp</a> <br>
+            <a href="http://localhost:8080/day08-el&jstl">index.web/jsp</a> <br>
+            <a href="http://localhost:8080${pageContext.request.contextPath}">index.web/jsp</a>
+            <a href="index.web/jsp">index.web/jsp</a> <br>
 
             ${cookie.JSESSIONID.value}
 
@@ -413,7 +413,7 @@ EL表达式主要简化从域对象（4个域）中获取数据
 		\${表达式}
 ```
 
-```jsp
+```web/jsp
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%--
         isELIgnored="true"   (整个jsp)
@@ -443,9 +443,9 @@ EL表达式主要简化从域对象（4个域）中获取数据
             %>
             ${pageContext.request.contextPath} <br>
 
-            <a href="http://localhost:8080/day08-el&jstl">index.jsp</a> <br>
-            <a href="http://localhost:8080${pageContext.request.contextPath}">index.jsp</a>
-            <a href="index.jsp">index.jsp</a> <br>
+            <a href="http://localhost:8080/day08-el&jstl">index.web/jsp</a> <br>
+            <a href="http://localhost:8080${pageContext.request.contextPath}">index.web/jsp</a>
+            <a href="index.web/jsp">index.web/jsp</a> <br>
 
             \${cookie.JSESSIONID.value}
 
@@ -532,11 +532,11 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 
 | **标签库**          | **标签库的URI**                        | **前缀** |
 | ------------------- | -------------------------------------- | -------- |
-| **Core**            | http://java.sun.com/jsp/jstl/core      | c        |
-| 国际化(几乎不用)    | http://java.sun.com/jsp/jstl/fmt       | fmt      |
-| SQL(过时)           | http://java.sun.com/jsp/jstl/sql       | sql      |
-| XML(过时)           | http://java.sun.com/jsp/jstl/xml       | x        |
-| Functions(几乎不用) | http://java.sun.com/jsp/jstl/functions | fn       |
+| **Core**            | http://java.sun.com/web/jsp/jstl/core      | c        |
+| 国际化(几乎不用)    | http://java.sun.com/web/jsp/jstl/fmt       | fmt      |
+| SQL(过时)           | http://java.sun.com/web/jsp/jstl/sql       | sql      |
+| XML(过时)           | http://java.sun.com/web/jsp/jstl/xml       | x        |
+| Functions(几乎不用) | http://java.sun.com/web/jsp/jstl/functions | fn       |
 
 
 
@@ -566,10 +566,10 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 	注意：此标签没有else功能，如果想实现else效果，请让条件取反
 ```
 
-```jsp
+```web/jsp
 <%@ page import="cn.itcast.domain.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/web/jsp/jstl/core" %>
 <html>
 <head>
     <title>demo1</title>
@@ -636,11 +636,11 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 				count 计数器   从1开始
 ```
 
-```jsp
+```web/jsp
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.Collections" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/web/jsp/jstl/core" %>
 
 <%--
     使用jstl标签库
@@ -741,7 +741,7 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598786179375.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598786179375.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 3.2 案例：用户信息列表展示
@@ -756,7 +756,7 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 
 ![1587536245514](assets/1587536245514.png) 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1587536245514.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1587536245514.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -769,7 +769,7 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 3. 做开发
 	a. 需求分析: 项目负责人
 	b. 技术选型: 组内讨论
-		jsp(jstl包) 
+		web/jsp(jstl包) 
 ```
 
 
@@ -779,14 +779,14 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598789452814.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598789452814.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### ② 导入第三方依赖jar包（jstl）
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598789430295.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598789430295.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### ③ 创建三层包目录结构
@@ -794,21 +794,21 @@ JSTL标准标签库有5个子库，但随着发展，目前常使用的是它的
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598789351847.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598789351847.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### ④ 最终项目结构
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598789499633.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598789499633.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 3.2.3 代码实现
 
-#### ① index.jsp
+#### ① index.web/jsp
 
-```jsp
+```web/jsp
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
@@ -948,7 +948,7 @@ public class FindAllServlet extends HttpServlet {
         //3. 数据转发到jsp
         request.setAttribute("list",list);
         //TODO: list.jsp待会写
-        request.getRequestDispatcher("list.jsp").forward(request,response);
+        request.getRequestDispatcher("list.web/jsp").forward(request,response);
     }
 
 }
@@ -1013,11 +1013,11 @@ public class FriendDao {
 
 
 
-#### ⑥ list.jsp
+#### ⑥ list.web/jsp
 
-```jsp
+```web/jsp
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/web/jsp/jstl/core" %>
 <html>
 <head>
     <title>Title</title>

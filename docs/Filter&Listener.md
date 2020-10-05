@@ -1,6 +1,6 @@
 
 
-# Filter&Listener
+# web/Filter&Listener
 
 **今日目标**
 
@@ -16,7 +16,7 @@ Servlet规范中的三大组件：
 | **组件**     | **作用**                                                     | **实现接口**                                  |
 | ------------ | ------------------------------------------------------------ | --------------------------------------------- |
 | **Servlet**  | 小应用程序，在JavaWeb中主要做为控制器来使用  可以处理用户的请求并且做出响应 | javax.servlet.Servlet                         |
-| **Filter**   | 过滤器，对用户发送的请求或响应进行集中处理，实现请求的拦截   | javax.servlet.Filter                          |
+| **web/Filter**   | 过滤器，对用户发送的请求或响应进行集中处理，实现请求的拦截   | javax.servlet.web/Filter                          |
 | **Listener** | 监听器，在某些框架中会使用到监听器(比如spring)，在Web执行过程中，引发一些事件，对相应事件进行处理 | javax.servlet.XxxListener  每个事件有一个接口 |
 
 
@@ -40,7 +40,7 @@ Servlet规范中的三大组件：
 
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1592011832218.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1592011832218.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -82,7 +82,7 @@ import java.io.IOException;
     1.实现Servlet规范中的Filter接口
     2.在filter中的doFilter方法中进行过滤操作
  */
-public class FirstFilter implements Filter {
+public class FirstFilter implements web/Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -150,7 +150,7 @@ public class FirstFilter implements Filter {
 ```java
 // 注解配置
 @WebFilter("/HelloServlet"}
-public class FirstFilter implements Filter {
+public class FirstFilter implements web/Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
 
@@ -186,7 +186,7 @@ public class FirstFilter implements Filter {
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
 #parse("File Header.java")
 @javax.servlet.annotation.WebFilter(urlPatterns = "/")
-public class ${Class_Name} implements javax.servlet.Filter {
+public class ${Class_Name} implements javax.servlet.web/Filter {
    
     public void init(javax.servlet.FilterConfig config) throws javax.servlet.ServletException {
     }
@@ -211,7 +211,7 @@ public class ${Class_Name} implements javax.servlet.Filter {
 
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1598890654989.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1598890654989.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -273,7 +273,7 @@ import java.io.IOException;
             tomcat关闭,会随之销毁, 只执行一次
  */
 @WebFilter(urlPatterns={"/HelloServlet"})
-public class FirstFilter implements Filter {
+public class FirstFilter implements web/Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("FirstFilter init");
@@ -374,7 +374,7 @@ import java.io.IOException;
  *   /*(拦截所有资源：动态资源和静态资源)
  */
 @WebFilter(urlPatterns = "/*")
-public class UrlFilter implements Filter {
+public class UrlFilter implements web/Filter {
 
     public void init(FilterConfig config) throws ServletException {
     }
@@ -413,7 +413,7 @@ public class UrlFilter implements Filter {
 #### ① xml版本
 
 ```java
-public class MethodFilter implements Filter {
+public class MethodFilter implements web/Filter {
 
     public void init(FilterConfig config) throws ServletException {
     }
@@ -456,7 +456,7 @@ public class MethodFilter implements Filter {
  */
 @WebFilter(urlPatterns = "/*",dispatcherTypes =
         {DispatcherType.REQUEST,DispatcherType.FORWARD})
-public class MethodFilter implements Filter {
+public class MethodFilter implements web/Filter {
 
     public void init(FilterConfig config) throws ServletException {
     }
@@ -483,7 +483,7 @@ public class MethodFilter implements Filter {
 
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1598805584680.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1598805584680.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -528,7 +528,7 @@ import java.io.IOException;
  *          按照filter-mapping在xml中的配置顺序来进行拦截
  */
 // @WebFilter(urlPatterns = "/ChainServlet")
-public class ChainFilter01 implements Filter {
+public class ChainFilter01 implements web/Filter {
 
     public void init(FilterConfig config) throws ServletException {
     }
@@ -558,7 +558,7 @@ import java.io.IOException;
  * @Description:
  */
 // @WebFilter(urlPatterns = "/ChainServlet")
-public class ChainFilter02 implements Filter {
+public class ChainFilter02 implements web/Filter {
 
     public void init(FilterConfig config) throws ServletException {
     }
@@ -605,7 +605,7 @@ public class ChainFilter02 implements Filter {
 
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1598807154354.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1598807154354.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -625,7 +625,7 @@ tomcat8.5版本中已经将get请求的中文乱码解决了,但是post请求还
 
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1592020764180.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1592020764180.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -642,7 +642,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
 @WebFilter(urlPatterns = "/*")
-public class PostFilter implements Filter {
+public class PostFilter implements web/Filter {
 
     public void init(FilterConfig config) throws ServletException {
     }
@@ -680,7 +680,7 @@ public class PostFilter implements Filter {
 
 
   <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1598878668923.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1598878668923.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -690,14 +690,14 @@ public class PostFilter implements Filter {
 
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1587622532687.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1587622532687.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 > 注意: properties文件编码问题
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1597731514135.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1597731514135.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -742,7 +742,7 @@ import java.util.Properties;
  * @Description:
  */
 @WebFilter("/*")
-public class DirtyFilter implements Filter {
+public class DirtyFilter implements web/Filter {
 
     private List<String> words = null;
 
@@ -907,11 +907,11 @@ import javax.servlet.ServletContextListener;
  * 2.Servlet组件的运行顺序
  *  启动：
  *      1.Listener
- *      2.Filter
+ *      2.web/Filter
  *      3.Servlet
  *  销毁：
  *      1.Serlvet
- *      2.Filter
+ *      2.web/Filter
  *      3.Listener
  */
 
@@ -1210,7 +1210,7 @@ public class SpringServletContextListerner implements ServletContextListener {
  
 
  <figure class="thumbnails">
-    <img src="picture/Filter&Listener/1587779813977.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Filter&Listener/1587779813977.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 

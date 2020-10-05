@@ -4,7 +4,7 @@
 **今日目标**
 
 ```markdown
-* jsp
+* web/jsp
 	工作原理（servlet）
 	脚本注释
 	指令
@@ -27,7 +27,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598751129651.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598751129651.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -41,11 +41,11 @@
 
 ## 1.2 快速入门
 
-感知 : jsp 是 html上写java
+感知 : web/jsp 是 html上写java
 
 ​	在jsp页面，动态展示当前时间
 
-```jsp
+```web/jsp
 <%@ page import="java.util.Date" %>
 <%@ page import="java.time.LocalDateTime" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
@@ -81,7 +81,7 @@
   0. 查看流程
       a. 运行看tomcat日志输出 
               1). Using CATALINA_BASE:   "C:\Users\spy\.IntelliJIdea2018.2\system\tomcat\_class111_web"
-              2). 浏览器访问了jsp页面, 然后到这个目录下查看路径 work\Catalina\localhost\模块名\org\apache\jsp
+              2). 浏览器访问了jsp页面, 然后到这个目录下查看路径 work\Catalina\localhost\模块名\org\apache\web/jsp
               3). 找到xx_jsp.java(继承自org.apache.jasper.runtime.HttpJspBase) 和 对应的class文件
       b. 查找HttpJspBase(实现自HttpServlet)
         
@@ -99,9 +99,9 @@
   1. JSP页面被tomcat翻译成Servlet,怎么翻译的?
   	1). tomcat中有一个Servlet: JspServlet
   		a. 启动加载
-  		b. 虚拟路径: *.jsp (只要访问后缀名为jsp的资源,都会被访问)
-  	2). 用户用浏览器访问 xxx.jsp
-      3). JspServlet会先运行, 将xxx.jsp 翻译成 xxx.java(Servlet)
+  		b. 虚拟路径: *.web/jsp (只要访问后缀名为jsp的资源,都会被访问)
+  	2). 用户用浏览器访问 xxx.web/jsp
+      3). JspServlet会先运行, 将xxx.web/jsp 翻译成 xxx.java(Servlet)
       4). xxxServlet的service方法就会运行
       
   2. 怎么证明xxx.java是 Servlet呢?
@@ -116,7 +116,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598751958636.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598751958636.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -127,7 +127,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598754392014.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598754392014.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -152,7 +152,7 @@
 		jsp中的命令：page include taglib
 ```
 
-```jsp
+```web/jsp
 <%--
   Created by IntelliJ IDEA.
   User: Simple
@@ -327,7 +327,7 @@
 		true：可以操作exception异常对象
 ```
 
-```jsp
+```web/jsp
 <%@ page import="java.time.LocalDateTime" %><%--
   Created by IntelliJ IDEA.
   User: Simple
@@ -336,7 +336,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%--jsp都是以page 来开头的--%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="error.jsp" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="error.web/jsp" %>
 <%--
 	1). contentType 等价于 response.setContentType(); 设置响应体的MIME类型和编码方式
 	2). language    目前仅支持java语言
@@ -367,7 +367,7 @@
 
 500.jsp（异常处理页面）
 
-```jsp
+```web/jsp
 <%--
   Created by IntelliJ IDEA.
   User: Simple
@@ -411,10 +411,10 @@
 2. 目的: 避免代码冗余
 3. 举例:
 		a. 有A.jsp和B.jsp两个页面, 头部都一样, 那么两个页面得写相同的代码两遍, 很冗余
-        b. 把头部抽取出来 top.jsp , 分别A.jsp和B.jsp包含即可, 这样避免了代码冗余
+        b. 把头部抽取出来 top.web/jsp , 分别A.jsp和B.jsp包含即可, 这样避免了代码冗余
         
 4. 语法:  
-	<%@include file="top.jsp"%>        
+	<%@include file="top.web/jsp"%>        
 ```
 
 
@@ -422,12 +422,12 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1587436830957.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1587436830957.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-top.jsp 
+top.web/jsp 
 
-```jsp
+```web/jsp
 <%--
   Created by IntelliJ IDEA.
   User: Simple
@@ -448,7 +448,7 @@ top.jsp
 
 
 
-```jsp
+```web/jsp
 <%--
   Created by IntelliJ IDEA.
   User: Simple
@@ -475,7 +475,7 @@ top.jsp
   <body>
 
     <div>
-      <%@include file="heard.jsp"%>
+      <%@include file="heard.web/jsp"%>
     </div>
     <div>我是体</div>
     <div>我是尾</div>
@@ -498,14 +498,14 @@ top.jsp
 #### ① 导入jar包
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1587437312125.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1587437312125.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### ② 通过taglib指令引入
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1587437472979.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1587437472979.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -555,7 +555,7 @@ top.jsp
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598768996016.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598768996016.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 示例代码：
@@ -598,7 +598,7 @@ public class LoginServlet extends HttpServlet {
             String input_code = request.getParameter("code");
             if (!(code.equalsIgnoreCase(input_code))) {
                 request.setAttribute("err_msg","验证码错误");
-                request.getRequestDispatcher("02login.jsp").forward(request,response);
+                request.getRequestDispatcher("02login.web/jsp").forward(request,response);
                 return;
             }
 
@@ -615,7 +615,7 @@ public class LoginServlet extends HttpServlet {
             } else {
                 // 3.用户数据不存在，调到失败servlet
                 request.setAttribute("err_msg","用户密码不存在或错误");
-                request.getRequestDispatcher("02login.jsp").forward(request,response);
+                request.getRequestDispatcher("02login.web/jsp").forward(request,response);
             }
 
         } catch (IllegalAccessException e) {
@@ -635,7 +635,7 @@ public class LoginServlet extends HttpServlet {
 
 
 
-```jsp
+```web/jsp
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -693,7 +693,7 @@ public class LoginServlet extends HttpServlet {
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598751129651.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598751129651.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 - 后来有了JSP(html+java)，简化了servlet开发；如果过度使用JSP，在JSP页面中写了大量的java代码和html标签，阅读性很差, 造成难于维护，难于分工协作的场景。
@@ -701,7 +701,7 @@ public class LoginServlet extends HttpServlet {
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598769307252.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598769307252.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 - 再后来为了弥补过度使用jsp的问题，我们使用servlet+jsp这套组合拳，利于分工协作。
@@ -709,7 +709,7 @@ public class LoginServlet extends HttpServlet {
 
 
   <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598769726849.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598769726849.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -738,5 +738,5 @@ MVC是软件工程中的一种软件架构模式，它是一种**分离业务逻
 
 
  <figure class="thumbnails">
-    <img src="picture/jsp&mvc/1598783868420.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/jsp&mvc/1598783868420.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>

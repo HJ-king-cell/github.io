@@ -126,7 +126,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553420508548.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553420508548.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 1.1 Windows版Redis的下载
@@ -141,7 +141,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553421186817.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553421186817.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 1.2 Windows版Redis的安装
@@ -177,7 +177,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565489522379.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565489522379.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 关闭
@@ -187,7 +187,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565489626752.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565489626752.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 客户端
@@ -264,7 +264,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565490354241.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565490354241.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 3.2 hash类型的操作命令
@@ -293,7 +293,7 @@
 它的存储结构如下：
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553421986390.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553421986390.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 
@@ -318,7 +318,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565490850121.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565490850121.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 1. 同时取得多个字段：age 和 sex
@@ -327,7 +327,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565490940023.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565490940023.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 3.3 list类型的操作命令
@@ -359,7 +359,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422277890.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422277890.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 | 命令                | 行为                                                         |
@@ -373,7 +373,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422354555.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422354555.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 **练习**
@@ -388,7 +388,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565491565595.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565491565595.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 5. 删除最右边的元素three
@@ -399,7 +399,7 @@
 
  
  <figure class="thumbnails">
-    <img src="picture/Redis/1565491643055.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565491643055.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -425,7 +425,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422461249.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422461249.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 
@@ -450,7 +450,7 @@
  
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565494483459.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565494483459.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 5. 判断A是否在myset集合中
@@ -459,7 +459,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565494529527.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565494529527.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 3.5 zset类型的操作命令
@@ -487,7 +487,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563279583231.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563279583231.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 | **命令**                                        | **行为**                                        |
@@ -513,7 +513,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565494974504.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565494974504.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 5. 查询Japan的索引号(从0开始)
@@ -526,7 +526,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565495068560.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565495068560.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 
@@ -559,7 +559,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565505801233.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565505801233.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 7. 显示所有的键
@@ -571,7 +571,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565505942936.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565505942936.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 10. 分别判断name user myset mylist分别是什么类型
@@ -584,7 +584,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1565506128394.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1565506128394.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 3.7 图形化的客户端工具
@@ -595,7 +595,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422641407.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422641407.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 2. 软件的许可协议，接受即可
@@ -603,7 +603,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422661651.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422661651.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -612,21 +612,21 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422706142.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422706142.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 4. 复制文件
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422721399.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422721399.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 5. 完成安装
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422733890.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422733890.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 3.7.2 客户端工具连接
@@ -636,7 +636,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422795912.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422795912.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 启动后出现如下登录界面：
@@ -644,7 +644,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422814799.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422814799.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ​	一个Redis服务器可以包括多个数据库，客户端可以只连接Redis中某个数据库，就好比一个mysql服务器中创建多个数据库，客户端连接时指定连接到哪个数据库。
@@ -652,7 +652,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553422860771.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553422860771.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -759,7 +759,7 @@
   
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553423429159.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553423429159.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 4. 在客户端添加3个键，发现服务器端有如下输出信息，表示写入到数据库dump.rdb文件中
@@ -767,7 +767,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553423438325.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553423438325.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 5. 直接关闭服务器窗口，再开启服务器，查看所有的keys，数据没有丢失。
@@ -775,7 +775,7 @@
  
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553423445306.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553423445306.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -831,7 +831,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553423644984.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553423644984.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 4. 打开appendonly.aof文件，查看文件的变化。会发现文件记录了所有操作的过程。                                     
@@ -896,7 +896,7 @@ list "C" "D" "E" "F" "G"代替前面的6条命令。
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283369062.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283369062.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 2. 执行以下命令
@@ -910,7 +910,7 @@ list "C" "D" "E" "F" "G"代替前面的6条命令。
    7. 显示列表中的所有元素
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283403726.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283403726.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 3. 输入命令：bgrewriteaof，则aof被重写
@@ -918,7 +918,7 @@ list "C" "D" "E" "F" "G"代替前面的6条命令。
    
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283417153.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283417153.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -927,13 +927,13 @@ list "C" "D" "E" "F" "G"代替前面的6条命令。
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283429470.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283429470.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 5. 服务器上出现提示
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283460687.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283460687.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 4.3.3 演示：AOF后台自动重写 
@@ -955,7 +955,7 @@ list "C" "D" "E" "F" "G"代替前面的6条命令。
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283612553.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283612553.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 5. 生成的重写文件
@@ -963,7 +963,7 @@ list "C" "D" "E" "F" "G"代替前面的6条命令。
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283627280.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283627280.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -971,7 +971,7 @@ list "C" "D" "E" "F" "G"代替前面的6条命令。
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1563283642080.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1563283642080.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## <font color="red">五. Jedis的使用</font>
@@ -985,7 +985,7 @@ Redis不仅可以使用命令来操作，现在基本上主流的语言都有API
 
 
  <figure class="thumbnails">
-    <img src="picture/Redis/1553423812156.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Redis/1553423812156.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ```xml

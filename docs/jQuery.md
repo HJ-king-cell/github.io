@@ -36,7 +36,7 @@ jQuery开发库也是使用JavaScript开发出来，本质上jQuery开发库就�
 
 
  <figure class="thumbnails">
-    <img src="picture/Ajax&json/1553152579233.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Ajax&json/1553152579233.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### jQuery库特点：
@@ -144,7 +144,7 @@ function $(id) {
 
 
  <figure class="thumbnails">
-    <img src="picture/Ajax&json/1553152806464.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Ajax&json/1553152806464.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 中文文档：https://www.jquery123.com/
@@ -202,7 +202,7 @@ function $(id) {
 
 
  <figure class="thumbnails">
-    <img src="picture/Ajax&json/1565228888062.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Ajax&json/1565228888062.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 三. jQuery和js的区别
@@ -1116,7 +1116,7 @@ jq对象.事件函数(function(){})
 
 
  <figure class="thumbnails">
-    <img src="picture/Ajax&json/1586499039991.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/web/Ajax&json/1586499039991.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ```html
