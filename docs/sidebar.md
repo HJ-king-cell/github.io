@@ -1,9 +1,14 @@
 - **MySQL**
-
+- [mysql一](mysql_01)
+- [mysql二](mysql_02)
+- [mysql三](mysql_03)
+- [mysql四](mysql_04)
+- [mysql五](mysql_05)
+- [mysql六](mysql_06)
 - **mybatis**
-- [mybatis一](mybatis一)
-- [mybatis二](mybatis二)
-- [mybatis三](mybatis三)
+- [mybatis一](mybatis_01)
+- [mybatis二](mybatis_02)
+- [mybatis三](mybatis_03)
 - **web**
 - [html&css](html&css)
 - [JavaScript基础](JavaScript基础)
