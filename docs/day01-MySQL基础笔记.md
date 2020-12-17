@@ -91,8 +91,9 @@ E-R 是两个单词的首字母，E表示Entity 实体   R表示Relationship  �
 
 需求： 使用E-R图描述 客户、商品、订单之间的关系。
 
- ![](img/关系型数据库图解.bmp)
-
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 

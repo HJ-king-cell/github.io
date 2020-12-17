@@ -1,21 +1,3 @@
----
-typora-copy-images-to: assets
-typora-root-url: ./
----
-# Cookie
-
-**今日目标**
-
-```markdown
-1. 会话概述
-
-2. cookie【重点】
-
-3. 综合案例
-```
-
-
-
 # 一 会话概述
 
 ## 1.1 什么是会话？
