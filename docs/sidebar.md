@@ -40,6 +40,9 @@
 - [SpringMVC](SpringMVC)
 - [SpringMVC2](SpringMVC2)
 - [SpringMVC3](SpringMVC3)
+- **消息中间件**
+- [RabbitMQ](rabbitmq)
+- [RabbitMQ](rabbitmq_linux安装)
 - **网络**
 - [网络](introduction)
 - **Linux**

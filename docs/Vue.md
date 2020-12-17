@@ -1,7 +1,3 @@
----
-typora-copy-images-to: img
-typora-root-url: ./
----
 
 # 1、Vue 快速入门
 
