@@ -15,8 +15,9 @@
 
 消息队列，即MQ，Message Queue。
 
-![1598338144118](RabbitMQ/1598338144118.png)
-
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1598338144118.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 消息队列是典型的：生产者、消费者模型。生产者不断向消息队列中生产消息，消费者不断的从队列中获取消息。因为消息的生产和消费都是异步的，而且只关心消息的发送和接收，没有业务逻辑的侵入，这样就实现了生产者和消费者的解耦。
@@ -27,7 +28,12 @@
 
 本文的消息队列中间件指的是用来处理消息的消息队列服务,简称MQ **是分布式系统中非常重要的组件**
 
-![image-20200221094304697](RabbitMQ/image-20200221094304697.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200221094304697.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ## 1.2 MQ常见的应用场景
 
@@ -42,13 +48,23 @@
 场景说明：用户注册后，需要发注册邮件和注册短信。传统的做法
 同步串行方式：将注册信息持久化后，发送注册邮件，再发送注册短信。三个业务全部完成后，返回给客户端。
 
-![img](assets/20181120215106451.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/20181120215106451.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 假设三个业务节点每个使用100毫秒钟，不考虑其他开销，则串行方式的时间是300ms，并行的时间可能是200毫秒。则串行的方式1秒内可处理3次请求，并行方式1秒内可处理5次请求，综上所述，传统的方式系统的性能（并发量，吞吐量，响应时间）会有瓶颈。如何解决这个问题呢？
 
 引入消息队列，将不是必须的业务逻辑，异步处理。如下图所示
 
-![image-20200218190752831](assets/image-20200218190752831.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218190752831.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 按照上图，用户的响应时间相当于是注册信息写入数据库的时间和将消息插入消息队列，也就是105毫秒。注册邮件，发送短信消息写入队列后，直接返回。如此消息队列异步处理后，1秒内可处理9次请求。大大提高了系统的性能
 
@@ -58,7 +74,12 @@
 
 场景说明：后台发货系统，发货后快递发货系统需要通知订单系统，该订单已发货。如果我们用传统的做法是，快递发货系统调用订单系统的接口，更新订单为已发货。如下图
 
-![在这里插入图片描述](assets/20181120232231653.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/20181120232231653.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 传统模式的缺点：
 
@@ -68,7 +89,11 @@
 
 如何解决以上问题呢？引入应用消息队列后的方案，如下图：
 
-![image-20200218191119135](assets/image-20200218191119135.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218191119135.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 发货系统：发货后，发货系统完成持久化处理，将消息写入消息队列，返回发货成功。
 
@@ -86,7 +111,12 @@
 
 应用场景：秒杀活动，一般会因为流量过大，应用系统配置承载不了这股瞬间流量，导致系统直接挂掉，即传说中的“宕机”现象。为解决这个问题，我们会将那股巨大的流量拒在系统的上层，即将其转移至 MQ 而不直接涌入我们的接口，此时MQ起到了缓冲作用。
 
-![image-20200218191327733](assets/image-20200218191327733.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218191327733.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 简单的说，消息中间件可以临时缓存要处理的任务消息，该缓冲有助于控制和优化数据流经过系统的速度。
 
@@ -101,11 +131,21 @@
 消息通讯是指，消息队列一般都内置了高效的通信机制，因此也可以用在实现消息通讯。如点对点消息队列，或者聊天室等。
 点对点通讯：客户端A和客户端B使用同一队列，进行消息通讯。
 
-![img](assets/20181120215743561.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/20181120215743561.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 聊天室通讯：客户端A，客户端B 订阅同一主题，进行消息发布和接收。
 
-![img](assets/20181120215759434.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/20181120215759434.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 简单的说，MQ可以作为数据的中转站。
 
@@ -123,13 +163,26 @@
 
 
 
-![1596940244680](assets/1596940244680.png)
-
-![1596940208157](assets/1596940208157.png)
 
 
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596940244680.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
-![1596703907973](assets/1596703907973.png)
+
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596940208157.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596703907973.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 小结：
 
@@ -142,7 +195,11 @@
 
 市场上常见的MQ产品有：Kafka、ActiveMQ、RabbitMQ、RocketMQ ，关于他们之间的对比也有各种各样的讨论，下面我们看看关于它们的总结：
 
-![1586308937006](assets/1586308937006.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1586308937006.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 (1)ActiveMQ版本更新频率较低，中小型软件公司，建议选RabbitMQ.一方面，erlang语言天生具备高并发的特性，而且他的管理界面用起来十分方便。正所谓，成也萧何，败也萧何！他的弊端也在这里，虽然RabbitMQ是开源的，然而国内有几个能定制化开发erlang的程序员呢？所幸，RabbitMQ的社区十分活跃，可以解决开发过程中遇到的bug，这点对于中小型公司来说十分重要。不考虑rocketmq和kafka的原因是，一方面中小型软件公司不如互联网公司，数据量没那么大，选消息中间件，应首选功能比较完备的，所以kafka排除。不考虑rocketmq的原因是，rocketmq是阿里出品，如果阿里放弃维护rocketmq，中小型公司一般抽不出人来进行rocketmq的定制化开发，因此不推荐。
 
@@ -235,7 +292,13 @@ RabbitMQ 提供了许多插件，来从多方面进行扩展，也可以编写�
 
 我这里安装到了`C:\11_SR\erl\erl10.0.1`
 
-![image-20200218200653045](assets/image-20200218200653045.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218200653045.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 安装后，系统变量中会有：
 
@@ -244,7 +307,11 @@ RabbitMQ 提供了许多插件，来从多方面进行扩展，也可以编写�
 
 
 
-![image-20200218200955365](assets/image-20200218200955365.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218200955365.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 （2）下载并安装rabbitmq
 
@@ -256,14 +323,21 @@ RabbitMQ 提供了许多插件，来从多方面进行扩展，也可以编写�
 
 我这里安装到了`C:\02_Server\MQServer\RabbitMQ Server`
 
-![image-20200218201444426](assets/image-20200218201444426.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218201444426.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
 安装后window服务中就存在rabbitMQ了，并且是启动状态。
 
-![1534315558709](assets/1534315558709.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534315558709.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 （3）管理插件的开启（图形化管理）
@@ -276,14 +350,21 @@ rabbitmq-plugins enable rabbitmq_management
 
 结果：
 
-![image-20200218201607782](assets/image-20200218201607782.png)
 
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218201607782.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
 （5）打开浏览器，地址栏输入http://127.0.0.1:15672 ,即可看到管理界面的登陆页，输入用户名和密码（默认都为guest） ，进入主界面。
 
-![1534315910987](assets/1534315910987.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534315910987.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 最上侧的导航以此是：概览、连接、信道、交换器、队列、用户管理
 
@@ -297,8 +378,11 @@ rabbitmq-plugins enable rabbitmq_management
 
 guest是内置默认的超管的账号，将来应用客户端连接时，不建议使用该账号（测试无所谓），下面手动创建新的RabbitMQ的用户（bobo/bobo），并给用户赋予管理员角色（Admin或Management）：
 
-![image-20200218221252742](assets/image-20200218221252742.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218221252742.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 创建虚拟主机Virtual Hosts：
@@ -310,29 +394,44 @@ guest是内置默认的超管的账号，将来应用客户端连接时，不建
 
 新建虚拟主机"/bobohost"，注意前面的"/"：
 
-![image-20200218215416009](assets/image-20200218215416009.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218215416009.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 设置Virtual Hosts权限，选择需要授权访问用户：
 
-![image-20200218220035014](assets/image-20200218220035014.png)
 
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218220035014.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 重新登录：
 
-![image-20200218220237208](assets/image-20200218220237208.png)
 
-![image-20200218221437676](assets/image-20200218221437676.png)
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218220237208.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218221437676.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 小结：
 
 安装流程如下：
 
-![image-20200218202245125](assets/image-20200218202245125.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218202245125.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 注意： 安装erlange和RabbitMQ的时候需要使用 管理员身份安装。
 
@@ -344,7 +443,12 @@ guest是内置默认的超管的账号，将来应用客户端连接时，不建
 
 AMQP协议是一个高级抽象层消息通信协议，RabbitMQ是AMQP协议的实现。架构模型如下： 
 
-![1534590097486](assets/1534590097486.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534590097486.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 主要组件的相关概念如下：
 
@@ -365,7 +469,11 @@ AMQP协议是一个高级抽象层消息通信协议，RabbitMQ是AMQP协议的�
 
 RabbitMQ官方建议和提供了多种使用模式（https://www.rabbitmq.com/getstarted.html），不同工作模式主要是由Exchange的类型来控制和决定的，后面专题讲解，我们这里首先使用最简单的模式：“Hello World”，即简单模式。
 
-![image-20200218225921665](assets/image-20200218225921665.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218225921665.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 上图的P是指Producer，即生产者；C指的是Consumer，即消费者。中间红色的方形是Queue，即队列。
 
@@ -416,7 +524,13 @@ RabbitMQ官方建议和提供了多种使用模式（https://www.rabbitmq.com/ge
 
 编写消息生产者代码，发送消息到队列
 
-![img](assets/sending.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/sending.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 生产者发送消息到RabbitMQ的某个队列，消费者从队列中获取消息。可以使用rabbitMQ的简单模式
 （simple）；生产者发送消息步骤：
@@ -539,7 +653,11 @@ public class Producer {
 
 2）发布消息
 
-![image-20200218222711567](assets/image-20200218222711567.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218222711567.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```java
 /**
@@ -592,7 +710,12 @@ public class Producer {
 
 编写消息消费者代码，从队列中接收消息并消费
 
-![img](assets/receiving.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/receiving.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 分析
 
@@ -690,7 +813,12 @@ public class Consumer {
 
 执行结果：
 
-![image-20200218224734090](assets/image-20200218224734090.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218224734090.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 注意：
 
@@ -772,7 +900,13 @@ BasicProperties ：需要注意的是BasicProperties.deliveryMode，1:不持久�
 - 如果消息不太重要，丢失也没有影响，那么自动ACK会比较方便
 - 如果消息非常重要，不容丢失。那么最好在消费完成后手动ACK，否则接收消息后就自动ACK，RabbitMQ就会把消息从队列中删除。如果此时消费者宕机，那么消息就丢失了。
 
-![1596788864797](assets/1596788864797.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596788864797.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 ```
 // 第二个参数 是否自动确认  false为手动确认
@@ -788,8 +922,11 @@ RabbitMQ提供了6种消息模型，但是第6种其实是RPC，并不是MQ，�
 
 参考链接:https://www.rabbitmq.com/getstarted.html
 
-![1596705495296](assets/1596705495296.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596705495296.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 这几种消息模型的实现和Exchange交换机类型有直接关系。交换器（Exchange）说到底是一个名称与队列绑定的列表。当消息发布到交换器时，实际上是由你所连接的信道，将消息路由键同交换器上绑定的列表进行比较，最后路由消息。
@@ -806,7 +943,13 @@ RabbitMQ常用的Exchange Type有fanout、direct、topic、headers这四种
 
 基本消息模型图：
 
- ![1596706138866](assets/1596706138866.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596706138866.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 在上图的模型中，有以下概念：
 
@@ -828,7 +971,12 @@ Work queues，也被称为（Task queues），任务模型。
 
 当消息处理比较耗时的时候，可能生产消息的速度会远远大于消息的消费速度。长此以往，消息就会堆积越来越多，无法及时处理。此时就可以使用work 模型：**让多个消费者绑定到一个队列，共同消费队列中的消息**。队列中的消息一旦消费，就会消失，因此任务是不会被重复执行的。
 
-![1596706329617](assets/1596706329617.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596706329617.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 角色：
 
@@ -1019,7 +1167,11 @@ public class MqConsumer2 {
 
 查看结果，会发现两个队列公平的消费了 队列中的所有消息。  可以看到 当多个消费者监听同一队列时 消息只会被消费一次，并且消息会被轮询分配到每个消费者中。 如果我们的队列数据比较多时 可以通过多个消费者快速消费消息。
 
-![1596770221854](assets/1596770221854.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596770221854.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 #### 能者多劳
 
@@ -1364,7 +1516,10 @@ public class ColorConsumer {
 
 ### 说明和机制
 
-![img](assets/p-1534601792014) 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/p-1534601792014" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 直连型交换机（direct exchange）是根据消息携带的路由键（routing key）将消息投递给对应队列的。设置 Exchange 和 Queue 的 Binding 时需指定 RoutingKey（一般为 Queue Name），发消息时也指定一样的 RoutingKey，消息就会被路由到对应的Queue。直连交换机用来处理消息的单播路由（unicast routing，尽管它也可以处理多播路由） （一对一模式）
 ​	
@@ -1428,33 +1583,67 @@ Default Exchange 是一种特殊的 Direct Exchange，是RabbitMQ内置、默认
 
 **创建交换器**
 
-![1596786921349](assets/1596786921349.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596786921349.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **配置交换机**
 
 依次绑定需要走该交换机的队列名字和路由key：
 
-![1596786988065](assets/1596786988065.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596786988065.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 绑定结果：
 
-![1596787054078](assets/1596787054078.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596787054078.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 测试发送消息
 
-![1596787197110](assets/1596787197110.png)
 
-![1596787288934](assets/1596787288934.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596787197110.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596787288934.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 进入对应队列 可以通过get message查看对应消息
 
-![1596787328734](assets/1596787328734.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1596787328734.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ## 4.4 发布订阅模式演示 (Fanout)
 
 ### 说明和机制
 
-![img](assets/p-1534602885817) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/p-1534602885817" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 扇出交换机（funout exchange）将消息路由给绑定到它身上的所有队列，而不理会绑定的路由键。如果N个队列绑定到某个扇型交换机上，当有消息发送给此扇出交换机时，交换机会将消息的拷贝分别发送给这所有的N个队列。扇出用来交换机处理消息的广播路由（broadcast routing）。 简单的说，Fanout Exchange 会忽略RoutingKey 的设置，直接将 Message 广播到所有绑定的 Queue 中。因此，你也可以将该交换机称之为广播交换机。
 ​	
@@ -1512,26 +1701,48 @@ Default Exchange 是一种特殊的 Direct Exchange，是RabbitMQ内置、默认
 
 创建两个funout的队列：fanout-queue1和fanout-queue2
 
-![1534607400056](assets/1534607400056.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534607400056.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 创建结果：
 
-![1534607177461](assets/1534607431465.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534607431465.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **创建和配置交换机**
 
 创建一个fanout类型的交换机：	fanout-exchange
 
-![1534607052743](assets/1534607471494.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534607471494.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 依次绑定需要走该交换机的队列名字：
 
-![1534607271649](assets/1534607521477.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534607521477.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 绑定结果：
 
-![1534607298833](assets/1534607544182.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534607544182.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1540,7 +1751,12 @@ Default Exchange 是一种特殊的 Direct Exchange，是RabbitMQ内置、默认
 
 ### 说明和机制
 
-![img](assets/p-1534602924291) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/p-1534602924291" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 主题交换机（topic exchanges）通过对消息的路由键和队列到交换机的绑定模式之间的匹配，将消息路由给一个或多个队列。主题交换机经常用来实现各种分发/订阅模式及其变种。主题交换机通常用来实现消息的多播路由（multicast routing）。 
 ​	Topic Exchange 配置上和 Direct Exchange 类似，也需要通过 RoutingKey 来路由消息，区别在于Direct Exchange 对 RoutingKey 是精确匹配，而 Topic Exchange 支持模糊匹配。
@@ -1601,15 +1817,27 @@ Default Exchange 是一种特殊的 Direct Exchange，是RabbitMQ内置、默认
 
 创建一个topic类型的交换机：		topic-exchange
 
-![1534609874105](assets/1534609874105.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534609874105.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 依次绑定需要走该交换机的队列规则：queuedemo1
 
-![1534610064018](assets/1534610064018.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534610064018.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 绑定结果：
 
-![1534610165775](assets/1534610165775.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1534610165775.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1623,27 +1851,51 @@ Default Exchange 是一种特殊的 Direct Exchange，是RabbitMQ内置、默认
 
 1、简单模式HelloWorld: 一个生产者、一个消费者，不需要设置交换机（使用默认的交换机）
 
-![image-20200218211554527](assets/image-20200218211554527.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218211554527.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 2、工作队列模式Work Queue 一个生产者、多个消费者（竞争关系），不需要设置交换机（使用默认
 的交换机）
 
-![image-20200218211600179](assets/image-20200218211600179.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218211600179.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 3、发布订阅模式Publish/subscribe,需要设置类型为fanout的交换机，并且交换机和队列进行绑定，
 当发送消息到交换机后，交换机会将消息发送到绑定的队列
 
-![image-20200218211612504](assets/image-20200218211612504.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218211612504.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 4、路由模式Routing 需要设置类型为direct的交换机，交换机和队列进行绑定，并且指定routing
 key，当发送消息到交换机后，交换机会根据routing key将消息发送到对应的队列
 
-![image-20200218211627317](assets/image-20200218211627317.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218211627317.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 5、通配符模式Topic需要设置类型为topic的交换机，交换机和队列进行绑定，并且指定通配符方式
 routing key，当发送消息到交换机后，交换机会根据routing key将消息发送到对应的队列
 
-![image-20200218211642421](assets/image-20200218211642421.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/image-20200218211642421.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1677,12 +1929,18 @@ routing key，当发送消息到交换机后，交换机会根据routing key将�
 
 Spring有很多不同的项目，其中就有对AMQP的支持：
 
-![1598338726053](assets/1598338726053.png)
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1598338726053.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 Spring AMQP的页面：<http://projects.spring.io/spring-amqp/> 
 
-![1598338745026](assets/1598338745026.png)
 
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1598338745026.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 注意这里一段描述：
@@ -1806,7 +2064,12 @@ public class MsgListener {
 
 然后在MQ的控制台可以查看到消息，如下：
 
-![1598343711740](assets/1598343711740.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1598343711740.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 消息已经发送到了队列中，并使用JDK序列化进行了序列化
 
@@ -1944,15 +2207,24 @@ public class ProducerStarter {
 
 再次发送消息，查看效果：
 
-![1598341751203](assets/1598341751203.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1598341751203.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
 
 注意： 发送消息时设置的什么转换器,消费消息时也需要设置同样的转换器，不然在消息内容反序列化时就失败了哦~~~~
 
-![1598341859511](assets/1598341859511.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1598341859511.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 **所以 消息的消费者 我们也要像生产者一样，引对应的转换器依赖 配置转换器对象**
 
@@ -2165,8 +2437,11 @@ spring:
 
 默认的消息也是持久化的: 
 
-![img](assets/1599377689740.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/RabbitMQ/1599377689740.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 #### 消费者确认机制
