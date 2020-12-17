@@ -116,79 +116,139 @@ mysql-installer-community-5.6.22.0.msi
 
 2.双击之后会出现如下图所示界面，询问是否同意，将我同意的选框勾选上，然后点击next,如下：
 
-![](img/mysql安装图解1.bmp)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/mysql安装图解1.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 3.选择自定义安装,点击下一步
 
-![](img/mysql安装图解2.bmp)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/mysql安装图解2.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 4.根据电脑配置选择要安装的MySql版本,然后点击next
 
-![](img/mysql安装图解3.bmp)
 
-![](img/mysql安装图解4.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/mysql安装图解3.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/mysql安装图解4.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 5.如果出现当前界面,则可以配置安装目录,如果出现的不是这个界面请点击Back返回
 
 ![](img/mysql安装图解5.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 6.点击back返回后,点击高级选项,配置安装路径,配置成功后点击下一步
 
 ![](img/mysql安装图解6.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ![](img/mysql安装图解7.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：安装路径最好不要有中文和空格以及特殊符号。
 
 注意：一定要保证Install  Directory和data  Directory保存的路径一致，这样才可以保证卸载MySql的时候会很方便。
 
 ![](img/mysql安装图解8.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 7.当出现绿色对号时表名安装成功,然后点击下一步
 
 ![](img/mysql安装图解9.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 8.开始配置mysql,点击下一步
 
 ![](img/mysql安装图解10.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 9.配置MySql开发模式以及端口号相关配置,然后点击下一步
 
 ![](img/mysql安装图解11.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：MySql默认端口是3306.这里不要修改，我们访问数据库的时候输入端口号3306即可。
 
 10.设置密码账户信息,然后点击next
 
 ![](img/mysql安装图解12.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 11.使用默认配置就可以了,然后点击下一步
 
 ![](img/mysql安装图解13.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 12.日志配置
 
 ![](img/mysql安装图解14.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 13.点击Execute安装
 
 ![](img/mysql安装图解15.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 14.全部画上绿色对勾之后,安装成功点击finish->next->finish
 
 ![](img/mysql安装图解16.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ![](img/mysql安装图解17.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ![](img/mysql安装图解18.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 15.配置环境变量,找到MySql的安装目录的bin目录下,将路径复制下来
 
 ![](img/mysql安装图解19.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 16.打开电脑的高级设置中的 path 路径,将复制的路径添加进去
 
 ![](img/mysql安装图解20.bmp)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -212,13 +272,22 @@ mysql-installer-community-5.6.22.0.msi
 查看windows服务 ，mysql数据库是否启动。
 
 ![1550408825267](img/1550408825267.png)
-![mysql启动02](img/mysql启动02.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
+![mysql启动02](img/mysql启动02.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 **2、连接mysql**
 
 ![1550289380140](img/1550409365086.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ​	MySQL是一个需要账户名密码登录的数据库，登陆后使用，它提供了一个默认的root账号，使用安装时设置的密码即可登录
 1. 登录格式1：`mysql -u用户名 -p密码`
@@ -233,6 +302,10 @@ mysql-installer-community-5.6.22.0.msi
    
 
    ![MYSQL登录01](img/测试mysql是否连接成功2.PNG)
+   
+    <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+   </figure>
    后输入密码方式：
 
    ```sql
@@ -242,6 +315,9 @@ mysql-installer-community-5.6.22.0.msi
 
    ![MYSQL登录04](img/dos窗口测试是否连接成功.PNG)
 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 2. 登录格式2：
 
     **mysql** **[**-h 连接的主机ip -P端口3306**]** **-u 用户名 -p 密码**
@@ -256,6 +332,9 @@ mysql-installer-community-5.6.22.0.msi
 
 3. 退出MySQL：`exit`
    ![MYSQL登录03](img/测试mysql是否连接成功2.PNG)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -274,6 +353,10 @@ mysql-installer-community-5.6.22.0.msi
 
 ![1550289366973](img/1550409365086.png)
 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 ​	在dos窗口中使用sql语句操作mysql数据库相对来说，太麻烦了，我们在实际开发中不会使用dos窗口来操作的，一定要使用可视化工具来操作mysql数据库，而会有多种可视化工具来操作mysql数据库，比如：Navicat、SQLyog等。我们这里使用SQLyog可视化工具。
 
 
@@ -282,28 +365,58 @@ mysql-installer-community-5.6.22.0.msi
 
 ![img](img\wps1.jpg) 
 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 ![img](img\wps2.jpg) 
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2.如果是第一次使用，会弹出一个提示框，需要输入注册码。注册码在如下文件夹中。
 
 ![img](img\wps3.jpg) 
 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 ![img](img\wps4.jpg) 
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 3.输入完成之后，创建桌面快捷方式，然后打开该可视化界面软件。会出现如下图所示界面：
 
 ![img](img\wps5.jpg) 
 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 ![img](img\wps6.jpg) 
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 点击链接：
 
 ![img](img\wps7.jpg) 
 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 然后就会弹出如下界面：
 
 ![img](img\wps8.jpg) 
-
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ### 小结
@@ -316,6 +429,10 @@ mysql-installer-community-5.6.22.0.msi
 1、找到mysql的安装目录：在mysql的安装目录中。找到my.ini 文件。
 
 ![image-20200609100334374](img\image-20200609100334374.png)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 找到datadir 并且记录路径。 
 
@@ -357,11 +474,17 @@ HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Eventlog\Application\MySQL文�
 
 ![1550409365086](img/1550409365086.png)
 
-
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 实体类与表的对应关系
 
 ![实体类与表的对应关系](img/%E5%AE%9E%E4%BD%93%E7%B1%BB%E4%B8%8E%E8%A1%A8%E7%9A%84%E5%AF%B9%E5%BA%94%E5%85%B3%E7%B3%BB.png)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ![](img/数据库内部存储结构.PNG)
 
@@ -518,11 +641,19 @@ SQL是用来存取关系数据库的语言，具有定义、操纵、控制和�
   ```
   ![直接创建数据库](img/直接创建数据库.png)
 
+   <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 * 判断是否存在并创建数据库db2
   ```sql
   CREATE DATABASE IF NOT EXISTS db2;
   ```
   ![判断是否存在并创建数据库](img/判断是否存在并创建数据库.png)
+
+   <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 * 创建数据库db3并指定字符集为gbk
   ```sql
@@ -530,17 +661,30 @@ SQL是用来存取关系数据库的语言，具有定义、操纵、控制和�
   ```
   ![创建数据库并指定字符集](img/创建数据库并指定字符集.png)
 
+   <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 #### 查看数据库
 1. 查看所有的数据库
 ```sql
 SHOW DATABASES;
 ```
    ![查看所有数据库](img/查看所有数据库.png)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 2. 查看某个数据库的定义信息
 ```sql
 SHOW CREATE DATABASE 数据库名;
 ```
    ![查看某个数据库的定义信息](img/查看某个数据库的定义信息.png)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -577,6 +721,11 @@ ALTER DATABASE 数据库 default character set 新的字符集;
   对应mysql数据库中的编码: utf8;  gbk;gb2312; latin1;
 
   ![修改数据库字符集](img/修改数据库字符集.png)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 #### 删除数据库
 
 ```sql
@@ -590,6 +739,10 @@ DROP DATABASE 数据库名;
   DROP DATABASE db2;
   ```
   ![删除数据库](img/删除数据库.png)
+
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -624,11 +777,20 @@ USE 数据库名;
   SELECT DATABASE();
   ```
   ![查看正在使用的数据库](img/查看正在使用的数据库.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 * 使用db1数据库
   ```sql
   USE db1;
   ```
   ![使用db1数据库](img/使用db1数据库.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -676,10 +838,18 @@ TABLE -- 表示表
 
 MySQL中的我们常使用的数据类型如下：
 ![MYSQL常用数据类型](img/MYSQL常用数据类型.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 详细的数据类型如下(不建议详细阅读！)
 
 ![1550410505421](img/1550410505421.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 具体操作: 
 
@@ -731,17 +901,29 @@ CREATE TABLE student (
   SHOW TABLES;
   ```
   ![查看某个数据库中的所有表](img/查看某个数据库中的所有表.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 * 查看student表的结构
   ```sql
   DESC student;
   ```
   ![查看student表的结构](img/查看student表的结构.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 * 查看student的创建表SQL语句
   ```sql
   SHOW CREATE TABLE student;
   ```
   ![查看student的创建表SQL语句](img/查看student的创建表SQL语句.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -793,11 +975,20 @@ CREATE TABLE 表名 LIKE 其他表;
   DROP TABLE s1;
   ```
   ![直接删除表](img/直接删除表.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 * 判断表是否存在并删除s1表
   ```sql
   DROP TABLE IF EXISTS s1;
   ```
   ![判断表存在并删除](img/判断表存在并删除.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -825,6 +1016,10 @@ CREATE TABLE 表名 LIKE 其他表;
      ALTER TABLE student ADD remark VARCHAR(20);
      ```
      ![添加字段](img/添加字段.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 2. 修改列类型
 
@@ -839,6 +1034,10 @@ CREATE TABLE 表名 LIKE 其他表;
      ALTER TABLE student MODIFY remark VARCHAR(100);
      ```
      ![修改字段类型](img/修改字段类型.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 3. 修改列名
 
@@ -854,6 +1053,11 @@ CREATE TABLE 表名 LIKE 其他表;
      ```
      ![修改表字段名称](img/修改表字段名称.png)
 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 4. 删除列
 
    ```sql
@@ -867,6 +1071,10 @@ CREATE TABLE 表名 LIKE 其他表;
      ALTER TABLE student DROP intro;
      ```
      ![删除字段](img/删除字段.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 5. 修改表名
 
@@ -881,6 +1089,10 @@ CREATE TABLE 表名 LIKE 其他表;
       RENAME TABLE student TO student2;
      ```
      ![修改表名](img/修改表名.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 6. 修改字符集
 
@@ -895,6 +1107,10 @@ CREATE TABLE 表名 LIKE 其他表;
      ALTER TABLE student2 character set gbk;
      ```
       ![修改字符集](img/修改字符集.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -919,14 +1135,26 @@ CREATE TABLE 表名 LIKE 其他表;
 1.简单熟悉下可视化工具。
 
 ![img](img\wps9.jpg) 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 2.一般的可视化工具，都能从界面看到 数据库-》数据库表-》表数据。
 
 ![img](img\wps10.jpg) 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 6.在可视化工具中给内容添加注释快捷键是：ctrl+shift+c
 
 ![img](img\wps11.jpg) 
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 这样我们就简单熟悉了下可视化工具，接下来我们所有的操作都会在该可视化工具中进行操作。
 
@@ -997,6 +1225,10 @@ INSERT INTO 表名 values(字段值1, 字段值2...),(字段值1, 字段值2...)
    INSERT INTO student (id, name, age, sex) VALUES (1, '张三', 20, '男');
    ```
    ![添加部分数据](img/添加部分数据.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
    * 向表中插入所有字段
      * 所有的字段名都写出来
@@ -1004,13 +1236,20 @@ INSERT INTO 表名 values(字段值1, 字段值2...),(字段值1, 字段值2...)
       INSERT INTO student (id, name, age, sex, address) VALUES (2, '李四',  23, '女', '广州');
      ```
      ![所有字段都添加数据](img/所有字段都添加数据.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
      * 不写字段名
      ```sql
      INSERT INTO student VALUES (3, '王五', 18, '男', '北京');
      ```
      ![添加所有字段数据](img/添加所有字段数据.png)
-     
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>     
+
      批量插入数据
      
      ~~~sql
@@ -1097,18 +1336,27 @@ INSERT INTO 表名 values(字段值1, 字段值2...),(字段值1, 字段值2...)
      UPDATE student SET sex='女';
      ```
      ![修改所有数据](img/修改所有数据.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    * 带条件修改数据，将id号为2的学生性别改成男
      ```sql
      UPDATE student SET sex='男' WHERE id=2;
      ```
      ![带条件修改](img/带条件修改.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    * 一次修改多个列，把id为3的学生，年龄改成26岁，address改成北京
      ```sql
      UPDATE student SET age=26, address='北京' WHERE id=3;
      ```
      ![一次性修改2个字段](img/一次性修改2个字段.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -1147,6 +1395,10 @@ INSERT INTO 表名 values(字段值1, 字段值2...),(字段值1, 字段值2...)
    >* delete是将表中的数据一条一条删除
    >* truncate是将整个表摧毁，重新创建一个新的表,新的表结构和原来表结构一模一样
    >  ![truncate](img/truncate.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 4. 具体操作：
    * 带条件删除数据，删除id为3的记录
@@ -1155,6 +1407,9 @@ INSERT INTO 表名 values(字段值1, 字段值2...),(字段值1, 字段值2...)
      ```
 
      ![删除满足条件的记录](img/删除满足条件的记录.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    * 带条件删除数据，删除id为1和2的记录
    
@@ -1170,6 +1425,9 @@ INSERT INTO 表名 values(字段值1, 字段值2...),(字段值1, 字段值2...)
      DELETE FROM student;
      ```
      ![删除所有记录](img/删除所有记录.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -1198,6 +1456,9 @@ SELECT 字段名1, 字段名2, ... FROM 表名;
 SELECT id, name ,age, sex, address FROM student;
    ```
    ![查询所有列](img/查询所有列.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2. 使用*表示所有列
 
@@ -1211,6 +1472,9 @@ SELECT id, name ,age, sex, address FROM student;
    SELECT * FROM student;
    ```
    ![查询所有列](img/查询所有列.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 查询表中指定列数据
 
@@ -1226,6 +1490,9 @@ SELECT 字段名1, 字段名2 FROM 表名;
 SELECT name, age FROM student;
 ```
 ![查询指定字段](img/查询指定字段.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 别名查询
 1. 查询时给列、表指定别名需要使用AS关键字
@@ -1243,6 +1510,9 @@ SELECT name, age FROM student;
    SELECT NAME AS 姓名, age AS 年龄 FROM student;
    ```
    ![查询字段别名](img/查询字段别名.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 清除重复值
 1. 查询指定列并且结果不出现重复数据
@@ -1257,6 +1527,9 @@ SELECT name, age FROM student;
    SELECT DISTINCT address 城市 FROM student;
    ```
    ![1550289641391](img/1550289641391.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 查询结果参与运算
 1. 某列数据和固定值运算
@@ -1287,11 +1560,18 @@ SELECT name, age FROM student;
   ```
 * 给每条记录添加对应的数学和英语成绩
      ![添加数学和英语成绩](img/添加数学和英语成绩.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>   
+
 * 查询math + english的和
   ```sql
   SELECT math + english FROM student;
   ```
   ![查询math和english的和](img/查询math和english的和.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
   >结果确实将每条记录的math和english相加，但是效果不好看
 
@@ -1300,12 +1580,18 @@ SELECT name, age FROM student;
   SELECT math + english 总成绩 FROM student;
   ```
   ![组合查询结果取别名](img/组合查询结果取别名.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 * 查询所有列与math + english的和并使用别名”总成绩”
   ```sql
   SELECT *, math + english 总成绩 FROM student;
   ```
   ![查询所有列数据和参与运算](img/查询所有列数据和参与运算.png)
+ <figure class="thumbnails">
+    <img src="picture/mysql/img01/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 * 查询姓名、年龄，将每个人的数学增加10分
   ```sql
@@ -1361,15 +1647,14 @@ SELECT name, age FROM student;
 8. 能够使用SQL语句简单查询数据
    SELECT 字段名1, 字段名2, ... FROM 表名;
 
-# 作业:
-
-## 作业1:实操题
+# 练习:
+## 1:实操题
 
 ```java
-参考讲义完成mysql数据库的安装与配置
+完成mysql数据库的安装与配置
 ```
 
-## 作业2:sql题
+## 2:sql题
 
 ```java
 1.编写sql语句创建demo1数据库
@@ -1386,11 +1671,5 @@ SELECT name, age FROM student;
      3	邓稼先	男	安徽	62
 5.编写sql,修改id为1的数据信息,年龄改为100
 6.删除id为3的数据信息
-```
-
-## 作业3:
-
-```sql
-练习课上相关sql
 ```
 
