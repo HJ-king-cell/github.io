@@ -1,7 +1,4 @@
----
 
-typora-copy-images-to: img
----
 
 # 学习目标
 
@@ -34,7 +31,11 @@ java中的方法好处：
 
 ​	  **1.提高代码的重用性**
 
-![image-20200707080824976](img\image-20200707080824976.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707080824976.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：我们可以将多条sql语句存储在存储过程和函数中，然后以后使用的时候直接通过存储过程的名字调用即可，不用在书写sql语句。	 
 
@@ -44,7 +45,11 @@ java中的方法好处：
 
 ​		说明：存储过程执行一次，由于之前已经编译过了，那么以后在执行的时候就不会在编译了，直接运行存储过程中的sql语句。
 
-![image-20200707081621273](img\image-20200707081621273.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707081621273.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 1).如果不使用存储过程和函数，那么每执行一次sql语句都要和数据库服务器建立连接，并且都要编译一次
 
@@ -116,7 +121,10 @@ delimiter $
 
   - 打开dos窗口连接到操作的数据库
 
-    ![image-20200707171859137](img\image-20200707171859137.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707171859137.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
   - 创建如下存储过程并执行
 
@@ -128,9 +136,11 @@ delimiter $
     end $
     ~~~
 
-    ![image-20200707172213721](img\image-20200707172213721.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707172213721.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 3 调用存储过程
 
@@ -147,7 +157,11 @@ call 存储过程名(实参列表)$
   call pro_test1()$
   ~~~
 
-  ![image-20200707172821403](img\image-20200707172821403.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707172821403.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
   说明：由于上述我们使用delimiter $声明结束分隔符是$，所以这里必须使用$结束了
 
@@ -162,11 +176,19 @@ call 存储过程名(实参列表)$
   select * from mysql.proc where db='day0401' \G$
   ~~~
 
-  ![image-20200707181536527](img\image-20200707181536527.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707181536527.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：其实上述语法是从mysql数据库自带的数据仓库mysql下面的proc表中查找存储过程：
 
-![image-20200707181809687](img\image-20200707181809687.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707181809687.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 - 查看创建某个存储过程的语句信息
 
@@ -177,12 +199,16 @@ call 存储过程名(实参列表)$
   show create procedure pro_test1 \G$
   ~~~
 
-  ![image-20200707182657663](img\image-20200707182657663.png)
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707182657663.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 - 直接在图形化界面中查看某个数据库的存储过程
 
-  ![image-20200707183030379](img\image-20200707183030379.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707183030379.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ## 5 删除存储过程
@@ -193,7 +219,11 @@ drop procedure 存储过程名$
 drop procedure pro_test1$
 ```
 
-![image-20200707184318681](img\image-20200707184318681.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707184318681.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 直接在可视化工具中查看发现存储过程pro_test1已经被删除
 
@@ -230,8 +260,11 @@ drop procedure pro_test1$
   call pro_test2()$
   ```
 
-  ![image-20200707193740194](img\image-20200707193740194.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707193740194.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -259,9 +292,10 @@ drop procedure pro_test1$
   call pro_test3()$
   ```
 
-  ![image-20200707205915756](img\image-20200707205915756.png)
 
-  
+  <figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707205915756.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
   【扩展】
 
@@ -282,9 +316,10 @@ drop procedure pro_test1$
   ```
 
 
-![image-20200707210615598](img\image-20200707210615598.png)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200707210615598.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 6.2 if条件判断
 
@@ -335,9 +370,11 @@ call pro_test5()$
 
 调用结果为 :
 
-![image-20200710092107054](img\image-20200710092107054.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710092107054.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 6.3 传递参数
 
@@ -393,9 +430,11 @@ call pro_test6(160)$
 
 执行结果:
 
-![image-20200710092430848](img\image-20200710092430848.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710092430848.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### OUT 输出
 
@@ -453,7 +492,11 @@ select @desc$
 
 执行结果:
 
-![image-20200710101140038](img\image-20200710101140038.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710101140038.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：本身存储过程是没有返回值的函数，是一个过程，没有结果。上述所说的返回值其实不是真正返回值，只是我们传递一个变量到存储过程中，在存储过程中修改了该变量值，然后在调用存储过程的位置在获取修改后的变量值。
 
@@ -507,9 +550,10 @@ select @m,@n$
 
 【结果】
 
-![image-20200710102938076](img\image-20200710102938076.png)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710102938076.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 6.4 case结构
 
@@ -569,9 +613,11 @@ call pro_test9(2)$
 
 直接结果:
 
-![image-20200710111441622](img\image-20200710111441622.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710111441622.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 6.5 mysql存储过程中的三种循环
 
@@ -624,9 +670,10 @@ call pro_test10(3)$
 
 直接结果:
 
-![image-20200710164726581](img\image-20200710164726581.png)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710164726581.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 6.5.2  repeat结构
 
@@ -680,9 +727,11 @@ call pro_test11(3)$
 
 执行结果:
 
-![image-20200710173416603](img\image-20200710173416603.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710173416603.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 6.5.3 loop语句
 
@@ -740,9 +789,10 @@ call pro_test12(3)$
 
 执行结果:
 
-![image-20200710175646886](img\image-20200710175646886.png)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710175646886.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 6.6 游标/光标(了解)
 
@@ -757,9 +807,11 @@ fetch 游标名  INTO 变量名,变量名 ... ; -- 获取游标中的数据并�
 close 游标名; -- 关闭游标
 ```
 
-![image-20200710190400329](img\image-20200710190400329.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710190400329.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 <div style='background-color:#42C0A3;'>示例: </div>
 
@@ -781,7 +833,10 @@ values(null,'金毛狮王',55,3800),(null,'白眉鹰王',60,4000),
 
 【结果】
 
-![image-20200710190920143](img\image-20200710190920143.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710190920143.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 <b>方式1-实例sql:查询emp中所有的数据存储到游标中，并取出游标中的数据</b>
 
@@ -828,7 +883,11 @@ call pro_test13()$
 
 **方式1-直接结果:**
 
-![image-20200616093728552](img/image-20200616093728552.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616093728552.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 上述获取游标中所有数据，sql语句比较重复，我们可以使用我们之前学习的循环替换，哪种循环都可以。
 
@@ -836,7 +895,11 @@ call pro_test13()$
 
 说明：使用循环实现上述过程，但是循环需要结束条件，那么我们在这里怎样书写结束条件呢？
 
-![image-20200710193408600](img\image-20200710193408600.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200710193408600.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 有两种方式：
 
@@ -891,7 +954,10 @@ call pro_test13()$
 
 **方式2-执行结果:**
 
-![image-20200616094838885](img/image-20200616094838885.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616094838885.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 扩展：使用循环另一种实现方式(自己完成)
 
@@ -977,7 +1043,11 @@ select fn1(1)$
 
 执行结果:
 
-![image-20200616095609016](img/image-20200616095609016.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616095609016.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 注意：如果创建函数时报如下错误：
 
@@ -993,7 +1063,10 @@ This function has none of DETERMINISTIC, NO SQL, or READS SQL DATA in its......
 show variables like '%func%';
 ~~~
 
-![image-20200731101140383](img\image-20200731101140383.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200731101140383.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 解决办法1:开启函数功能即可。
 
@@ -1003,7 +1076,10 @@ show variables like '%func%';
  set global log_bin_trust_function_creators=1;
 ~~~
 
-![image-20200731101517664](img\image-20200731101517664.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200731101517664.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 不过这种做法重启mysql服务， 就失效了，又会变为off.
 
@@ -1094,15 +1170,19 @@ call transfer('tom','rose',100,@flag)$
 select @flag$
 ~~~
 
-![image-20200731114804533](img\image-20200731114804533.png)
 
-
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200731114804533.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 # 第二章 Mysql体系结构(了解)
 
-![image-20200616104826352](img/92.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/92.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 整个 MySQL Server由以下组成
 
@@ -1147,7 +1227,11 @@ MySQL5.0支持的存储引擎包含 ： InnoDB 、MyISAM 、BDB、MEMORY、MERGE
 
 **可以通过指定 show engines ， 来查询当前数据库支持的存储引擎 ：**
 
-![image-20200616104826352](img/image-20200616104826352.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616104826352.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 创建新表时如果不指定存储引擎，那么系统就会使用默认的存储引擎， MySQL5.5之前的默认存储引擎是
 MyISAM，5.5之后就改为了InnoDB。
@@ -1158,7 +1242,11 @@ MyISAM，5.5之后就改为了InnoDB。
 show variables like '%storage_engine%';
 ```
 
-![image-20200616105013230](img/image-20200616105013230.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616105013230.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 2 存储引擎特性
 
@@ -1199,7 +1287,10 @@ CREATE TABLE tab_innodb(
 
 上述创建好数据表之后，在对应的mysql安装目录的数据库下面会创建如下两个文件：
 
-![1588659606099](img\1588659606099.png) 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/1588659606099.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：
 
@@ -1224,8 +1315,11 @@ CREATE TABLE tab_myisam(
  name VARCHAR(32)
 )ENGINE=MYISAM;
 ```
+ 
 
-![1588659151895](img\1588659151895.png) 
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/1588659151895.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：
 
@@ -1270,7 +1364,11 @@ CREATE TABLE tab_myisam(
 
 MySQL这3种锁的特性可大致归纳如下 ：
 
-![image-20200616170852814](img/image-20200616170852814.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616170852814.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 从上述特点可见，很难笼统地说哪种锁更好，只能就具体应用的特点来说哪种锁更合适！仅从锁的角度来说：表级锁更适合于以查询为主，只有少量按索引条件更新数据的应用，如Web 应用；而行级锁则更适合于有大量按索引条件并发更新少量不同数据，同时又有并发查询的应用，如一些在线事务处理系统。
 
@@ -1351,7 +1449,11 @@ lock table tb_book read;
 select * from tb_book;
 ```
 
-![image-20200616171709882](img/image-20200616171709882.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616171709882.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 可以正常执行 ， 查询出数据。
 
@@ -1363,7 +1465,11 @@ select * from tb_book;
 select * from tb_book; 
 ```
 
-![image-20200616171709882](img/image-20200616171709882.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616171709882.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：在客户端一中给tb_book表加了读锁，在客户端二中也可以查看到数据的原因是，读锁也称为共享锁，针对同一份数据，多个读操作可以同时进行而不会互相影响。
 
@@ -1379,7 +1485,10 @@ select * from tb_book;
 select name from tb_user; 
 ```
 
-![image-20200616172104645](img/image-20200616172104645.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616172104645.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：报错原因是上述在客户端一中给tb_book表加了读锁，而此时tb_book表正在占有锁，tb_user表无法拿到锁所以不让查询，必须得等到tb_book表释放锁之后，tb_user才可以获取锁并进行查询操作。如果这里使用lock table命令给tb_user表加锁，那么tb_book就会释放锁，tb_user表就可以获取到锁了。
 
@@ -1393,7 +1502,11 @@ select name from tb_user;
 select name from tb_user; 
 ```
 
-![image-20200616172128092](img/image-20200616172128092.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616172128092.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：可以正常查询出未锁定的表，因为客户端二没有对表进行加锁。
 
@@ -1407,7 +1520,11 @@ select name from tb_user;
 insert into tb_book values(null,'Mysql 高级','2088-01-01','1');
 ```
 
-![image-20200616172336937](img/image-20200616172336937.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616172336937.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 执行插入， 直接报错 ， 由于当前tb_book 获得的是 读锁， 不能执行更新(增删改)操作。
 
@@ -1421,17 +1538,29 @@ insert into tb_book values(null,'Mysql 高级','2088-01-01','1');
 insert into tb_book values(null,'Mysql 高级','2088-01-01','1'); 
 ```
 
-![image-20200616172435791](img/image-20200616172435791.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616172435791.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 上述出现阻塞现象，等待现象。
 
 当在客**户端一**中释放锁指令 unlock tables; 后 ， 客户端二中的 inesrt 语句 ， 立即执行 ；
 
-![image-20200719110544965](img\image-20200719110544965.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200719110544965.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 客户端二效果：
 
-![image-20200719110636132](img\image-20200719110636132.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200719110636132.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 小结：如果给某个表加读锁，不会阻塞其他线程即客户端的读操作，但是会阻塞其他线程的写操作。
 
@@ -1453,7 +1582,11 @@ lock table tb_book write;
 select * from tb_book; 
 ```
 
-![image-20200616172808253](img/image-20200616172808253.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616172808253.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ​	查询操作执行成功；
 
@@ -1463,7 +1596,11 @@ select * from tb_book;
 update tb_book set name = 'java 编程思想（第二版）' where id = 1; 
 ```
 
-![image-20200616172922536](img/image-20200616172922536.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616172922536.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 【练习二:在客户端二dos窗口执行查询操作】
 
@@ -1473,19 +1610,31 @@ update tb_book set name = 'java 编程思想（第二版）' where id = 1;
 select * from tb_book; 
 ```
 
-![image-20200616173010147](img/image-20200616173010147.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616173010147.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：在客户端二发现阻塞了，因为给客户端一加写锁（排它锁）：当前操作没有完成之前，它会阻断其他线程即窗口客户端写锁和读锁。
 
 当在客户端一中释放锁指令 unlock tables 后 ， 客户端二中的 select 语句 ， 立即执行 ；
 
-![image-20200616173038655](img/image-20200616173038655.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616173038655.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 结论
 
 锁模式的相互兼容性如表中所示：
 
-![image-20200616173119304](img/image-20200616173119304.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616173119304.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 由上表可见：
 
@@ -1507,7 +1656,10 @@ select * from tb_book;
 show open tables;
 ```
 
-![image-20200616173345072](img/image-20200616173345072.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616173345072.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 In_use:  表示当前表被查询使用的次数。如果该数为零，则表是打开的，但是当前没有被使用。
 
@@ -1517,7 +1669,10 @@ Name_locked：表名称是否被锁定。名称锁定用于对表进行重命名
 show status like 'Table_locks%'; 
 ```
 
-![image-20200616173439787](img/image-20200616173439787.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616173439787.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 Table_locks_immediate  ： 指的是能够立即获得表级锁的次数，每立即获取锁，值加1。
 
@@ -1527,7 +1682,11 @@ Table_locks_waited ： 指的是不能立即获取表级锁而需要等待的次
 
 在窗口1给tb_book加读锁：
 
-![image-20200722103229052](img\image-20200722103229052.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200722103229052.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 在窗口2中对tb_book进行更新操作：
 
@@ -1537,13 +1696,18 @@ update tb_book set name = 'java 编程思想（第二版）' where id = 2;
 
 此时会阻塞，如下所示：
 
-![image-20200722103422206](img\image-20200722103422206.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200722103422206.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 在窗口1中查看锁争用情况：
 
-![image-20200722103600686](img\image-20200722103600686.png)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200722103600686.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 5 InnoDB 行锁
 
@@ -1596,7 +1760,10 @@ create index idx_test_innodb_lock_name on test_innodb_lock(name);
 
 ### 行锁基本演示
 
-![image-20200616175211142](img/image-20200616175211142.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616175211142.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 更新语句：
 
@@ -1612,15 +1779,24 @@ update test_innodb_lock set name='3000' where id=3;
 
 2.注意，由于刚开始关闭了自动提交事务，即使窗口2执行了更新语句也要提交事务，否则再打开新的窗口是看不到窗口2更新后的数据。
 
-![image-20200722124036872](img\image-20200722124036872.png)
 
-![image-20200722124225780](img\image-20200722124225780.png)
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200722124036872.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200722124225780.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 以上， 操作的都是同一行的数据，接下来，演示不同行的数据 ：
 
-![image-20200616175250973](img/image-20200616175250973.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616175250973.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：执行不同行的更新操作，不会有相互影响。
 
@@ -1636,7 +1812,10 @@ update test_innodb_lock set name='3000' where id=3;
 show index from test_innodb_lock \G;
 ```
 
-![image-20200616175341899](img/image-20200616175341899.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616175341899.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 窗口1执行的更新语句：
 
@@ -1650,7 +1829,11 @@ update test_innodb_lock set sex='0' where name=30;
 update test_innodb_lock set sex='0' where id=9;
 ~~~
 
-![image-20200616175413589](img/image-20200616175413589.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616175413589.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 正常情况下，上述两个更新语句不是更新同一行数据，不应该产生阻塞现象，但是由于执行更新时 ， name字段本来为varchar类型， 我们是作为整数类型使用，存在类型转换，索引失效，最终行锁变为表锁 ；
 
@@ -1692,7 +1875,11 @@ insert into test_innodb_lock values(2,'8888','0');
 
 <div style='background-color:#42C0A3;'>示例: </div>
 
-![image-20200616175525671](img/image-20200616175525671.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616175525671.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：上述由于更新是id小于4，而没有id是2的数据，此时id是2的数据就是间隙，这里执行的是update更新语句，所以会加排它锁，那么同时也会给id是2的数据加间隙锁(不存在也会加间隙锁)，所以另一个窗口即事务执行insert插入id是2的数据，就会阻塞，直到窗口1即事务1提交事务才不会阻塞。
 
@@ -1704,7 +1891,11 @@ insert into test_innodb_lock values(2,'8888','0');
 show status  like 'innodb_row_lock%';
 ```
 
-![image-20200616175601028](img/image-20200616175601028.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img05/image-20200616175601028.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```sql
 Innodb_row_lock_current_waits:  当前正在等待锁定的数量
@@ -1735,10 +1926,4 @@ InnoDB 存储引擎由于实现了行级锁定，虽然在锁定机制的实现�
 - 尽可能减少索引条件，及索引范围，避免间隙锁
 - 尽量控制事务大小，减少锁定资源量和时间长度
 - 尽量使用低级别事务隔离（但是需要业务层面满足需求）
-
-# 作业
-
-```java
-练习上课做讲内容
-```
 

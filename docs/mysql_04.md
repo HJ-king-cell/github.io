@@ -18,7 +18,11 @@
 
 关于上述两种情况，使用数据库中的事务可以解决。具体解决方案如下图所示：
 
-![](img\mysql事务1.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/mysql事务1.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 **说明：在数据库中查询不会涉及到使用事务，都是增删改。**
@@ -60,7 +64,11 @@ MYSQL中可以有两种方式进行事务的操作：
 
 ​    第1种情况：开启事务 -> 执行SQL语句 -> 成功 -> 提交事务
 ​    第2种情况：开启事务 -> 执行SQL语句 -> 失败 -> 回滚事务
-   ![](img\事务01.png)
+  
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务01.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 准备数据:
 
@@ -84,13 +92,21 @@ insert into account values (null,'b',1000);
 
 **案例演示1**：需求：演示提交事务，a给b转账100元。
 
-![](img\提交事务.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/提交事务.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ---
 
 **案例演示2**：演示回滚事务，a给b转账100元。（失败）
 
-![](img\回滚事务.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/回滚事务.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 注意：
 
@@ -152,7 +168,11 @@ a=1000 b=1000;
 show variables like '%commit%';
 ```
 
-![](img\自动提交事务.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/自动提交事务.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2.设置自动提交的参数为OFF:
 
@@ -285,7 +305,11 @@ commit;
 
 ### 原理图
 
-![1562228567293](img\事务19.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务19.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 原理说明
 
@@ -419,7 +443,11 @@ b + 100
 
 ​	脏读具体解释如下图所示：注意脏读的前提是没有事务的隔离性。
 
-![](img\脏读.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/脏读.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：事务a首先执行转账操作，然后事务a还没有提交数据的情况下，事务b读取了数据库的数据。紧接着事务a执行回滚操作，导致事务b读取的结果和数据库的实际数据是不一样的。
 
@@ -439,7 +467,11 @@ b 查询账户那100不见了。
 
 **2.不可重复读：在一个事务内多次读取表中的数据，多次读取的结果不同。**
 
-![](img\不可重复读.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/不可重复读.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：事务b首先读取数据库的数据，然后事务a对数据修改并提交。之后事务b对数据库再次进行读取。这时发现在事务b中2次读取的结果不一致。
 
@@ -461,7 +493,11 @@ b 查询账户那100不见了。
 
 **3.幻读（虚读）:一个事务内读取到了别的事务插入或者删除的数据，导致前后读取记录行数不同**
 
-![](img\幻读.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/幻读.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：事务b首先读取数据的数量，然后事务a添加了一条数据，并且提交了。接着事务b再次读取了数据的数量。2次读取不一致。
 
@@ -540,7 +576,11 @@ b 查询账户那100不见了。
    select @@tx_isolation;
    ```
 
-   ![](img\事务27.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务27.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2. 设置事务隔离级别，需要退出MSQL再进入MYSQL才能看到隔离级别的变化
 
@@ -550,7 +590,10 @@ b 查询账户那100不见了。
    set global transaction isolation level read uncommitted;
    ```
 
-   ![](img\事务28.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务28.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 脏读的演示
 
@@ -568,7 +611,11 @@ b 查询账户那100不见了。
    set global transaction isolation level read uncommitted;
    ```
 
-   ![](img\事务290.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务290.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **注意：设置事务隔离级别，需要重新打开一个窗口才能看到隔离级别的变化.**
 
@@ -584,7 +631,11 @@ mysql -u root -p
 select @@tx_isolation;
 ```
 
-![](img\294.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/294.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 3.AB窗口都开启事务
 
@@ -593,7 +644,11 @@ use day05_db;
 start transaction;
 ```
 
-![](img\293.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/293.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 4.A窗口更新2个人的账户数据，未提交
 
@@ -602,7 +657,11 @@ update account set money=money-500 where id=1;
 update account set money=money+500 where id=2;
 ```
 
-![](img\295.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/295.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 5.B窗口查询账户
 
@@ -610,7 +669,11 @@ update account set money=money+500 where id=2;
 select * from account;
 ```
 
-![](img\事务32.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务32.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 6.A窗口回滚
 
@@ -618,10 +681,17 @@ select * from account;
 rollback;
 ```
 
-![](img\296.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/296.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 7.B窗口查询账户，钱没了
-![](img\事务34.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务34.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 脏读非常危险的，比如张三向李四购买商品，张三开启事务，向李四账号转入500块，然后打电话给李四说钱已经转了。李四一查询钱到账了，发货给张三。张三收到货后回滚事务，李四的再查看钱没了。
 
@@ -633,13 +703,25 @@ rollback;
    set global transaction isolation level read committed;
    ```
 
-   ![](img\事务35.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务35.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2. B窗口退出MySQL，B窗口再进入MySQL
-   ![](img\事务36.png)
+ 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务36.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 3. AB窗口同时开启事务
-   ![](img\事务37.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务37.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 4. A更新2个人的账户，未提交
 
@@ -648,16 +730,31 @@ rollback;
    update account set money=money+500 where id=2;
    ```
 
-   ![](img\297.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/297.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 5. B窗口查询账户
-   ![](img\298.bmp)
+ 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/298.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 6. A窗口commit提交事务
-   ![](img\事务40.png)
+  
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务40.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 7. B窗口查看账户
-   ![](img\事务41.png)
+ 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/事务41.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 >结论：read committed的方式可以避免脏读的发生
 
@@ -704,7 +801,11 @@ show global status like 'Innodb_rows%';
 
 说明：Innodb数据一种存储引擎。我们后续会讲解。
 
-![1588642111101](img\1588642111101.png) 
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/1588642111101.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 2.3 查看-sql语句的执行效率
 
@@ -752,13 +853,20 @@ CALL auto_insert();
 
 **锁哥电脑需要预计5分钟左右**
 
-![image-20200702113746689](img\image-20200702113746689.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200702113746689.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
  说明：由于每个人的电脑配置不一样，所以插入千万条数据的时间也是不一样的，有的人是2分钟，有的人十几分钟或者半个小时。
 
 需求：查询id是22的用户。
 
-![image-20200704091912695](img\image-20200704091912695.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200704091912695.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 大概需要8秒。时间太长了。那么我们需要使用接下来讲解的索引进行优化。
 
@@ -772,7 +880,11 @@ MySQL官方对索引的定义为：索引（index）是帮助MySQL高效获取�
 
 我们根据索引去查，提高效率
 
-![1588643911985](img\1588643911985.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/1588643911985.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 MySQL索引的建立对于MySQL的高效运行是很重要的，索引可以大大提高MySQL的检索速度。
 
@@ -780,9 +892,11 @@ MySQL索引的建立对于MySQL的高效运行是很重要的，索引可以大�
 
 个人力三轮车。
 
-![image-20200702231058157](img\image-20200702231058157.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200702231058157.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 3.2 MySQL索引分类
 
@@ -870,11 +984,16 @@ CREATE UNIQUE INDEX telephone_uni_idx ON student(telephone);
 
 设置好之后可以通过图形化工具查看设置的索引：
 
-![image-20200703085004366](img\image-20200703085004366.png)
-
-![image-20200703085108312](img\image-20200703085108312.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703085004366.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703085108312.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### ② 在已有表的字段上修改表时指定【了解】
 
@@ -922,9 +1041,11 @@ ALTER TABLE student2 ADD UNIQUE(telephone);
 
 设置好之后可以通过图形化工具查看设置的索引：
 
-![image-20200703090543210](img\image-20200703090543210.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703090543210.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### ③ 创建表时指定【掌握】
 
@@ -940,7 +1061,11 @@ CREATE TABLE student3(
 );
 ```
 
-![image-20200703090908671](img\image-20200703090908671.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703090908671.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 3.3.2查看索引
 
@@ -956,9 +1081,11 @@ show index from student3;
 
 【结果】
 
-![image-20200703091709085](img\image-20200703091709085.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703091709085.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 3.3.3 删除索引
 
@@ -996,7 +1123,10 @@ ALTER TABLE student DROP INDEX telephone_uni_idx;
 
 使用之前创建好的user数据表中的千万条数据进行测试。注意user表中是没有索引的。
 
-![image-20200703102211151](img\image-20200703102211151.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703102211151.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **【1.先来测试没有索引情况下查询】**
 
@@ -1007,9 +1137,10 @@ select * from user where id = 8888888;
 select * from user  where username = 'jack1234567';
 ```
 
-![image-20200703102942834](img\image-20200703102942834.png)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703102942834.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **【2.给这2个字段添加索引】**
 
@@ -1017,7 +1148,11 @@ select * from user  where username = 'jack1234567';
 
 没有添加索引之前，数据占硬盘空间大小：
 
-![image-20200703103305640](img\image-20200703103305640.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703103305640.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 按照如下方式给以下字段添加索引
 
@@ -1028,11 +1163,19 @@ ALTER TABLE USER ADD PRIMARY KEY(id);
 ALTER TABLE USER ADD INDEX(username);
 ```
 
-![image-20200703104104300](img\image-20200703104104300.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703104104300.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 添加索引之后，数据占硬盘空间大小：
 
-![image-20200703104139995](img\image-20200703104139995.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703104139995.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 如果在多添加索引，那么占硬盘空间大小还会增加。如果表很复杂，索引加多的话，有可能比原来多几个G也是有可能的。
 
@@ -1047,7 +1190,10 @@ select * from user where id = 8888888;
 select * from user  where username = 'jack1234567';
 ```
 
-![image-20200703104444965](img\image-20200703104444965.png) 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200703104444965.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：通过以上结果可以看出有了索引之后，查询速度比之前快了几十倍。快的飞起。
 
@@ -1093,7 +1239,11 @@ select * from user  where username = 'jack1234567';
 
 肯定和mysql底层的数据结构有关的，接下来我们就分析下mysql中的索引底层的数据结构。
 
-![1566372154562](img\1566372154562.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/1566372154562.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ​	每一行数据都对应一个磁盘地址，假设我要想查找数据6，那么如果没有索引，那么内存读取磁盘会进行6次的磁盘IO。	
 
@@ -1120,19 +1270,31 @@ https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 ```
 
 1. 二叉查找树：左边的子节点比父节点小，右边的子节点比父节点大
-   ![1588649871508](img\1588649871508.png) 
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/1588649871508.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    说明：类似上述数据比较特殊的情况下，那么如果存储在二叉查找树中就会出现类似链表的情况，那么会大大降低查找效率。
 
 2. 红黑树：平衡二叉树（左旋、右旋、变色）
-   ![1588650208409](img\1588650208409.png) 
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/1588650208409.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：如果数据结构是红黑树，那么查询1000万条数据，根据计算树的高度大概是23左右，这样确实比之前的方式快了很多，但是如果高并发访问，那么一个用户有可能需要23次磁盘IO.那么100万用户，那么会造成效率极其低下。所以为了减少红黑树的高度，那么就得增加树的宽度，就是不再像红黑树一样每个节点只能保存一个数据，可以引入另外一种数据结构，一个节点可以保存多个数据，这样宽度就会增加从而降低树的高度。这种数据结构例如BTree就满足。
 
 
 
 ​	3.BTree：多路平衡搜索树
-![1588650730396](img\1588650730396.png) 
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/1588650730396.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：
 
@@ -1159,7 +1321,11 @@ https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 
 
 **4.B+Tree：优化BTree（非叶子节点：索引+指针、叶子节点：索引+数据【地址】）**
-![1588651284679](F:\itcast\就业班\上课\基础部分\version05\数据库\day04-mysql高级\讲义\img\1588651284679.png) 
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/1588651284679.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：
 
@@ -1218,9 +1384,11 @@ MySQL中的 B+Tree 索引结构示意图：
 
 
 
-![](img/image-20200612174549333.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200612174549333.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 # 第四章 视图(掌握)
 
@@ -1231,9 +1399,10 @@ MySQL中的 B+Tree 索引结构示意图：
 1.  1个国家有多个城市，一个城市只属于一个国家
 2.  国家和城市是：1对多
 
-![image-20200704183150041](img\image-20200704183150041.png)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200704183150041.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```sql
 use day0401;
@@ -1347,9 +1516,11 @@ select t.*,c.country_name from country c inner join city t on c.country_id = t.c
 select * from city_country_view; -- city_country_view表示创建的视图名
 ```
 
-![image-20200704202716802](img\image-20200704202716802.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200704202716802.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 4.3修改视图
 
@@ -1378,7 +1549,11 @@ select * from city_country_view;
 
 【结果】
 
-![image-20200704205209148](img\image-20200704205209148.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200704205209148.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 【2】方式二：
 
@@ -1402,7 +1577,11 @@ select * from city_country_view;
 
 【结果】
 
-![image-20200704205534401](img\image-20200704205534401.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200704205534401.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 4.4 查看视图
 
@@ -1412,15 +1591,26 @@ select * from city_country_view;
 
 1）从 MySQL 5.1 版本开始，使用 SHOW TABLES 命令的时候不仅显示表的名字，同时也会显示视图的名字，而不存在单独显示视图的 SHOW VIEWS 命令。
 
-![image-20200615164647797](img/image-20200615164647797.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200615164647797.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2）同样，在使用 **desc 视图名**; 可以查看视图的结构。
 
-![image-20200704210920244](img\image-20200704210920244.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200704210920244.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 3）如果需要查询某个视图的定义，可以使用 **show create view 视图名**  命令进行查看 ：
 
-![image-20200615171013883](img/image-20200615171013883.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200615171013883.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：\G表示格式化的意思。这样显示的结果看起来更舒服一些。
 
@@ -1440,7 +1630,11 @@ drop view 视图名,视图名,.....;
  DROP VIEW city_country_view ;
 ```
 
-![image-20200615171255846](img/image-20200615171255846.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200615171255846.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 # 第五章 触发器(了解)
 
@@ -1522,7 +1716,11 @@ concat('插入后(id:',new.id,', name:',new.name,',age:',new.age,', salary:',new
 insert into emp values(null, '光明左使',30,3500);
 ~~~
 
-![image-20200706223939553](img\image-20200706223939553.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200706223939553.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：我们发现向emp表中插入数据之后，日志表中自动添加插入的信息。
 
@@ -1543,7 +1741,10 @@ values(null,'update',now(),new.id,concat('修改前(id:',old.id,',name:',old.nam
 update emp set name='张无忌',age=20,salary=20000 where id = 3;
 ~~~
 
-![image-20200706224818904](img\image-20200706224818904.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200706224818904.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 更新emp表的数据，日志表就会添加数据。
 
@@ -1566,7 +1767,11 @@ values(null,'delete',now(),old.id,concat('删除前(id:',old.id,',name:',old.nam
 delete from emp where id=3;
 ```
 
-![image-20200706225310928](img\image-20200706225310928.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200706225310928.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 5.3 查看触发器
 
@@ -1578,13 +1783,18 @@ show triggers ;
 
 可视化工具：
 
-![image-20200706225538151](img\image-20200706225538151.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200706225538151.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 命令行：
 
-![image-20200706225650019](img\image-20200706225650019.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200706225650019.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 5.4 删除触发器
 
@@ -1592,15 +1802,12 @@ show triggers ;
 drop trigger trigger_name 
 ```
 
-![image-20200706225917200](img\image-20200706225917200.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img04/image-20200706225917200.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
-# 作业
-
-```java
-练习课上所讲内容,理解事务,索引,视图,触发器的作用和应用场景
-```
 
 
 

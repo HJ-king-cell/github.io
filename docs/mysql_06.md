@@ -44,7 +44,12 @@
 
    具体的解释如下图所示：
 
-   ![](img/电脑和其他硬件设备交互.bmp)
+  
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/电脑和其他硬件设备交互.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 同理：java程序想和数据库进行交互，也必须得安装数据库驱动，这样才能交互。但是，我们数据库有多种，这样就会导致不同的数据库具备不同的数据库驱动。
 
@@ -52,9 +57,10 @@
 
 换句话就是说，就是数据库厂商使用sun公司提供的接口，然后作为java程序员实现接口中的方法即可。**接口中的方法体由具体的数据库厂商来实现。**
 
-![](img/jdbc连接数据库.bmp)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### JDBC的好处
 
@@ -90,7 +96,11 @@
 2. Connection(接口): 是一个接口, 建立数据库连接的一个接口。作用：建立数据库和java代码之间的连接。表示与数据库创建的连接
 3. Statement(接口)、PreparedStatement(接口) (解决安全隐患问题，比如sql注入的问题)： 数据库操作，向数据库发送sql语句。执行SQL语句的对象
 4. ResultSet: 结果集或一张虚拟表。 Statement 发送sql语句，得到的结果 封装在 ResultSet 中。
-   ![](img/jdbc03.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc03.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### JDBC访问数据库的步骤
 
@@ -140,17 +150,28 @@ JDBC四个核心对象？
 
 此电脑-------》右键管理-------》选择服务
 
-![](img/jdbc连接数据库1.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库1.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 找到MySQL服务，查看MySQL服务是否已经启动了，如果启动是灰色，说明已经启动了。
 
-![](img/jdbc连接数据库2.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库2.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2、创建数据库和创建user表，并添加信息，sql语句如下。
 
 打开可视化工具，将如下sql语句添加到可视化工具中，并执行以下sql语句即可。
 
-![](img/jdbc连接数据库3.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库3.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```sql
 -- 创建数据库
@@ -175,26 +196,46 @@ select * from user;
 
 执行结果：
 
-![](img/jdbc连接数据库4.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库4.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 导入驱动Jar包
 
 1、新建项目day04，在项目day04上新建lib文件夹
 
-![](img/jdbc连接数据库5.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库5.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2、将mysql驱动的jar包导入到lib文件夹下
 
-![](img/jdbc连接数据库6.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库6.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 3、在导入的mysql的jar包上右键，选择Add as Library...
 
-![](img/jdbc连接数据库7.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc连接数据库7.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 注册驱动
 我们Java程序需要通过数据库驱动才能连接到数据库，因此需要注册驱动。
 MySQL的驱动的入口类是：`com.mysql.jdbc.Driver`
-![](img/jdbc07.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc07.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ##### API介绍
 `java.sql.DriverManager`类用于注册驱动。提供如下方法注册驱动
@@ -242,7 +283,12 @@ public class Driver extends NonRegisteringDriver implements java.sql.Driver {
     }
 }
 ```
-![](img/jdbc08.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc08.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 >注意：使用`DriverManager.registerDriver(new com.mysql.jdbc.Driver());`，存在以下方面不足
 >
 >1. 驱动被注册两次
@@ -257,10 +303,18 @@ public class Demo01 {
 ```
 
 演示：`Class.forName("包名.类名");`会走这个类的静态代码块
-![](img/jdbc10.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc10.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 通常开发我们使用Class.forName() 加载驱动。`Class.forName("com.mysql.jdbc.Driver");`会走Driver类的静态代码块。在静态代码块中注册一次驱动。
-![](img/jdbc09.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc09.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 >总结：注册MySQL驱动使用`Class.forName("com.mysql.jdbc.Driver");`
 
@@ -294,13 +348,19 @@ static Connection getConnection(String url, String user, String password)
 3. `String password`：数据库的密码
 
 连接数据库的URL地址格式：`协议名:子协议://服务器名或IP地址:端口号/数据库名?参数=参数值`
-![](img/jdbc13.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc13.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 MySQL写法：`jdbc:mysql://localhost:3306/day04_db`
 如果是本地服务器，端口号是默认的3306，则可以简写：`jdbc:mysql:///day04_db`
 
-![](img/url.bmp)
 
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/url.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 注意事项
 >如果数据出现乱码需要加上参数: ?useUnicode=true&characterEncoding=utf8，表示让数据库以UTF8编码来处理数据。
@@ -325,9 +385,18 @@ public class Demo01 {
 ```
 #### 案例效果
 1.连接成功
-![](img/jdbc14.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc14.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 2.连接失败
-![](img/jdbc15.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc15.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -437,16 +506,28 @@ public class Demo03 {
 1. ResultSet内部有一个指针,刚开始记录开始位置
 2. 调用next方法, ResultSet内部指针会移动到下一行数据
 3. 我们可以通过ResultSet得到一行数据 getXxx得到某列数据
-   ![](img/jdbc18.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc18.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### ResultSet获取数据的API
 
 其实ResultSet获取数据的API是有规律的get后面加数据类型。我们统称`getXXX()`
-![](img/jdbc19.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/jdbc19.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ​     例如：
 
-![img](img/结果集.bmp) 
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/结果集.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 对于上图中的一行数据，我要获取username为zhangsan这列的值，有如下2种写法：
 
@@ -599,11 +680,19 @@ Connection con = null;
 
 第一步：选中项目day04,右键----》new-----》File
 
-![](img/抽取工具类.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/抽取工具类.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 第二步：将文件以properties为后缀名进行保存。
 
-![](img/抽取工具类1.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/抽取工具类1.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 jdbc.properties文件中的配置信息：
 
@@ -782,9 +871,11 @@ insert into account values (null,'b',1000);
 ```
 #### JDBC操作事务
 
-![](img/JDBC控制事务.bmp)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/JDBC控制事务.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### API介绍
 
@@ -1004,7 +1095,11 @@ select * from user where username ='zhangsan' -- ' and password ='kajajha''' ;
 
  -- ' and password ='kajajha''' ; -- 表示注释的意思，这样就会将密码都给注释掉了，就相当于只根据用户名zhangsan来查询了。
 
-![](img/sql注入问题.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/sql注入问题.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 注意：以上的 zhangsan' 空格--空格 中的用户名zhangsan是数据库存在的。
 
@@ -1201,7 +1296,11 @@ String sql=”select *from user where username=? and password = ?”;
 
 新建一个User类，具体属性如下所示：
 
-![](img/15.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/15.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 在DAO层使用JDBC将查询的数据封装到User类的对象中的代码，如下所示：
 
@@ -1295,7 +1394,11 @@ call transfer('tom','rose',100,@flag)$
 
 在jdbc中调用存储过程使用CallableStatement接口完成。
 
-![image-20200804080942200](img\image-20200804080942200.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/image-20200804080942200.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：
 
@@ -1453,5 +1556,7 @@ public class Test01 {
 
 具体的三层开发如下图所示：
 
-![](img/三层开发流程图.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img06/三层开发流程图.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
