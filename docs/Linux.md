@@ -312,10 +312,10 @@ eg:	find / -name 'aa*'
 	 mv的语法不仅可以对目录进行重命名 而且也可以对各种文件，压缩包等进行 重命名的操作
 ```
 
-![image-20200921175248356](image/image-20200921175248356.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921175248356.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【6】移动目录
@@ -330,10 +330,10 @@ eg:	find / -name 'aa*'
 命令: mkdir test newTest
 ```
 
-![image-20200921210421208](image/image-20200921210421208.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921210421208.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 移动test到newTest
@@ -343,10 +343,10 @@ eg:	find / -name 'aa*'
 	 mv语法不仅可以对目录进行剪切操作，对文件和压缩包等都可执行剪切操作*
 ```
 
-![image-20200921210612192](image/image-20200921210612192.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921210612192.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【7】拷贝目录
@@ -358,10 +358,8 @@ eg:	find / -name 'aa*'
 	 cp命令不仅可以拷贝目录还可以拷贝文件，压缩包等，拷贝文件和压缩包时不用-r表示递归**
 ```
 
-![image-20200921210931925](image/image-20200921210931925.png)
-
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921210931925.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【8】删除目录
@@ -371,10 +369,8 @@ eg:	find / -name 'aa*'
 	 rm不仅可以删除目录，也可以删除其他文件或压缩包，为了方便大家的记忆，无论删除任何目录或文件，都直接使用rm -rf 目录/文件/压缩包
 ```
 
-![image-20200921211320845](image/image-20200921211320845.png)
-
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921211320845.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 3、文件操作
@@ -388,10 +384,9 @@ eg:	find / -name 'aa*'
 
 在test目录中创建test.txt文件
 
-![image-20200921211754178](image/image-20200921211754178.png)
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921211754178.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【2】查看文件
@@ -412,10 +407,10 @@ eg:	find / -name 'aa*'
 	查看指定文件的前n行
 ```
 
-![image-20200921212143848](image/image-20200921212143848.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921212143848.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【3】编辑文件★
@@ -432,35 +427,35 @@ eg:	find / -name 'aa*'
 
 /test下的aaa.txt文件，使用vim aaa.txt
 
-![image-20200921212541403](image/image-20200921212541403.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921212541403.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 但此时并不能编辑，因为此时处于命令模式，点击键盘i/a/o进入编辑模式，可以	编辑文件
 
-![image-20200921212646228](image/image-20200921212646228.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921212646228.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 编辑完成后，按下Esc，退回命令模式
 
-![image-20200921212733979](image/image-20200921212733979.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921212733979.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 此时文件虽然已经编辑完成，但是没有保存，需输入冒号：进入底行模式，在底行模	式下输入wq代表写入内容并退出，即保存；输入q!代表强制退出不保存
 
-![image-20200921212830700](image/image-20200921212830700.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921212830700.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ```java
@@ -498,10 +493,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:tar -zcvf test.tar.gz test.txt
 ```
 
-![image-20200921213608884](image/image-20200921213608884.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921213608884.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 实例：打包并压缩/test下的所有文件 压缩后的压缩包指定名称为xxx.tar.gz
@@ -510,10 +505,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:tar -zcvf test.tar.gz /test/*
 ```
 
-![image-20200921213856474](image/image-20200921213856474.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921213856474.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【2】解压压缩包(重点)
@@ -527,10 +522,9 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 
 示例：将/test下的test.tar.gz解压到当前目录下
 
-![image-20200921214616442](image/image-20200921214616442.png)
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921214616442.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 示例：将/test下的xxx.tar.gz解压到根目录/home下
@@ -544,10 +538,9 @@ linux中打包并压缩的文件的扩展名： .tar.gz
   	 
 ```
 
-![image-20200921214914023](image/image-20200921214914023.png)
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921214914023.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 5、其他命令
@@ -558,10 +551,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:pwd  显示当前所在的目录的绝对路径
 ```
 
-![image-20200921215147796](image/image-20200921215147796.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921215147796.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【2】查看进程
@@ -570,10 +563,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令: ps -ef 显示所有的进程
 ```
 
-![image-20200921215220687](image/image-20200921215220687.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921215220687.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【3】kill命令
@@ -594,10 +587,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 
 示例：搜索/usr/sudo.conf文件中包含字符串to的行
 
-![image-20200921215845896](image/image-20200921215845896.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921215845896.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【5】管道命令
@@ -608,10 +601,9 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 
 示例：查看当前系统中所有的进程中包括system字符串的进程
 
-![image-20200921215951749](image/image-20200921215951749.png)
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921215951749.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【6】网络通信命令
@@ -620,20 +612,20 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:ifconfig 查看当前系统的网卡信息
 ```
 
-![image-20200921220144202](image/image-20200921220144202.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921220144202.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ```properties
 命令: ping  查看与某台机器的连接情况 
 ```
 
-![image-20200921220315189](image/image-20200921220315189.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921220315189.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ```properties
@@ -642,17 +634,17 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 
 全部信息：
 
-![image-20200921220423851](image/image-20200921220423851.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921220423851.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 80端口信息：
-![image-20200921220811491](image/image-20200921220811491.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921220811491.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【7】关机命令
@@ -666,16 +658,16 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 
 ### 【1】文件类别含义
 
-![1585060087979](image/1585060087979.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585060087979.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1553479161559](image/1553479161559.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1553479161559.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 | **字母** | **说明**     |
@@ -684,10 +676,9 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 | **-**    | 这是一个文件 |
 | **l**    | 这是一个链接 |
 
-![1585060133053](image/1585060133053.png)
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585060133053.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 【2】操作方式
@@ -703,10 +694,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:chmod u=rwx,g=rwx,o=rwx test/
 ```
 
-![image-20200921222227606](image/image-20200921222227606.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921222227606.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ```properties
@@ -721,10 +712,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:chmod 761 test
 ```
 
-![image-20200921222343851](image/image-20200921222343851.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921222343851.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 7、防火墙设置
@@ -746,16 +737,15 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 或者:firewall-cmd --state
 ```
 
-![image-20200921224828030](image/image-20200921224828030.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921224828030.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![image-20200921224914831](image/image-20200921224914831.png)
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921224914831.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 【2.2】关闭防火墙
@@ -764,10 +754,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:systemctl stop firewalld 关闭防火墙
 ```
 
-![image-20200921225406050](image/image-20200921225406050.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921225406050.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 【2.3】启动防火墙
@@ -776,10 +766,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:systemctl start firewalld  启动防火墙
 ```
 
-![image-20200921225919524](image/image-20200921225919524.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921225919524.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 【2.4】重启防火墙
@@ -797,10 +787,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 
 
 
-![image-20200921230650724](image/image-20200921230650724.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921230650724.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### 【2.6】端口设置
@@ -818,10 +808,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 
 添加80端口
 
-![image-20200921231120998](image/image-20200921231120998.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200921231120998.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 重启防火墙，查看防火墙信息：
@@ -830,10 +820,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 命令:firewall-cmd --zone=public --list-ports
 ```
 
-![image-20200922000735761](image/image-20200922000735761.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200922000735761.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 删除80端口
@@ -842,10 +832,10 @@ linux中打包并压缩的文件的扩展名： .tar.gz
 密令:firewall-cmd --zone=public --remove-port=80/tcp --permanent	
 ```
 
-![image-20200922000857865](image/image-20200922000857865.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20200922000857865.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 8、基础命令总结
@@ -996,62 +986,60 @@ Linux; 配置域名映射
 
 将Linux系统分节点备份保存.  在Linux启动状态下就可以进行.
 
-![1585203844355](img/1585203844355.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585203844355.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### Linux系统克隆:
 
 克隆: 将一个Linux系统复制一份, 操作之前需要将Linux关机
 
-![1585147751820](img/1585147751820.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585147751820.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1585147793843](img/1585147793843.png)
-
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585147793843.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1585147849244](img/1585147849244.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585147849244.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1585147894422](img/1585147894422.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585147894422.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1585148010161](img/1585148010161.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585148010161.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1585148037100](img/1585148037100.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585148037100.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![1585148049155](img/1585148049155.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585148049155.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
-![](img/1585148065918.png)
+
 
  <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/1585148065918.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 # 第四章 软件安装
@@ -1106,14 +1094,14 @@ Linux:
 
 ```
 
-![image-20201012165458491](img/image-20201012165458491.png)
+
 
   <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20201012165458491.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
- ![image-20201012165517443](img/image-20201012165517443.png)
+
 
   <figure class="thumbnails">
-    <img src="picture/Linux/1585117711733.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/image-20201012165517443.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
