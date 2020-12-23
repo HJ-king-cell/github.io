@@ -1,6 +1,4 @@
----
-typora-copy-images-to: img
----
+
 
 # MYSQL基础语法
 
@@ -35,8 +33,9 @@ insert into student2 select * from student;
 ```
 >注意：如果只想复制student表中name,age字段数据到student2表中使用如下格式
 >`insert into student2(name, age) SELECT name, age FROM student;`
->![蠕虫复制](img/蠕虫复制.png)
-
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/蠕虫复制.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -93,6 +92,11 @@ SELECT * FROM student3 WHERE math>80;
 
 ![](imgs/where查询01.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询english分数小于或等于80分的学生
 
 ```sql
@@ -100,6 +104,11 @@ SELECT * FROM student3 WHERE english<=80;
 ```
 
 ![](imgs/where查询02.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 - 查询age等于20岁的学生
 
@@ -109,6 +118,11 @@ SELECT * FROM student3 WHERE age=20;
 
 ![](imgs/where查询03.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询age不等于20岁的学生
 
 ```sql
@@ -117,6 +131,11 @@ SELECT * FROM student3 WHERE age<>20;
 ```
 
 ![](imgs/where查询04.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 #### 逻辑运算符
 
@@ -134,6 +153,11 @@ SELECT * FROM student3 WHERE  age>35 AND sex='男';
 
 ![](imgs/where查询05.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询age大于35或性别为男的学生(两个条件其中一个满足)
 
 ```sql
@@ -142,6 +166,11 @@ SELECT * FROM student333 WHERE age>35 OR sex='男';
 
 ![](imgs/where查询06.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询id是1或3或5的学生
 
 ```sql
@@ -149,6 +178,11 @@ SELECT * FROM student3 WHERE id=1 OR id=3 OR id=5;
 ```
 
 ![](imgs/where查询08.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **in关键字**
 语法格式：
@@ -169,6 +203,11 @@ SELECT * FROM student3 WHERE id IN (1,3,5);
 
 ![](imgs/where查询08.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询id不是1或3或5的学生
 
 ```sql
@@ -176,6 +215,11 @@ SELECT * FROM student3 WHERE id NOT IN (1,3,5);
 ```
 
 ![](imgs/where查询07.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 #### 范围
 
@@ -197,6 +241,11 @@ SELECT * FROM student3 WHERE english BETWEEN 75 AND 90;
 
 ![](imgs/where查询09.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 ## 3、模糊查询like(掌握)
 
 ### 目标
@@ -204,6 +253,12 @@ SELECT * FROM student3 WHERE english BETWEEN 75 AND 90;
 能够掌握模糊查询语法格式
 
 ![](imgs/where查询11.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 ### 讲解
 
@@ -247,6 +302,11 @@ SELECT * FROM student3 WHERE NAME LIKE '%德%';
 
 ![](imgs/where查询11.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询姓马，且姓名有三个字的学生
 
 ```sql
@@ -254,6 +314,11 @@ SELECT * FROM student3 WHERE NAME LIKE '马__';
 ```
 
 ![](imgs/where查询12.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -269,6 +334,12 @@ SELECT * FROM student3 WHERE NAME LIKE '马__';
 1. 能够掌握对查询的数据进行排序
 
 ![](imgs/orderby01.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 ### 讲解
 
@@ -294,6 +365,12 @@ SELECT * FROM student3 ORDER BY age DESC;
 ```
 
 ![](imgs/orderby01.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 1.2.2 组合排序
 
@@ -324,6 +401,11 @@ SELECT * FROM student3 ORDER BY age DESC, math DESC;
 ```
 
 ![](imgs/orderby02.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -364,6 +446,12 @@ SELECT COUNT(english) FROM student3;
 ```
 
 ![](imgs/聚合函数01.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 我们发现对于NULL的记录不会统计.
 
 统计数量常用:
@@ -374,6 +462,11 @@ SELECT COUNT(*) FROM student3;
 
 ![](imgs/聚合函数02.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询年龄大于40的总数
 
 ```sql
@@ -382,6 +475,11 @@ SELECT COUNT(*) FROM student3 WHERE age>40;
 
 ![](imgs/聚合函数03.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询数学成绩总分
 
 ```sql
@@ -389,6 +487,11 @@ SELECT SUM(math) FROM student3;
 ```
 
 ![](imgs/聚合函数04.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 - 统计数学与英语的总和值。
 
@@ -401,6 +504,11 @@ SELECT SUM(math) FROM student3;
 
   ![](imgs/总和值.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
   方法二：
 
   ```sql
@@ -409,6 +517,11 @@ SELECT SUM(math) FROM student3;
   ```
 
   ![](imgs/总和值2.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
   我们发现按照方法二的做法，结果是有问题的。结果少了86。
 
@@ -436,6 +549,9 @@ SELECT SUM(math) FROM student3;
 
 ![](imgs/总和值3.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 - 查询数学成绩最高分
@@ -446,6 +562,11 @@ SELECT MAX(math) FROM student3;
 
 ![](imgs/聚合函数06.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询数学成绩最低分
 
 ```sql
@@ -454,6 +575,11 @@ SELECT MIN(math) FROM student3;
 
 ![](imgs/聚合函数07.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - 查询数学成绩平均分
 
 ```sql
@@ -461,6 +587,11 @@ SELECT AVG(math) FROM student3;
 ```
 
 ![](imgs/聚合函数05.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -492,6 +623,11 @@ SELECT AVG(math) FROM student3;
 说明：分组其实就是按列进行分类，然后可以对分类完的数据使用聚合函数进行运算。
 
 ![](imgs/分组图解1.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 上述数据表示纸巾和洗衣粉属于不同品牌，但是价格是一样的。
 
@@ -528,6 +664,11 @@ insert into orders(id,product,price) values(6,'洗衣粉',60);
 
 ![](imgs/分组图解2.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 分组之后查询的结果应该是：
 
 苹果    8
@@ -541,6 +682,11 @@ insert into orders(id,product,price) values(6,'洗衣粉',60);
 最终答案：
 
 ![](imgs/分组图解3.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 说明：先按照product进行分组，分组完成之后再给每一组进行求和。
 
@@ -556,9 +702,19 @@ select id,product,sum(price) from orders group by product;
 
 ![](imgs/分组图解4.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 原来的数据：
 
 ![](imgs/分组图解5.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 说明：
 
@@ -572,13 +728,28 @@ select id,product,sum(price) from orders group by product;
 
 ![](imgs/分组图解6.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 然后修改查询语句，要求是先按照商品名分组，然后在按照价格进行分组。
 
 ![](imgs/分组图解7.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 出现上述结果的原因是：
 
 ![](imgs/分组图解8.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 说明：先按照商品名字进行分组，然后再按照商品的价格进行分组。
 
@@ -594,9 +765,19 @@ select id,product,sum(price) from orders group by product;
 
 ![](imgs/分组图解9.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 可是执行上述sql语句时，会报如下错误：
 
 ![](imgs/分组图解10.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 是因为上述的sql语句的使用有错误。
 
@@ -616,9 +797,19 @@ select id,product,sum(price) from orders group by product;
 
 ![](imgs/分组图解11.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 关于以上sql语句可以实现的最终结果的原因如下所示：
 
 ![](imgs/分组图解12.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 总结：
 
@@ -642,9 +833,19 @@ sql语句举例：
 
 ![](imgs/分组图解13.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 上述sql语句执行顺序如下图所示：
 
 ![](imgs/分组图解14.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 select ... from ... where 条件1 ... group by ... having 条件2 order by...
 
@@ -713,11 +914,21 @@ SELECT * FROM student3 LIMIT 1,4;
 
 ![](imgs/limit01.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 **LIMIT的使用场景**：分页
 
 比如我们登录京东，淘宝，返回的商品信息可能有几万条，不是一次全部显示出来。是一页显示固定的条数。假设我们一每页显示5条记录的方式来分页。
 
 ![](imgs/limit04.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 假设我们一每页显示5条记录的方式来分页，SQL语句如下：
 
@@ -732,6 +943,11 @@ SELECT * FROM student3 LIMIT 10,5;
 ```
 
 ![](imgs/limit03.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 > **注意**：
 >
@@ -779,6 +995,11 @@ SELECT * FROM student3 LIMIT 10,5;
 
    ![](img\DCL01.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 #### 创建用户
 
 ```sql
@@ -813,9 +1034,19 @@ create user 'u1'@'localhost' identified by '1234';
 
 ![](img\DCL权限1.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 2）然后再打开一个dos窗口，使用新创键的普通用户u1进行登录。
 
 ![](img\DCL权限2.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 需求2：创建u2用户可以在任何电脑上登录mysql服务器，密码为1234
 
@@ -831,20 +1062,38 @@ create user 'u2'@'%' identified by '1234';
 
 ![](img\DCL权限12.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 2）使用新创键的用户u2登录
 
 ![](img\DCL权限13.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **注：创建的用户名都在mysql数据库中的user表中可以查看到，密码经过了加密。**
 
 ![](img\可视化工具中查看用户1.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 #### 授权用户
 
 用户创建之后，基本没什么权限！需要给用户授权
 ![](img\DCL权限2.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **授权格式**：
 
@@ -869,6 +1118,11 @@ GRANT 权限1, 权限2... ON 数据库名.表名 TO '用户名'@'主机名';
 
    ![](img\DCL权限3.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
    B:使用root管理员给普通用户u1进行上述需求的授权。
 
    ```sql
@@ -877,9 +1131,19 @@ GRANT 权限1, 权限2... ON 数据库名.表名 TO '用户名'@'主机名';
 
    ![](img\DCL权限4.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 2. 使用u1用户创建表person,并插入一条数据
 
    ![](img\DCL权限5.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```sql
 语句：create table person(age int);
@@ -887,9 +1151,19 @@ GRANT 权限1, 权限2... ON 数据库名.表名 TO '用户名'@'主机名';
 
 ![](img\DCL权限6.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 向person表中插入一条记录：
 
 ![](img\DCL权限7.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```sql
 语句：insert into person values(18);
@@ -898,6 +1172,11 @@ GRANT 权限1, 权限2... ON 数据库名.表名 TO '用户名'@'主机名';
 注意：由于上述没有给普通用户授权删除表中的数据，所以当我们删除的时候，会出现如下错误：
 
 ![](img\DCL权限8.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 #### 撤销授权
 
@@ -925,9 +1204,18 @@ REVOKE…ON…FROM	：撤销授权的关键字
 
   ![](img\DCL权限9.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
   2) 使用用户u1登录，操作heima01数据库中的表。
 
   ![](img\DCL权限10.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
   
 
@@ -975,6 +1263,9 @@ DROP USER '用户名'@'主机名';
 
   ![](img\DCL权限14.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 #### 修改管理员密码
@@ -996,6 +1287,11 @@ mysqladmin -u root -p password 新密码
 
    ![](img\DCL权限15.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 #### 修改普通用户密码
 
 > 注意：需要使用root用户登陆MySQL的情况下操作。新密码要加单引号。
@@ -1012,9 +1308,19 @@ set password for '用户名'@'主机名' = password('新密码');
 
 ![](img\DCL权限16.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 2) 使用新密码登录，老密码登录不了
 
 ![](img\DCL权限17.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -1041,6 +1347,11 @@ set password for '用户名'@'主机名' = password('新密码');
 ​	在服务器进行数据传输、数据存储和数据交换，就有可能产生数据故障。比如发生意外停机或存储介质损坏。这时，如果没有采取数据备份和数据恢复手段与措施，就会导致数据的丢失，造成的损失是无法弥补与估量的。
 
 ![1551281803999](imgs/1551281803999.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 #### 命令行方式备份与还原
 
@@ -1074,6 +1385,11 @@ create database heima;
 
 ![](imgs/备份数据库1.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 说明：在备份数据的时候，数据库不会被删除。可以手动删除数据库。同时在恢复数据的时候，不会自动的给我们创建数据库，仅仅只会恢复数据库中的表和表中的数据。
 
 
@@ -1090,6 +1406,11 @@ create database heima;
 
 ![](imgs/还原数据库1.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 ​	2）重新开启一个新的dos窗口。将day02备份的数据表和表数据 恢复到heima中。
 
 注意：在cmd下使用，不是登录mysql后使用，和备份比较类似，只不过mysql后面不带dump，并且箭头是<,指向需要导入数据的新的数据库。这种恢复的方式，也需要数据库提前存在。
@@ -1100,10 +1421,18 @@ create database heima;
 
 ![](imgs/还原数据库2.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 导入后的表结构：
 
 ![](imgs/还原数据库3.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 #### 图形化界面备份与还原
@@ -1116,15 +1445,28 @@ create database heima;
 
   ![img](img\wps12.jpg) 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
   2）
 
   ![img](img\wps13.jpg) 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
   3）
 
   ![img](img\wps14.jpg) 
 
-   
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 - 使用可视化工具将之前备份的数据导入：
 
@@ -1134,17 +1476,37 @@ create database heima;
 
   ![img](img\wps15.jpg) 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
   2）
 
   ![img](img\wps16.jpg) 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
   3）
 
   ![img](img\wps17.jpg) 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
   恢复后的结果：
 
   ![img](img\wps18.jpg) 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ## 11、数据库约束的概述
 
@@ -1188,7 +1550,18 @@ create database heima;
 
 有些记录的 name,age,score 字段的值都一样时,那么就没法区分这些数据,造成数据库的记录不唯一,这样就不方便管理数据。
 ![](imgs/主键01.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 ![](imgs/主键02.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 每张表都应该有一个主键，并且每张表只能有一个主键。
 
@@ -1231,6 +1604,11 @@ CREATE TABLE st5 (
 ```
 
 ![](imgs/主键03.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 - 添加数据
 
@@ -1306,14 +1684,28 @@ INSERT INTO st6 (NAME, age) VALUES ('沙僧', 20);
 
 ![](imgs/主键05.png)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 DELETE和TRUNCATE的区别
 
 - DELETE 删除表中的数据，但不重置AUTO_INCREMENT的值。
   ![](imgs/主键06.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 - TRUNCATE 摧毁表，重建表，AUTO_INCREMENT重置为1
   ![](imgs/主键07.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 
@@ -1502,6 +1894,11 @@ INSERT INTO st9 VALUES (2, '张学友', '香港');
 
 ![](img\1.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 分析：
 
 程序员和项目：
@@ -1529,6 +1926,11 @@ INSERT INTO st9 VALUES (2, '张学友', '香港');
 关系图总结:
 
 ![](img\多对多关系图解.PNG)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 创建表的sql语句:
 
@@ -1582,6 +1984,11 @@ insert into coder_project values(3,2);
 
 ![](img\2.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 说明：在程序员和项目表中是不存在编号是30和20的，但是这里依然可以插入不存在的编号。这样做是不可以的，失去了中间表的意义。
 
  
@@ -1592,9 +1999,19 @@ insert into coder_project values(3,2);
 
 ![](img\3.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 可是我们却可以删除程序员表coder中的编号为1的程序员：
 
 ![](img\4.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 编号为1的程序员张三已经被我们删除，但是在中间表coder_project中仍然还存在编号为1的程序员，这样对于中间表没有意义了。
 
@@ -1678,9 +2095,19 @@ create table coder_project(
 
 ![](img\5.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 2、增加外键约束：
 
 ![](img\6.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 3、添加完外键约束以后，就会在可视化工具中的架构设计器上查看表之间的关系
 
@@ -1688,13 +2115,28 @@ create table coder_project(
 
 ![](img\7.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 然后点击右下角：
 
 ![](img\8.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 最后的表关系如下：
 
 ![](img\9.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 3、向三张表中分别插入数据：
 
@@ -1721,9 +2163,19 @@ A:执行以下语句：
 
 ![](img\10.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 B:执行以下语句：
 
 ![](img\11.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 再次执行上述语句的时候，发现报错了，而数据库表中的数据都没有改变，说明外键约束起到了作用。
 
@@ -1781,9 +2233,19 @@ insert into coder_project values(3,2);
 
 ![](img\12.bmp)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 **需求2：删除主表coder表的id是4的行数据。**
 
 ![](img\12.bmp)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **小结：**
 
@@ -1810,6 +2272,11 @@ insert into coder_project values(3,2);
 
 ![](img\表之间的一对多关系.PNG)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 注意：如果是一对多的关系，那么设计表的时候需要在多的一方增加一列，引入一的一方的主键作为自己的外键。
 
 
@@ -1824,6 +2291,9 @@ insert into coder_project values(3,2);
 
 ![](img\一对一表设计图解.PNG)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ## 18、表设计案例(练习)
@@ -1871,6 +2341,11 @@ insert into coder_project values(3,2);
 2）关于设计学生成绩管理系统的数据表的E-R图如下所示：
 
 ![](img\多表设计练习.PNG)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 3）创建表sql语句：
 
@@ -1924,6 +2399,9 @@ create table studentcourse(
 
 ![](img\多表设计练习最后结果.PNG)
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ## 作业:多表练习
@@ -1934,6 +2412,11 @@ create table studentcourse(
 
 一个旅游线路分类中有多条旅游线路 , 一条旅游线路属于某一个分类 . 旅游线路表是多表 ,可以在多表上添加一个外键来执行分类表中的主键.
 ![](img\1对多练习01.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 <div style='background-color:#999;'>具体操作:<div>
 
@@ -1971,6 +2454,11 @@ CREATE TABLE tab_route (
 
 一个用户可以收藏多个线路，一个线路可以被多个用户收藏 ,所以用户和线路之间是多对多的关系.对于多对多的关系我们需要增加一张中间表来维护他们之间的关系
 ![](img\多对多练习01.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 <div style='background-color:#999;'>具体操作:<div>
 
