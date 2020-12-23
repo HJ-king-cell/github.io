@@ -94,7 +94,7 @@ SELECT * FROM student3 WHERE math>80;
 
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/where查询01.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询01.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -104,10 +104,9 @@ SELECT * FROM student3 WHERE math>80;
 SELECT * FROM student3 WHERE english<=80;
 ```
 
-![](imgs/where查询02.png)
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/where查询02.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询02.png)" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -117,10 +116,10 @@ SELECT * FROM student3 WHERE english<=80;
 SELECT * FROM student3 WHERE age=20;
 ```
 
-![](imgs/where查询03.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询03.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -131,10 +130,10 @@ SELECT * FROM student3 WHERE age!=20;
 SELECT * FROM student3 WHERE age<>20;
 ```
 
-![](imgs/where查询04.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询04.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -152,10 +151,10 @@ SELECT * FROM student3 WHERE age<>20;
 SELECT * FROM student3 WHERE  age>35 AND sex='男';
 ```
 
-![](imgs/where查询05.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询05.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -165,10 +164,10 @@ SELECT * FROM student3 WHERE  age>35 AND sex='男';
 SELECT * FROM student333 WHERE age>35 OR sex='男';
 ```
 
-![](imgs/where查询06.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询06.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -178,10 +177,10 @@ SELECT * FROM student333 WHERE age>35 OR sex='男';
 SELECT * FROM student3 WHERE id=1 OR id=3 OR id=5;
 ```
 
-![](imgs/where查询08.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询08.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -202,10 +201,10 @@ SELECT * FROM 表名 WHERE 字段 in (值1, 值2, 值3);
 SELECT * FROM student3 WHERE id IN (1,3,5);
 ```
 
-![](imgs/where查询08.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询08.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -218,7 +217,7 @@ SELECT * FROM student3 WHERE id NOT IN (1,3,5);
 ![](imgs/where查询07.png)
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询07.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -240,10 +239,10 @@ SELECT * FROM student3 WHERE english>=75 AND english<=90;
 SELECT * FROM student3 WHERE english BETWEEN 75 AND 90;
 ```
 
-![](imgs/where查询09.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询07.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -253,10 +252,10 @@ SELECT * FROM student3 WHERE english BETWEEN 75 AND 90;
 
 能够掌握模糊查询语法格式
 
-![](imgs/where查询11.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询11.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -293,7 +292,11 @@ name like '_张_'  只有中间是张，前面一个字，后面一个字。
 SELECT * FROM student3 WHERE NAME LIKE '马%';
 ```
 
-![](imgs/where查询10.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/where查询10.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 - 查询姓名中包含'德'字的学生
 
@@ -301,10 +304,8 @@ SELECT * FROM student3 WHERE NAME LIKE '马%';
 SELECT * FROM student3 WHERE NAME LIKE '%德%';
 ```
 
-![](imgs/where查询11.png)
-
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询11.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -314,10 +315,10 @@ SELECT * FROM student3 WHERE NAME LIKE '%德%';
 SELECT * FROM student3 WHERE NAME LIKE '马__';
 ```
 
-![](imgs/where查询12.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img03/where查询12.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -334,10 +335,9 @@ SELECT * FROM student3 WHERE NAME LIKE '马__';
 
 1. 能够掌握对查询的数据进行排序
 
-![](imgs/orderby01.png)
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/orderby01.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -365,10 +365,10 @@ SELECT 字段 FROM 表名 ORDER BY 排序的字段 [ASC|DESC];
 SELECT * FROM student3 ORDER BY age DESC;
 ```
 
-![](imgs/orderby01.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/orderby01.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -404,7 +404,7 @@ SELECT * FROM student3 ORDER BY age DESC, math DESC;
 ![](imgs/orderby02.png)
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/orderby02.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -446,10 +446,10 @@ SELECT 聚合函数(字段) FROM 表名;
 SELECT COUNT(english) FROM student3;
 ```
 
-![](imgs/聚合函数01.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/聚合函数01.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -464,7 +464,7 @@ SELECT COUNT(*) FROM student3;
 ![](imgs/聚合函数02.png)
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/聚合函数02.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -477,7 +477,7 @@ SELECT COUNT(*) FROM student3 WHERE age>40;
 ![](imgs/聚合函数03.png)
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/聚合函数03.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
