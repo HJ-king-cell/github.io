@@ -33,6 +33,7 @@ insert into student2 select * from student;
 ```
 >注意：如果只想复制student表中name,age字段数据到student2表中使用如下格式
 >`insert into student2(name, age) SELECT name, age FROM student;`
+
 <figure class="thumbnails">
     <img src="picture/mysql/img02/蠕虫复制.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
