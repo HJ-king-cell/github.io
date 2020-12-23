@@ -120,9 +120,11 @@ DELETE FROM 表名;
 ​	数据库表的每一列都是不可分割的原子数据项。即表中的某个列有多个值时，必须拆分为不同的列。直到不能拆分为止。简而言之，第一范式每一列不可再拆分，称为原子性。
 
 **第一范式**：表中每一列不能再拆分
-![](img/范式01.png)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/范式01.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 > 总结：如果不遵守第一范式，查询出数据还需要进一步处理（查询不方便）。遵守第一范式，需要什么字段的数据就查询什么数据（方便查询）。
 
@@ -136,7 +138,9 @@ DELETE FROM 表名;
 
 2) 表中的每一列都完全依赖于主键
 
-![](img/范式03.png)
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/范式03.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 > 总结：如果不遵守第二范式，数据冗余，相同数据无法区分。遵守第二范式减少数据冗余，通过主键区分相同数据。
 
@@ -145,7 +149,11 @@ DELETE FROM 表名;
 ​	在满足第二范式的前提下，表中的每一列都直接依赖于主键，而不是通过其它的列来间接依赖于主键。简而言之，第三范式就是所有列不依赖于其它非主键列，也就是在满足2NF的基础上，任何非主键列不得传递依赖于主键。所谓传递依赖，指的是如果存在"A → B → C"的决定关系，则C传递依赖于A。因此，满足第三范式的数据库表应该不存在如下依赖关系：主键列 → 非主键列x → 非主键列y。这里：非主键列y间接依赖于主键列了，所以不满足第三范式。
 
 **第三范式**：从表的外键必须使用主表的主键
-![](img/范式04.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/范式04.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 > 总结：如果不遵守第三范式，可能会有相同数据无法区分，修改数据的时候多张表都需要修改（不方便修改）。遵守第三范式通过id可以区分相同数据，修改数据的时候只需要修改一张表（方便修改）。
 
@@ -190,11 +198,19 @@ DELETE FROM 表名;
 
 将一方即价格的主键作为多方即水果的外键。
 
-![](imgs/多表查询1.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/多表查询1.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 多表查询的分类
 
-![1550291804592](imgs/1550291804592.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/1550291804592.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -262,11 +278,19 @@ insert into fruit values(3,'香蕉',null);
 
 查询结果：
 
-![](imgs/笛卡尔积问题.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/笛卡尔积问题.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 产生上述查询结果的原因：
 
-![](imgs/笛卡尔积问题图解.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/笛卡尔积问题图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：
 
@@ -292,7 +316,11 @@ fruit表中的每一条记录，都和price表中的每一条进行匹配连接�
 
 解决上述查询的方案：在查询两张表的同时添加条件进行过滤，比如fruit表的id和必须和price表的id相同。
 
-![](imgs/显示内连接解决笛卡尔积问题.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/显示内连接解决笛卡尔积问题.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -313,7 +341,11 @@ fruit表中的每一条记录，都和price表中的每一条进行匹配连接�
 
 用左边表的记录去匹配右边表的记录，如果符合条件的则显示。内连接查询的结果：两表的公共部分。
 
-![](imgs/内连接结果.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/内连接结果.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### 隐式内连接
 
@@ -342,7 +374,11 @@ select * from 表名1  join 表名2 on 条件
 
 - 使用显示内连接解决上述笛卡尔积问题
 
-![](imgs/显示内连接解决笛卡尔积问题2.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/显示内连接解决笛卡尔积问题2.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：显示的内连接，一般称为标准的内连接，有inner join，查询到的数据为两个表经过on条件过滤后的笛卡尔积。
 
@@ -395,7 +431,11 @@ select f.id,f.name,p.id,p.price from fruit f inner join price p on f.price_id = 
 
 左外连接原理如下所示：
 
-![](imgs/做外连接原理图.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/做外连接原理图.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **左外连接**可以理解为：用左边表去右边表中查询对应记录，不管是否找到，都将显示左边表中全部记录。
 
@@ -413,11 +453,19 @@ select * from 表1 left outer join 表2 on 条件;
 
 - 不管能否查到水果对应的价格，都要把水果显示出来。
 
-![](imgs/左外连接图解.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/左外连接图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 分析：香蕉是没有价格的，但是由于香蕉位于左边的表中，所以即使香蕉的价格是null，也会将香蕉的信息显示出来。
 
-![](imgs/左外连接结果2.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/左外连接结果2.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -440,7 +488,11 @@ select * from 表1 left outer join 表2 on 条件;
 
 右外连接原理如下所示：
 
-![](imgs/右外连接原理.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/右外连接原理.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 用右边表去左边表查询对应记录，不管是否找到，右边表全部记录都将显示。
 
@@ -458,19 +510,29 @@ right之前的是左侧，right之后的是右侧。
 
 - 需求：不管能否查到价格对应的水果，都要把价格显示出来。
 
-![](imgs/右外连接实现.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/右外连接实现.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 分析：在price表中id为4到fruit表中查询是没有对应水果描述的，但是使用右外连接也会将price表中的价格查询出来。
 
-![](imgs/右外连接实现2.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/右外连接实现2.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **注意：**其实关于左外连接和右外连接只记住一种就可以，只需将表的前后位置换一下就可以达到互换。
 
 需求：使用左外连接达到上述右外连接的效果。
 
-![](imgs/右外连接和左外连接互换.bmp)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/右外连接和左外连接互换.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -524,8 +586,11 @@ INSERT INTO emp(NAME,gender,salary,join_date,dept_id) VALUES('蜘蛛精','女',4
 
 
 
-![image-20200802103333568](F:\itcast\就业班\上课\基础部分\version05\数据库\day03-mysql\讲义\img\image-20200802103333568.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/image-20200802103333568.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 #### 什么是子查询
@@ -538,17 +603,39 @@ SELECT 查询字段 FROM 表 WHERE 条件;
 SELECT * FROM employee WHERE salary=(SELECT MAX(salary) FROM employee);
 ```
 
-![](imgs/子查询01.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询01.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 说明：子查询需要放在（）中
 
 #### 子查询结果的三种情况
 
 1. 子查询的结果是单行单列的时候
-   ![](imgs/1562225585954.png)
+
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/1562225585954.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 2. 子查询的结果是多行单列的时候
-   ![](imgs/1562225605676.png)
+
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/1562225605676.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 3. 子查询的结果是多行多列
-   ![](imgs/1562225632007.png)
+
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/1562225632007.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -578,7 +665,11 @@ SELECT * FROM employee WHERE salary=(SELECT MAX(salary) FROM employee);
    SELECT MAX(salary) FROM emp;
    ```
 
-     ![](imgs/子查询05.png)
+ 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询05.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    1. 根据最高工资到员工表查询到对应的员工信息
 
@@ -586,7 +677,9 @@ SELECT * FROM employee WHERE salary=(SELECT MAX(salary) FROM employee);
      SELECT * FROM emp WHERE salary=(SELECT MAX(salary) FROM emp);
    ```
 
-     ![](imgs/子查询06.png)
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询06.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2. **查询工资小于平均工资的员工有哪些？**
 
@@ -596,7 +689,10 @@ SELECT * FROM employee WHERE salary=(SELECT MAX(salary) FROM employee);
    SELECT AVG(salary) FROM emp;
    ```
 
-     ![](imgs/子查询07.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询07.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    1. 到员工表查询小于平均的员工信息
 
@@ -604,7 +700,10 @@ SELECT * FROM employee WHERE salary=(SELECT MAX(salary) FROM employee);
    SELECT * FROM emp WHERE salary < (SELECT AVG(salary) FROM emp);
    ```
 
-     ![](imgs/子查询08.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询08.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -636,7 +735,11 @@ SELECT 查询字段 FROM 表 WHERE 字段 IN （子查询）;
    SELECT dept_id FROM emp WHERE salary > 5000;
    ```
 
-     ![](imgs/子查询09.png)
+   
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询09.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    1. 再查询在这些部门id中部门的名字
 
@@ -644,7 +747,11 @@ SELECT 查询字段 FROM 表 WHERE 字段 IN （子查询）;
    SELECT dept.name FROM dept WHERE dept.id IN (SELECT dept_id FROM emp WHERE salary > 5000);
    ```
 
-     ![](imgs/子查询10.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询10.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2. **查询开发部与财务部所有的员工信息**
 
@@ -654,7 +761,11 @@ SELECT 查询字段 FROM 表 WHERE 字段 IN （子查询）;
    SELECT id FROM dept WHERE NAME IN('开发部','财务部');
    ```
 
-   ![](imgs/子查询11.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询11.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    1. 再查询在这些部门id中有哪些员工
 
@@ -662,7 +773,11 @@ SELECT 查询字段 FROM 表 WHERE 字段 IN （子查询）;
    SELECT * FROM emp WHERE dept_id IN (SELECT id FROM dept WHERE NAME IN('开发部','财务部'));
    ```
 
-   ![](imgs/子查询12.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询12.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -693,7 +808,10 @@ SELECT 查询字段 FROM （子查询） 表别名 WHERE 条件;
   SELECT * FROM emp WHERE join_date > '2011-1-1';
   ```
 
-  ![](imgs/子查询14.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询14.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
   1. 查询所有的部门信息，与上面的虚拟表中的信息组合，找出所有部门id等于dept_id
 
@@ -701,7 +819,11 @@ SELECT 查询字段 FROM （子查询） 表别名 WHERE 条件;
   SELECT * FROM dept d, (SELECT * FROM emp WHERE join_date > '2011-1-1') e WHERE e.dept_id = d.id;
   ```
 
-  ![](imgs/子查询13.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询13.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 使用表连接：
 
@@ -817,9 +939,11 @@ insert into studentcourse values(10,5,83);
 
 分析4张表的关系：
 
-![](imgs/多表练习图解1.bmp)
 
 
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/多表练习图解1.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 练习1
 
@@ -839,7 +963,11 @@ insert into studentcourse values(10,5,83);
 
 3）在学生表中根据学生编号找学生信息；
 
-![](imgs/子查询练习.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询练习.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 练习2
 
@@ -853,7 +981,11 @@ insert into studentcourse values(10,5,83);
 
 课程编号和对应的成绩的部分数据：
 
-![](imgs/子查询练习2.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询练习2.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 分析：
 
@@ -889,7 +1021,11 @@ where id in (select student_id
 
 查询结果：
 
-![](imgs/子查询练习3.bmp)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/子查询练习3.bmp" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 练习3
 
@@ -1097,7 +1233,10 @@ select isnull('锁哥'); -- 结果：0 表示假 不是null
 
 8. 能够理解多表查询的规律
 
-  ![1563360456604](imgs/1563360456604.png) 
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/1563360456604.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    
 
@@ -1107,7 +1246,11 @@ select isnull('锁哥'); -- 结果：0 表示假 不是null
 
 **sql脚本与表关系**
 
-![image-20200617173911215](img\image-20200617173911215.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql/img03/image-20200617173911215.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```sql
 CREATE DATABASE demo3;
