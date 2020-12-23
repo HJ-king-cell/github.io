@@ -44,6 +44,8 @@
 - [RabbitMQ](rabbitmq)
 - [RabbitMQ](rabbitmq_linux安装)
 - [Docker](docker)
+- [Docker安装fastdfs&Seata](docker安装fastdfs&Seata)
+- [MOngoDB](MongoDB)
 - **网络**
 - [网络](introduction)
 - **Linux**
