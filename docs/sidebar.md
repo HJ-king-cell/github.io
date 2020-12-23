@@ -7,6 +7,7 @@
 - [mysql四](mysql_04)
 - [mysql五](mysql_05)
 - [mysql六](mysql_06)
+- [mysql索引及性能优化](mysql索引及性能优化)
 - **mybatis**
 - [mybatis一](mybatis_01)
 - [mybatis二](mybatis_02)

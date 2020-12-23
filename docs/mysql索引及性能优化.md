@@ -31,7 +31,11 @@
 
 #### 1.3 通用的优化方案
 
-![img](images/mysql001.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql001.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```
 索引优化: 添加适当索引(index）(重点)
@@ -51,10 +55,19 @@ Sql优化: 写出高质量的sql，避免索引失效 (重点)
 
 每次从磁盘中查找数据称为磁盘I/O， 而磁盘IO 至少要经历磁盘寻道、磁盘旋转、数据读取等等操作，非常影响性能，所以对于读取数据，最大的优化就是减少磁盘I/O
 
-![img](images/mysql004.png)
 
 
-![img](images/mysql003.png)
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql004.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql003.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 
 ### 2.2 索引的底层实现
@@ -65,7 +78,12 @@ Sql优化: 写出高质量的sql，避免索引失效 (重点)
 
 ##### 2.2.1.1 二叉树
 
-![img](images/mysql002.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql002.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 为了加快数据的查找,可以维护**二叉查找树**,  每个节点分别包含索引键值和一个指向对应数据记录的物理地址的指针,这样就可以运用二叉查找在一定的复杂度内获取相应的数据,从而快速的检索出符合条件 的记录
 
@@ -90,7 +108,12 @@ Sql优化: 写出高质量的sql，避免索引失效 (重点)
 
 
 
-![img](images/mysql006.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql006.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```
 疑问：
@@ -121,7 +144,12 @@ B+树是B树的变体,基本与BTree相同
 顺序访问指针，提高区间访问能力
 ```
 
-![img](images/mysql008.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql008.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 B+Tree**索引的性能分析**
 
@@ -136,7 +164,11 @@ B+Tree叶子节点有顺序指针，更容易做范围查询
 
 使用hash结构存储索引，查找单行数据很快，但缺点也很明显。
 
-![img](images/mysql005.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql005.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```
 1.无法用于排序
@@ -199,7 +231,12 @@ MyISAM 和 innoDB引擎  这两种引擎都是采用B+Tree和hash 数据结构�
 	非主键索引和主键索引类似
 ```
 
-![img](images/mysql010.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql010.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ##### 2.2.2.4 InnoDB索引实现
 
@@ -213,7 +250,12 @@ MyISAM 和 innoDB引擎  这两种引擎都是采用B+Tree和hash 数据结构�
 	
 ```
 
-![img](images/mysql009.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql009.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 2.3 索引的分类
 
@@ -332,7 +374,12 @@ select * from 员工表 where 工号=10002 and 名称=Staff and 入职日期='20
 	条件为： （名称）不生效    （名称，入职日期）不生效  （工号，入职日期）部分生效
 ```
 
-![img](images/mysql011.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql011.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 2.6 索引的优劣势
 
@@ -493,9 +540,19 @@ show global status like '%slow_queries%';
 
 **第三方的慢查询日志分析工具：mysqlsla，myprofi，pt-query-diges等等**
 
-![img](images/slow_log1.png)
 
-![img](images/slow_log2.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/slow_log1.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/slow_log2.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 #### 3.1.2 Explain (执行计划)
 
@@ -523,7 +580,12 @@ show global status like '%slow_queries%';
 explain select cus_id from testemployee where cus_id > 10
 ```
 
-![img](images/mysql012.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql012.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ##### 3.1.2.3 参数详解
 
@@ -550,20 +612,35 @@ EXPLAIN SELECT * from employee e,department d,customer c where e.dep_id = d.id a
 
 ```
 
-![img](images/mysql013.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql013.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- id值不同	
 EXPLAIN SELECT * from department WHERE id = (SELECT id from employee WHERE id=(SELECT id from customer WHERE id = 1))
 ```
 
-![img](images/mysql014.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql014.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- id值相同 不同都存在 deriverd 衍生出来的虚表
 EXPLAIN select * from department d, (select * from employee group by dep_id) t where d.id = t.dep_id;
 ```
-![img](images/mysql015.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql015.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **select_type** 		
 
@@ -590,7 +667,12 @@ UNION
 select * from employee e RIGHT JOIN department D ON e.dep_id = d.id
 ```
 
-![img](images/mysql016.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql016.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **table**
 
@@ -617,49 +699,84 @@ select * from employee e RIGHT JOIN department D ON e.dep_id = d.id
 explain select HOST from mysql.db where HOST='localhost'
 ```
 
-![img](images/mysql020.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql020.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- const  表示通过索引一次就找到了，const用于比较primary 或者 unique索引.   直接查询主键或者唯一索引，因为只匹配一行数据,所以很快
 EXPLAIN select id from employee where id=1
 ```
 
-![img](images/mysql017.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql017.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- eq_ref 唯一性索引扫描 对于每个索引键,表中只有一条记录与之匹配, 常见于主键或唯一索引扫描
 EXPLAIN select * from employee e,department d where e.id=d.id
 ```
 
-![img](images/mysql018.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql018.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- ref 非唯一性索引扫描,返回匹配某个单独值的所有行,本质上也是一种索引访问,它返回所有匹配某个单独值的行可能会找到多个符合条件的行,所以它应该属于查找和扫描的混合体
 EXPLAIN select e.id,e.dep_id,d.id from employee e,department d where e.dep_id = d.id
 ```
 
-![img](images/mysql019.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql019.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- range 只检索给定范围的行,使用一个索引来选择行 一般就是在你的where语句中出现between\<\>\ in等查询,这种范围扫描索引比全表扫描要好,因为它只需要开始于索引的某一点.而结束语另一点,不用扫描全部索引
 explain select * from employee where id>2
 ```
 
-![img](images/mysql021.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql021.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- index index与All区别为index类型只遍历索引树,通常比All要快,因为索引文件通常比数据文件要小all和index都是读全表,但index是从索引中读取,all是从硬盘当中读取
 explain select id from employee
 ```
 
-![img](images/mysql022.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql022.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- ALL 将全表进行扫描,从硬盘当中读取数据,如果出现了All 切数据量非常大, 一定要去做优化
 explain select * from employee
 ```
 
-![img](images/mysql023.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql023.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```
 要求:
@@ -680,14 +797,23 @@ explain select * from employee
 explain select dep_id from employee
 ```
 
-![11](images/mysql024.png)
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql024.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- 可能会使用索引，实际没用到索引
 EXPLAIN select * from employee e,department d where e.dep_id = d.id
 ```
 
-![img](images/mysql025.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql025.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **key** （重要）
 
@@ -705,8 +831,11 @@ possible_keys与key关系,理论应该用到哪些索引  实际用到了哪些�
 explain select * from employee where dep_id=1 and name='鲁班' and age=10
 ```
 
-![img](images/mysql026.png)
 
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql026.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 **ref**
@@ -718,13 +847,23 @@ explain select * from employee where dep_id=1 and name='鲁班' and age=10
 ```mysql
 Explain select * from employee e,department d where e.dep_id = d.id and e.cus_id = 1
 ```
-![img](images/mysql027.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql027.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 Explain select e.dep_id from employee e,department d,customer c where e.dep_id = d.id and e.cus_id = c.id and e.name='鲁班'
 ```
 
-![img](images/mysql028.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql028.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **rows**
 
@@ -759,7 +898,12 @@ Explain select e.dep_id from employee e,department d where e.dep_id = d.id
 	explain select * from employee where dep_id =1 ORDER BY cus_id
 ```
 
-![img](images/mysql029.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql029.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 	/* 
@@ -770,7 +914,12 @@ Explain select e.dep_id from employee e,department d where e.dep_id = d.id
 	explain select name from employee where dep_id in (1,2,3) GROUP BY cus_id
 ```
 
-![img](images/mysql030.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/mysql030.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 	/*
@@ -1056,7 +1205,12 @@ explain select e.id from testemployee e RIGHT JOIN department d on e.dep_id=d.id
 
 使用in 时的explain执行计划 d的数据先被查询出来, 根据d的结果集循环查询a表数据
 
-![1598535713330](assets/1598535713330.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/1598535713330.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- 使用in 时间: 3.292ms
@@ -1071,7 +1225,12 @@ for( select id from department d)
 
 使用exits时的explain执行计划   虽然d的查询优先级高，但是当select_type为DEPENDENT_SUBQUERY时，代表当前子查询依赖外部查询，所以可以考到 e表先进行查询
 
-![1598535511423](assets/1598535511423.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/mysql索引及性能优化/1598535511423.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ```mysql
 -- 使用exits 时间: 14.771ms
