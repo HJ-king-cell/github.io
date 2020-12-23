@@ -49,7 +49,10 @@ nobody     100  0.0  0.0  33036  2116 ?        S    14:15   0:00 nginx: worker p
 root       118  0.0  0.0  11272   728 pts/1    S+   14:54   0:00 grep --color=auto nginx
 ```
 
-![image-20200308225704946](img/image-20200308225704946.png)
+ <figure class="thumbnails">
+    <img src="picture/docker/image-20200308225704946.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 添加以下内容
 
@@ -77,12 +80,17 @@ cd /etc/nginx/sbin
 
 修改后：
 
-![image-20200308230309127](img/image-20200308230309127.png)
+
+ <figure class="thumbnails">
+    <img src="picture/docker/image-20200308230309127.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 storage存储的位置/data/fast_data/data
 
-![image-20200308230644094](img/image-20200308230644094.png)
 
+ <figure class="thumbnails">
+    <img src="picture/docker/image-20200308230644094.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ### 5 设置开机启动容器

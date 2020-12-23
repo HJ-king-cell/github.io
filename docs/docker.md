@@ -26,21 +26,36 @@
 
 如果需要通俗的描述容器的话，容器就是一个存放东西的地方，就像书包可以装各种文具、衣柜可以放各种衣服、鞋架可以放各种鞋子一样。我们现在所说的容器存放的东西可能更偏向于应用比如网站、程序甚至是系统环境。
 
-[![1.png](assets/0eb95638b712ca6ad211c76f73a366af.png)](http://dockone.io/uploads/article/20190626/0eb95638b712ca6ad211c76f73a366af.png)
+
+ <figure class="thumbnails">
+    <img src="picture/docker/0eb95638b712ca6ad211c76f73a366af.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ## 1.2  容器 VS 虚拟机
 
 物理机：
 
-![2.jpeg](assets/e9444d264eeaea2b178a71c9ed823c9c.jpeg)
 
+
+ <figure class="thumbnails">
+    <img src="picture/docker/e9444d264eeaea2b178a71c9ed823c9c.jpeg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 虚拟机：
 
-![3.jpeg](assets/bb23f04f2b23b2312b04ba87dc8ad31d.jpeg)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/bb23f04f2b23b2312b04ba87dc8ad31d.jpeg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 容器：
 
-![4.jpeg](assets/e34f0f2a4b8718f09c8b366a14d5e9a9.jpeg)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/e34f0f2a4b8718f09c8b366a14d5e9a9.jpeg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 相信通过上面的解释大家对于容器这个既陌生又熟悉的概念有了一个初步的认识，下面我们就来谈谈Docker的一些概念。
 
@@ -52,11 +67,19 @@
 
 容器技术：是一个**共享操作系统内核**的虚拟化技术。不会虚拟化硬件，容器的运行要依赖于**宿主**的内核，容器内没有自己的内核。因此容器要比传统虚拟机更为轻便。
 
-[![7.png](assets/2e2b95eebf60b6d03f6c1476f4d7c697.png)](http://dockone.io/uploads/article/20190626/2e2b95eebf60b6d03f6c1476f4d7c697.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/2e2b95eebf60b6d03f6c1476f4d7c697.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **容器与虚拟机 (VM) 总结**
 
-[![8.png](assets/4ef8691d67eb1eb53217099d0a691eb5.png)](http://dockone.io/uploads/article/20190626/4ef8691d67eb1eb53217099d0a691eb5.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/4ef8691d67eb1eb53217099d0a691eb5.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 - 容器: 用于将代码和依赖资源打包在一起。 多个容器可以在同一台机器上运行，共享操作系统内核，但各自作为独立的进程在用户空间中运行 。与虚拟机相比， 容器占用的空间较少（容器镜像大小通常只有几十兆），瞬间就能完成启动 。
 - 虚拟机（VM）是一个物理硬件层抽象，用于将一台服务器变成多台服务器。 管理程序允许多个VM在一台机器上运行。每个VM都包含一整套操作系统、一个或多个应用、必要的二进制文件和库资源，因此占用大量空间。而且VM启动也十分缓慢 。
@@ -65,9 +88,11 @@
 
 **并且两者也可以共存的：**
 
-[![9.png](assets/056c87751b9dd7b56f4264240fe96d00.png)](http://dockone.io/uploads/article/20190626/056c87751b9dd7b56f4264240fe96d00.png)
 
 
+ <figure class="thumbnails">
+    <img src="picture/docker/056c87751b9dd7b56f4264240fe96d00.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 1.3 什么是Docker
 
@@ -75,7 +100,10 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 
 
-![img](assets/f703738da977391281957edbf0198618377ae2dd.jpg)
+
+ <figure class="thumbnails">
+    <img src="picture/docker/f703738da977391281957edbf0198618377ae2dd.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 #### Docker服务器与客户端
 
@@ -83,7 +111,10 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 Docker是一个客户端/服务端(C/S)架构程序。Docker客户端只需要向Docker服务器或者守护进程发送请求，服务器或者守护进程完成所有工作并返回结果。Docker提供了一个命令行工具Docker以及一整套的Restful API。 你可以在同一台宿主机上运行Docker守护进程和客户端。也可以从本地的Docker客户端连接到运行在另一台宿主机上的远程Docker守护进程
 ```
 
-![1564158400842](assets/docker002.png)
+
+ <figure class="thumbnails">
+    <img src="picture/docker/docker002.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 英文官网：
 
@@ -126,13 +157,19 @@ Docker官方建议在Ubuntu中安装，因为Docker是基于Ubuntu发布的，�
 
 启动虚拟机，选择`我已复制该虚拟机`。
 
-![1564123474630](assets/1564123474630.png)
+
+ <figure class="thumbnails">
+    <img src="picture/docker/1564123474630.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 启动成功后，需要登录，默认的用户名为`root`，密码为`itcast`。
 
 使用ip addr或ifconfig命令查看虚拟机系统的IP，使用客户端软件，连接该IP的主机。
 
- ![image-20200708213510470](assets/image-20200708213510470.png)
+
+ <figure class="thumbnails">
+    <img src="picture/docker/image-20200708213510470.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 2.2 Docker的安装
 
@@ -296,7 +333,11 @@ sudo systemctl restart docker
 
 获取阿里云镜像加速账号获取 [https://cr.console.aliyun.com/#/accelerator](https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors)
 
- ![image-20200708220105963](assets/image-20200708220105963.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/image-20200708220105963.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```shell
 sudo mkdir -p /etc/docker
@@ -324,6 +365,7 @@ macOS下支持两种安装方式：
 
 [Homebrew](https://brew.sh/) 的 [Cask](https://github.com/Homebrew/homebrew-cask) 已经支持 Docker Desktop for Mac，因此可以很方便的使用 Homebrew Cask 来进行安装：
 
+
 ```bash
 $ brew cask install docker
 ```
@@ -334,17 +376,29 @@ $ brew cask install docker
 
 如同 macOS 其它软件一样，安装也非常简单，双击下载的 `.dmg` 文件，然后将那只叫 [Moby](https://www.docker.com/blog/call-me-moby-dock/) 的鲸鱼图标拖拽到 `Application` 文件夹即可（其间需要输入用户密码）。
 
-![1604923093959](assets/1604923093959.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/1604923093959.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **运行**
 
 从应用中找到 Docker 图标并点击运行。
 
-![1604923083980](assets/1604923083980.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/1604923083980.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 运行之后，会在右上角菜单栏看到多了一个鲸鱼图标，这个图标表明了 Docker 的运行状态。
 
-![1604923073674](assets/1604923073674.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/1604923073674.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 第一次点击图标，可能会看到这个安装成功的界面，点击 "Got it!" 可以关闭这个窗口。
 
@@ -503,7 +557,11 @@ docker search centos
 
 该命令一般只用于查看是否存在拥有关键字的镜像。
 
-![1564128665346](assets/1564128665346.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/1564128665346.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ```
 - NAME：仓库名称
@@ -898,7 +956,9 @@ mysql -uroot
 
  ![1564123474630](assets/1564160746670.png)
 
-
+ <figure class="thumbnails">
+    <img src="picture/docker/0eb95638b712ca6ad211c76f73a366af.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ## 6.2 Tomcat部署
 
@@ -1447,9 +1507,9 @@ http://192.168.206.99:2375/version
 
 配置后 在maven的管理页面刷新一下，会出现docker插件 并有一些可执行的命令
 
-![1587006730315](assets/1587006730315.png)
-
-
+ <figure class="thumbnails">
+    <img src="picture/docker/1587006730315.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **执行mvn clean package docker:build -DpushImage**
 
@@ -1463,13 +1523,19 @@ docker:build 使用docker的build命令构建镜像
 
 
 
-![1585210862809](assets/1585210862809.png)
 
 
+ <figure class="thumbnails">
+    <img src="picture/docker/1585210862809.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 在docker中通过docker images查看
 
-![1585210905297](assets/1585210905297.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/docker/1585210905297.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 上传成功！！
 
@@ -1498,11 +1564,9 @@ docker run -id --name=容器名称 -p 9002:9002 镜像ID
 需要有专门的集成服务器来执行集成构建；
 ```
 
-
-
-![1585212110702](assets/1585212110702.png)
-
-
+ <figure class="thumbnails">
+    <img src="picture/docker/1585212110702.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **所涉及相关工具**
 
