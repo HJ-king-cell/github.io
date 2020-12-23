@@ -91,10 +91,10 @@ INSERT INTO student3(id,NAME,age,sex,address,math,english) VALUES (1,'马云',55
 SELECT * FROM student3 WHERE math>80;
 ```
 
-![](imgs/where查询01.png)
+
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/where查询01.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
