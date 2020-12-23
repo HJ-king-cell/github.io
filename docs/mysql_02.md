@@ -107,7 +107,7 @@ SELECT * FROM student3 WHERE english<=80;
 ![](imgs/where查询02.png)
 
 <figure class="thumbnails">
-    <img src="picture/mysql/img02/关系型数据库图解.bmp" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/mysql/img02/where查询02.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
