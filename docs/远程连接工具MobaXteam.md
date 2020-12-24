@@ -4,11 +4,20 @@
 2. 安装和使用简单，解压即可使用，绿色软件，支持中文操作界面，学生容易上手。
 3. 软件本身功能强大，左边可以操作文件，右边输入命令
 
-![1567042234526](assets/1567042234526.png)
+
+<figure class="thumbnails">
+    <img src="picture/Linux/1567042234526.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 4. 支持的传输协议非常多
 
-   ![image-20191213212834606](assets/image-20191213212834606.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/Linux/image-20191213212834606.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 5. 支持宏和多种主题
 
@@ -26,13 +35,20 @@
 
 1. 官网免费下载 https://mobaxterm.mobatek.net
 
-   ![1567041150123](assets/1567041150123.png)
+ 
+
+<figure class="thumbnails">
+    <img src="picture/Linux/1567041150123.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    
 
 2. 无需安装，直接解压就可以使用
 
-![1567041016921](assets/1567041016921.png) 
+
+<figure class="thumbnails">
+    <img src="picture/Linux/1567041016921.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -40,25 +56,41 @@
 
 1. 点左上角的Session创建一个会话连接
 
-   ![1567042164375](assets/1567042164375.png) 
+
+<figure class="thumbnails">
+    <img src="picture/Linux/1567042164375.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    
 
 2. 在如下窗体中进行会话的设置
 
-   ![1567042210491](assets/1567042210491.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/Linux/1567042210491.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    
 
 3. 第1次连接，需要输入密码
 
-   ![1567042234526](assets/1567042234526.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/Linux/1567042234526.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
    
 
 ### 使用客户端传输文件
 
-![1567042652103](assets/1567042652103.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/Linux/1567042652103.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 小结
 

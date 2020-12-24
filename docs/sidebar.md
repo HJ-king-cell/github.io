@@ -51,6 +51,8 @@
 - [网络](introduction)
 - **Linux**
 - [Linux](Linux)
+- [centos7安装流程](centos7安装流程)
+- [远程连接工具MobaXteam](远程连接工具MobaXteam)
 - [Kali Linux](themes)
 - **漏洞原理**
 - [SQL注入](SQL)
