@@ -1543,7 +1543,7 @@ docker:build 使用docker的build命令构建镜像
 
 ```
 docker run -id --name=容器名称 -p 9002:9002 镜像ID
-```
+```   
 
 # 11.DevOps持续自动化集成（了解）
 

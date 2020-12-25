@@ -331,7 +331,6 @@ eg:	find / -name 'aa*'
 ```
 
 
-
  <figure class="thumbnails">
     <img src="picture/Linux/image-20200921210421208.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
