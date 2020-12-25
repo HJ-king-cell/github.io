@@ -102,7 +102,7 @@ Docker 是一个开源的应用容器引擎，让开发者可以打包他们的�
 
 
  <figure class="thumbnails">
-    <img src="picture/docker/f703738da977391281957edbf0198618377ae2dd.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/docker/f703738da977391281957edbf0198618377ae2dd.jpg" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 #### Docker服务器与客户端
