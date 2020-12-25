@@ -954,10 +954,8 @@ mysql -uroot
 
 （1）我们在我们本机的电脑上去连接虚拟机Centos中的Docker容器，这里192.168.206.99是虚拟机操作系统的IP：
 
- ![1564123474630](assets/1564160746670.png)
-
  <figure class="thumbnails">
-    <img src="picture/docker/0eb95638b712ca6ad211c76f73a366af.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/docker/1564160746670.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 6.2 Tomcat部署
