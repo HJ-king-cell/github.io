@@ -89,7 +89,7 @@ Linux: 操作系统,直接运行在硬件之上
 
 
  <figure class="thumbnails">
-    <img src="picture/Linux/wps3-1585052787325.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Linux/wps3-1585052787325.jpg" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ```java
