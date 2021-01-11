@@ -46,7 +46,7 @@
 - [RabbitMQ](rabbitmq)
 - [RabbitMQ](rabbitmq_linux安装)
 - [Docker](docker)
-- [Zookeeper](Zookeeper)
+- [Dubbo&Zookeeper](Dubbo&Zookeeper)
 - [Docker安装fastdfs&Seata](docker安装fastdfs&Seata)
 - [MOngoDB](MongoDB)
 - **Linux**
