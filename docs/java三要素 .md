@@ -1,34 +1,3 @@
----
-typora-copy-images-to: imgs
----
-
-# day01【复习、继承、抽象类模板设计模式】 
-
-## 今日内容
-
-- 构造方法
-
-- 继承
-
-- 抽象类
-
-- 模板设计模式
-
-## 教学目标
-
-- [ ] 能够知道构造方法的格式和注意事项
-- [ ] 能够写出类的继承格式
-- [ ] 能够说出继承的特点
-- [ ] 能够说出子类调用父类的成员特点
-- [ ] 够说出方法重写的概念
-- [ ] 能够说出this可以解决的问题
-- [ ] 能够说出super可以解决的问题
-- [ ] 描述抽象方法的概念
-- [ ] 写出抽象类的格式
-- [ ] 写出抽象方法的格式
-- [ ] 能够说出父类抽象方法的存在意义
-
-
 
 # 第一章 复习回顾
 
@@ -230,7 +199,11 @@ public class Student {
 
 3、定义一个测试学生类的类StudentTest。
 
-![](imgs\匿名对象.jpg)
+
+
+<figure class="thumbnails">
+    <img src="picture/javase/匿名对象.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 Student：是一个类。描述的是学生这个事物
 
@@ -255,13 +228,23 @@ new Student();
 
 ### 匿名对象应用场景
 
-![](imgs\匿名对象使用场景.jpg)
+
+
+<figure class="thumbnails">
+    <img src="picture/javase/匿名对象使用场景.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 说明：匿名对象是指创建对象时，只有创建对象的语句，却没有把对象地址值赋值给某个变量。
 
 ### **匿名对象的局限性**
 
-![](imgs\匿名对象局限性.jpg)
+
+
+<figure class="thumbnails">
+    <img src="picture/javase/匿名对象局限性.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
 
 上述代码结果：
 
@@ -271,7 +254,10 @@ null 学习中。。。。。
 
 **注意：只要在程序中使用new关键字创建对象，那么在堆中都会有一个新的对象产生。**
 
-![](imgs\匿名对象局限性内存图解.jpg)
+
+<figure class="thumbnails">
+    <img src="picture/javase/匿名对象局限性内存图解.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **注意：匿名对象通常是在对象只需要访问成员一次的情况下使用**
 
@@ -439,10 +425,18 @@ class Teacher
 
 学生和老师，没有继承关系，但是学生和老师都属于人这类事物。那么我们就可以把学生和老师的共性内容抽取到人这个类中，然后让学生和老师与人这个类产生关系即可。
 
-![](imgs\继承引入图解.jpg)
 
 
-![](imgs/1.jpg)
+<figure class="thumbnails">
+    <img src="picture/javase/继承引入图解.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
+
+
+<figure class="thumbnails">
+    <img src="picture/javase/1.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 其中，多个类可以称为**子类**，单独被继承的那一个类称为**父类**、**超类（superclass）**或者**基类**。
 
@@ -731,7 +725,11 @@ class ExtendsDemo3
 
 上述代码图解分析：
 
-![](imgs\继承中成员变量特点.jpg)
+
+<figure class="thumbnails">
+    <img src="picture/javase/继承中成员变量特点.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 注意：加载到方法区的顺序：在jvm加载子类的时候，jvm会发现子类的字节码文件里面有一个extends标识，所以jvm会先将父类加载到方法区中，然后再将子类加载到方法区中。
 
@@ -1024,9 +1022,11 @@ class ConstructorDemo
 
 上述代码的内存执行过程如下所示：
 
-![](imgs\继承中构造方法图解.jpg)
 
 
+<figure class="thumbnails">
+    <img src="picture/javase/继承中构造方法图解.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1163,9 +1163,11 @@ super(..)是根据参数去确定调用父类哪个构造器的。
 
 在每次创建子类对象时，先初始化父类空间，再创建其子类对象本身。目的在于子类对象中包含了其对应的父类空间，便可以包含其父类的成员，如果父类成员非private修饰，则子类可以随意使用父类成员。代码体现在子类的构造器调用时，一定先调用父类的构造器。理解图解如下：
 
-![](imgs/2.jpg)
 
 
+<figure class="thumbnails">
+    <img src="picture/javase/2.jpg" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 2.8.5 this(...)用法演示
 
@@ -1518,6 +1520,10 @@ public class Demo02 {
 
 运行效果
 
-![](imgs/1560747035458.png)
+
+
+<figure class="thumbnails">
+    <img src="picture/javase/1560747035458.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 **可以看出，模板模式的优势是，模板已经定义了通用架构，使用者只需要关心自己需要实现的功能即可！非常的强大！**
