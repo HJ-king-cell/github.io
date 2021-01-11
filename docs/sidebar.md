@@ -1,8 +1,6 @@
 - **JavaSe**
 - [java继承](java继承)
 - [类加载器、反射](类加载器、反射)
-- [XML&Dom4j](XML&Dom4j)
-- [设计模式&Base64](设计模式&Base64)
 - [JUnit单元测试、注解、正则表达式](JUnit单元测试、注解、正则表达式)
 - **MySQL**
 - [mysql一](mysql_01)
