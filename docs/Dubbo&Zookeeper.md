@@ -102,7 +102,7 @@ redis:
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/1.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/1.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 架构说明：
@@ -125,7 +125,7 @@ redis:
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/18.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/18.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 架构说明：       
@@ -153,7 +153,7 @@ SOA全称为Service-Oriented Architecture，即面向服务的架构。它可以
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/19.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/19.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 架构说明：
@@ -181,7 +181,7 @@ SOA全称为Service-Oriented Architecture，即面向服务的架构。它可以
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/20.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/20.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 架构说明：
@@ -231,13 +231,13 @@ Dubbo架构图（Dubbo官方提供）如下：
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/2.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/2.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/image-20201013110356587.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/image-20201013110356587.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 节点角色说明：
@@ -276,7 +276,7 @@ Zookeeper 是 Apache Hadoop 的子项目，是一个树型的目录服务，支�
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/4.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/4.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 我的电脑可以分为多个盘符（例如C、D、E等），每个盘符下可以创建多个目录，每个目录下面可以创建文件，也可以创建子目录，最终构成了一个树型结构。通过这种树型结构的目录，我们可以将文件分门别类的进行存放，方便我们后期查找。而且磁盘上的每个文件都有一个唯一的访问路径，例如：C:\Windows\itcast\hello.txt。
@@ -285,7 +285,7 @@ Zookeeper树型目录服务：
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/3.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/3.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 流程说明：
@@ -765,7 +765,7 @@ tomcat7:run启动
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/5.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/5.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 （2）启动服务提供者工程和服务消费者工程，可以在查看到对应的信息
@@ -773,25 +773,25 @@ tomcat7:run启动
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/6.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/6.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/7.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/7.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/8.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/8.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/9.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/9.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ## 6. Dubbo相关配置说明
@@ -959,7 +959,7 @@ public class HelloServiceImpl implements HelloService {
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/12.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/12.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 上面的错误为没有可用的服务提供者
@@ -969,7 +969,7 @@ public class HelloServiceImpl implements HelloService {
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/13.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/13.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 可以通过断点调试的方式查看Dubbo执行过程，Dubbo通过AnnotationBean的postProcessAfterInitialization方法进行处理
@@ -977,13 +977,13 @@ public class HelloServiceImpl implements HelloService {
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/14.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/14.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/15.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/15.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 ### 7.2 解决方案
@@ -1002,7 +1002,7 @@ public class HelloServiceImpl implements HelloService {
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/17.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/17.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 （2）修改HelloServiceImpl类，在Service注解中加入interfaceClass属性，值为HelloService.class，作用是指定服务的接口类型
@@ -1088,7 +1088,7 @@ Spring的父子容器:
 
 
  <figure class="thumbnails">
-    <img src="picture/ddouble/image-20201013110356587.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/double/image-20201013110356587.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 # zookeeper安装

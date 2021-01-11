@@ -1,6 +1,8 @@
 - **JavaSe**
 - [java继承](java继承)
 - [XML&Dom4j](XML&Dom4j)
+- [设计模式&Base64](设计模式&Base64)
+- [JUnit单元测试、注解、正则表达式](JUnit单元测试、注解、正则表达式)
 - **MySQL**
 - [mysql一](mysql_01)
 - [mysql二](mysql_02)
