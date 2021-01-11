@@ -20,11 +20,10 @@
 
 
 
-**1) 数据交换：**不同的计算机语言之间，不同的操作系统之间，不同的数据库之间，进行数据交换。           
-![1552221268464](imgs/1552221268464.png)                                       
+**1) 数据交换：**不同的计算机语言之间，不同的操作系统之间，不同的数据库之间，进行数据交换。                                                 
 
  <figure class="thumbnails">
-    <img src="picture/XMl/mysql001.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/XMl/1552221268464.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -32,9 +31,11 @@
 
 比如我们很快会学到连接池：c3p0-config.xml
 
-![1552221310087](imgs/1552221310087.png) 
 
 
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552221310087.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -77,13 +78,21 @@ Person p = new Person("1","张三",18,"男");
 
 ### 效果
 
-![1552352318788](imgs/1552352318788.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552352318788.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 步骤
 
 1. 选择当前项目鼠标右键新建
 
-![1552221478628](imgs/1552221478628.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552221478628.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 2. 编写person.xml文件
 
@@ -100,7 +109,10 @@ Person p = new Person("1","张三",18,"男");
 
 3. 通过浏览器解析XML的内容
 
-   ![1552221534649](imgs/1552221534649.png) 
+   
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552221534649.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 - **注：XML以后通过Java来进行解析，很少直接在浏览器上显示。**
 
@@ -138,7 +150,11 @@ Person p = new Person("1","张三",18,"男");
 
 3. 文档声明必须从文档的1行1列位置开始,==**必须在xml文档中的首行首列**==
 
-   ![](imgs/1552352524671.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552352524671.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 4. 文档声明中常见的两个属性：
 
@@ -228,17 +244,26 @@ Person p = new Person("1","张三",18,"男");
 
 元素没有结束
 
-![1552352828511](imgs/1552352828511.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552352828511.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 元素大写小写不一致
 
-![1552352880848](imgs/1552352880848.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552352880848.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 xml中多个根 
 
-![1552352959286](imgs/1552352959286.png) 
 
-
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552352959286.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 ### 小结
 
@@ -279,7 +304,14 @@ xml中多个根
 
 2. 属性的定义格式：`属性名=“属性值”`，其中**属性值必须使用单引或双引号括起来**
 
-3. 一个元素可以有0~N个属性，但一个元素中**==不能出现同名属性==**![](imgs/1552353173877.png) 
+3. 一个元素可以有0~N个属性，但一个元素中**==不能出现同名属性==**
+
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552353173877.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 4. 属性名不能使用空格 , 建议不要使用冒号等特殊字符，且必须以字母开头
 
@@ -332,7 +364,12 @@ XML注释：
 
 ​	XML中的实体字符与HTML一样。因为很多符号已经被文档结构所使用，所以在元素体或属性值中想使用这些符号就必须使用实体字符
 
-![1552353386585](imgs/1552353386585.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552353386585.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 | 字符 | 预定义的转义字符 |        说明        |
 | :--: | :--------------: | :----------------: |
@@ -416,8 +453,11 @@ CDATA (Character Data)字符数据区，格式如下：
 
 快捷模板：CD 回车
 
-![image-20200103105134226](imgs/image-20200103105134226.png) 
 
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/image-20200103105134226.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 *注意：*
@@ -462,7 +502,11 @@ CDATA (Character Data)字符数据区，格式如下：
 
 体验效果说明：当编写xml文档时不符合指定dtd约束时，进行提示xml编写错误，如下图：
 
-![](imgs/07.png)
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/07.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 体验步骤:
 
@@ -478,7 +522,12 @@ CDATA (Character Data)字符数据区，格式如下：
 <!ELEMENT 售价 (#PCDATA)>
 ```
 
-![image-20200720102720233](imgs/image-20200720102720233.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/image-20200720102720233.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 步骤三：新建books.xml，代码如下
 
@@ -506,9 +555,12 @@ CDATA (Character Data)字符数据区，格式如下：
 
 步骤四：idea开发工具books.xml的dtd约束验证不通过的效果如下
 
-![](imgs/09.png)
 
-  
+
+   <figure class="thumbnails">
+    <img src="picture/XMl/09.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 ### 3. DTD学习要求
 
@@ -538,11 +590,21 @@ Schema 功能更强大，数据类型约束更完善。
 
 体验效果说明：体验schema约束XML文档中对元素体数据类型的约束。效果如下：
 
-![](imgs/12.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/12.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 DTD约束无法对具体数据类型进行约束,所以开发工具没有任何错误提示，如下效果：
 
-![](imgs/11.png)
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/11.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **实现步骤**
 
@@ -580,7 +642,12 @@ DTD约束无法对具体数据类型进行约束,所以开发工具没有任何�
 
 ```
 
-![image-20200720110251137](imgs/image-20200720110251137.png) 
+
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/image-20200720110251137.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 步骤2：新建books2.xml使用schema约束文件bookshelf.xsd，代码如下
 
@@ -601,8 +668,10 @@ xsi:schemaLocation="http://www.itcast.cn bookshelf.xsd"
 
 步骤3：开发工具提示效果
 
-![](imgs/12.png)
 
+ <figure class="thumbnails">
+    <img src="picture/XMl/12.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ### 3 名称空间
@@ -673,12 +742,19 @@ xsi:schemaLocation="http://www.itcast.cn bookshelf.xsd"
 
 解析器，就是根据不同的解析方式提供具体实现。有的解析器操作过于繁琐，为了方便开发人员，有提供易于操作的解析开发包
 
-![](imgs/13.png)
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/13.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
+
 
 **常见的解析器**
 
-![1552305195234](imgs/1552305195234.png) 
 
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552305195234.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 ## 2 Dom4j的基本使用
@@ -709,15 +785,20 @@ xsi:schemaLocation="http://www.itcast.cn bookshelf.xsd"
 
 DOM中的核心概念就是节点，在XML文档中的元素、属性、文本，在DOM中都是节点！所有的节点都封装到了Document对象中。
 
-![](imgs/15.png)
 
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/15.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 **引入dom4j的jar包**  
 
 去官网下载 zip 包。<http://www.dom4j.org/>
-![1552305595501](imgs/1552305595501.png)  
 
+ <figure class="thumbnails">
+    <img src="picture/XMl/1552305595501.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 **通常我们会在项目中创建lib文件夹，将需要依赖的库放在这里。**
@@ -730,8 +811,11 @@ DOM中的核心概念就是节点，在XML文档中的元素、属性、文本�
 
 2. 直接右键选择：Add as Library
 
-   ![image-20200719205315975](imgs/image-20200719205315975.png) 
 
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/image-20200719205315975.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
@@ -1011,8 +1095,11 @@ Node接口中存在以下方法：
 
 我们熟知的Document，Element等都是Node的子类型，因此也能使用上述selectNode的方法。如下图
 
-![image-20200310230825936](imgs/image-20200310230825936.png) 
 
+
+ <figure class="thumbnails">
+    <img src="picture/XMl/image-20200310230825936.png" alt="Screenshot of coverpage" title="Cover page">
+</figure>
 
 
 
