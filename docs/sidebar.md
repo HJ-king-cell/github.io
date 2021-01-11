@@ -65,4 +65,4 @@
 - [Git](Git)
 - [Git高级](Git高级)
 - **Links**
-- [![Github](https://icongram.jgog.in/simple/github.svg?color=808080&size=16)Github](https://github.com/HJ-king-cell/github.io)
+- [![Github](assets/img/github.svg)Github](https://github.com/HJ-king-cell/github.io)
