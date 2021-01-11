@@ -1,5 +1,5 @@
 - **JavaSe**
-- [java三要素](java三要素)
+- [java继承](java继承)
 - **MySQL**
 - [mysql一](mysql_01)
 - [mysql二](mysql_02)
