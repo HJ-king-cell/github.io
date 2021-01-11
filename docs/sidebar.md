@@ -52,8 +52,6 @@
 - [Zookeeper](Zookeeper)
 - [Docker安装fastdfs&Seata](docker安装fastdfs&Seata)
 - [MOngoDB](MongoDB)
-- **网络**
-- [网络](introduction)
 - **Linux**
 - [Linux](Linux)
 - [centos7安装流程](centos7安装流程)
@@ -65,10 +63,6 @@
 - [Options](options)
 - [Markdown](markdown)
 - [Changelog](changelog)
-- **靶场演示**
-- [SQLI](SQLI)
-- **读书笔记，胡言乱语**
-- [《渗透测试完全初学者指南》](stcszn)
 - **GitHub**
 - [GitHub](GitHub)
 - **Gitb**
