@@ -52,7 +52,6 @@
 - [Linux](Linux)
 - [centos7安装流程](centos7安装流程)
 - [远程连接工具MobaXteam](远程连接工具MobaXteam)
-- [Kali Linux](themes)
 - **GitHub**
 - [GitHub](GitHub)
 - **Gitb**
