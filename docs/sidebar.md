@@ -82,6 +82,9 @@
 - [Linux](Linux)
 - [centos7安装流程](centos7安装流程)
 - [远程连接工具MobaXteam](远程连接工具MobaXteam)
+- **项目**
+- [项目部署_持续集成](项目部署_持续集成)
+- [项目链路追踪](项目链路追踪)
 - **GitHub**
 - [GitHub](GitHub)
 - **Gitb**
