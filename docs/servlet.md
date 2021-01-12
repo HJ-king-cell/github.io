@@ -1,16 +1,4 @@
 
-
-
-# Servlet入门
-
-**今日目标**
-
-```markdown
-
-```
-
-
-
 # 一 Servlet概述
 
 - servlet= server+applet 运行在服务器端的java程序。

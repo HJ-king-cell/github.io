@@ -1,26 +1,3 @@
----
-typora-copy-images-to: assets
-typora-root-url: ./
----
-
-# Session
-
-**今日目标**
-
-```markdown
-1. session【重点】
-	 它也是一个域对象
-	 
-2. 三大域对象总结
-	servletContext
-	session
-	request
-	
-3. 综合案例
-	用户登录（验证码）
-```
-
-
 
 # 一 Session
 

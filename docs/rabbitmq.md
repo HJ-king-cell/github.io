@@ -1,14 +1,5 @@
 # 消息队列中间件-RabbitMQ
 
-课程目标：
-
-- 了解消息中间件的概念、使用场景
-- 了解AMQP的协议模型和相关概念
-- 可以实现RabbitMQ的Windows下安装
-- 掌握RabbitMQ的生产者和消费者的代码编写。
-- 理解RabbitMQ的五种工作模式
-- 掌握Spring整合RabbitMQ 
-
 # 1. RabbitMQ概述
 
 ## 1.1 消息队列中间件是什么？

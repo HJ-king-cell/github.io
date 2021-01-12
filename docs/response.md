@@ -1,24 +1,4 @@
 
-
-# Response&ServletContext
-
-**今日目标**
-
-```markdown
-0. http响应
-1. response【重点】
-2. ServletContext：应用上下文对象
-3. 综合案例
-```
-
-
-
-# 零 Http响应
-
-之前我们已经学习过Http请求, 现在我们一起再来学习Http响应
-
-
-
 ## 0.1 浏览器查看Http响应协议
 
 

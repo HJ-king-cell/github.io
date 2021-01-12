@@ -1,22 +1,6 @@
 # 《Redis基础》
 
 
-
-# 学习目标
-
-1. 概念
-   1. 能够理解NOSQL的概念
-   2. 能够说出redis的常用数据类型
-2. 五种数据类型的命令
-   1. 能够使用redis的string操作命令
-   2. 能够使用redis的hash操作命令
-   3. 能够使用redis的list操作命令
-   4. 能够使用redis的set操作命令
-3. 能够说出redis的两种持久化机制(了解)
-4. 能够使用jedis对redis进行操作(通过Java访问Redis)
-
-
-
 # 学习内容
 
 ## 一. NoSQL非关系型数据库概述

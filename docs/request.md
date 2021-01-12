@@ -1,33 +1,6 @@
 
 # Http请求&Request
 
-***
-
-**今日目标**
-
-```markdown
-0. http请求
-
-1. Request概述
-
-2. reuqest获取请求消息内容
-	请求行
-	请求头
-	请求参数（体）【重点】
-	
-3. request其他功能
-	请求转发
-	域对象
-	
-4. 案例：用户登录
-```
-
-
-
-# 零 Http协议
-
-
-
 ## 0.1 Http协议概述（熟知）
 
 超文本传输协议（Hyper Text Transfer Protocol)是互联网上应用最为广泛的一种网络协议。

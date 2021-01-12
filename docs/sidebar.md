@@ -31,6 +31,7 @@
 - [mybatis一](mybatis_01)
 - [mybatis二](mybatis_02)
 - [mybatis三](mybatis_03)
+- [mybatisplus快速入门](mybatisplus快速入门)
 - **web**
 - [html&css](html&css)
 - [JavaScript基础](JavaScript基础)
@@ -60,6 +61,15 @@
 - [SpringMVC](SpringMVC)
 - [SpringMVC2](SpringMVC2)
 - [SpringMVC3](SpringMVC3)
+- **SpringBoot**
+- [SpringBoot](SpringBoot)
+- [EasyCode代码生成插件](EasyCode代码生成插件)
+- [thymeleaf语法入门](thymeleaf语法入门)
+- [elasticsearch01](elasticsearch01)
+- [elasticsearch02](elasticsearch02)
+- **SpringCloud**
+- [SpringCloud-01](SpringCloud-01)
+- [SpringCloud-02](SpringCloud-02)
 - **中间件**
 - [RabbitMQ](rabbitmq)
 - [RabbitMQ](rabbitmq_linux安装)
@@ -77,4 +87,4 @@
 - [Git](Git)
 - [Git高级](Git高级)
 - **Links**
-- [![Github](assets/picture/javase/异常/github.svg)Github](https://github.com/HJ-king-cell/github.io)
+- [![Github](assets/img/github.svg)Github](https://github.com/HJ-king-cell/github.io)
