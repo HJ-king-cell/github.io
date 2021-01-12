@@ -70,6 +70,7 @@
 - **SpringCloud**
 - [SpringCloud-01](SpringCloud-01)
 - [SpringCloud-02](SpringCloud-02)
+- [nacos](nacos)
 - **中间件**
 - [RabbitMQ](rabbitmq)
 - [RabbitMQ](rabbitmq_linux安装)
