@@ -78,6 +78,7 @@
 - [Dubbo&Zookeeper](Dubbo&Zookeeper)
 - [Docker安装fastdfs&Seata](docker安装fastdfs&Seata)
 - [MOngoDB](MongoDB)
+- [xxl_job](Xxl-Job分布式任务调度)
 - **Linux**
 - [Linux](Linux)
 - [centos7安装流程](centos7安装流程)
