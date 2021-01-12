@@ -1,5 +1,8 @@
 - **JavaSe**
 - [java继承](java继承)
+- [List&Set](List、Collections、set)
+- [Map](Map、斗地主排序、冒泡排序)
+- [异常&多线程入门](异常&多线程入门)
 - [线程](线程)
 - [字节流](File类、递归、字节流)
 - [字符流](字符流、IO流处理异常、缓冲流)
@@ -68,4 +71,4 @@
 - [Git](Git)
 - [Git高级](Git高级)
 - **Links**
-- [![Github](assets/img/github.svg)Github](https://github.com/HJ-king-cell/github.io)
+- [![Github](assets/picture/javase/异常/github.svg)Github](https://github.com/HJ-king-cell/github.io)
