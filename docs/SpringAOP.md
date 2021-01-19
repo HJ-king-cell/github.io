@@ -1,6 +1,4 @@
 
-
-
 ## 1.动态代理回顾
 
 在之前课程用，已经学习了，在修改源代码的基础上，对方法进行增强，大致有两种方式，如下：
@@ -30,10 +28,9 @@
 
 - 装饰者示意图：
 
+![1600412329098](picture/Spring/AOP/1600412329098.png)
 
- <figure class="thumbnails">
-    <img src="picture/Spring/1600412329098.png" alt="Screenshot of coverpage" title="Cover page">
-</figure>
+
 
 示例代码：
 
@@ -135,9 +132,8 @@ public class WrapperTest {
 
 - JDK动态代理示意图：
 
- <figure class="thumbnails">
-    <img src="picture/Spring/1600416175472.png" alt="Screenshot of coverpage" title="Cover page">
-</figure>
+![1600416175472](picture/Spring/AOP/1600416175472.png)
+
 
 
 示例代码：
@@ -280,10 +276,8 @@ public class ProxyTest {
 
 - cglib动态代理示意图：
 
+![1600416648310](picture/Spring/AOP/1600416648310.png)
 
- <figure class="thumbnails">
-    <img src="picture/Spring/1600416648310.png" alt="Screenshot of coverpage" title="Cover page">
-</figure>
 
 
 - 导入 cglib 的 jar 包：
@@ -474,10 +468,8 @@ Spring2.0开始，Spring AOP引入对Aspect的支持，AspectJ扩展了Java语�
 
 术语示意图：
 
+![1600421428510](picture/Spring/AOP/1600421428510.png)
 
- <figure class="thumbnails">
-    <img src="picture/Spring/1600421428510.png" alt="Screenshot of coverpage" title="Cover page">
-</figure>
 
 
 ### 2.2 AOP 功能演示
@@ -1216,7 +1208,7 @@ Spring 框架中提供了对事务完美的解决方案，在学习前，先来�
 
 在三层软件架构中，视图的体现：
 
-![1600437672690](/img/1600437672690.png)
+![1600437672690](picture/Spring/AOP/1600437672690.png)
 
 在 Service 层会开启事务管理。
 
@@ -1265,10 +1257,8 @@ Spring的事务管理是通过 AOP 来实现的，必须要导入Spring相关的
 
 在上面的依赖jar文件中，会将 **spring-tx** 事务管理的jar依赖引入，如下图：
 
+![1600439586313](picture/Spring/AOP/1600439586313.png)
 
- <figure class="thumbnails">
-    <img src="picture/Spring/1600439586313.png" alt="Screenshot of coverpage" title="Cover page">
-</figure>
 
 
 #### 3.2.1 Spring 事务管理 Api 介绍

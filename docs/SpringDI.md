@@ -50,7 +50,7 @@
 对于 DI 注解 @value 形式主要用途：
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600257492503.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Spring/DI/1600257492503.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 **1.编写一个类，并交给 Spring 容器进行管理。**

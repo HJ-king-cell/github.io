@@ -16,7 +16,7 @@
 
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600218586402.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Spring/IOC/1600218586402.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 # 框架阶段学习
@@ -114,7 +114,7 @@ Spring结构体系如下：
 
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600164978207.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Spring/IOC/1600164978207.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -223,7 +223,7 @@ Class.forName("com.mysql.jdbc.Driver");  // 实现注册驱动
 
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600168166801.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Spring/IOC/1600168166801.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -556,7 +556,7 @@ lInversion of  control 控制反转，让spring创建对象实例。将创建对
 
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1576738380977.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Spring/IOC/1576738380977.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 
@@ -661,7 +661,7 @@ public class SpringTest01 {
 在 Spring 中，对于其 Api 的使用如下结构图：
 
  <figure class="thumbnails">
-    <img src="picture/Spring/1600174708602.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="picture/Spring/IOC/1600174708602.png" alt="Screenshot of coverpage" title="Cover page">
 </figure>
 
 上图的结构介绍：
